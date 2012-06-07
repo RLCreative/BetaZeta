@@ -1,0 +1,9 @@
+﻿/* Akord Screen Styles and IE7/win fixes 
+Author: allen@regallager.com */
+
+/* import style sheets and hide from IE/Mac \*/
+@import url("960_12_col.css");
+@import url("screen.css");
+@import url("ie.css");
+
+/* end import/hide */

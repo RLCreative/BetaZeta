@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Welcome to Regal+Lager : @ViewBag.SubTitle</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../Content/core.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="@ViewBag.StylesheetURL" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Description" content="@ViewBag.MetaDescription" />
+    <meta name="Keywords" content="@ViewBag.MetaKeywords" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui-1.8.19.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/euk0nha.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+    <script type="text/javascript" src="@ViewBag.ScriptJQ171"></script>
+    <script type="text/javascript" src="@ViewBag.ScriptURL"></script>
+</head>
+<body>
+    @RenderSection("script", required: false)
+    <section id="abovefold">
+        <header>
+            <div class="content-wrapper">
+                <div id="logo">
+                    <h5 class="logo">@Html.ActionLink("Home", "Index", "Home")</h5>
+                </div>
+                <div class="storebar">
+                    <input id="Text1" type="text" placeholder="Search the site..." style="width:200px;" />
+                </div>
+                <nav>
+                    <ul id="topmenu">
+                        <li>@Html.ActionLink("Home", "Index", "Home", new { @title = "Register Your Product" }, new { @class = "" })
+                        </li>
+                        <li>@Html.ActionLink("Register a Product", "Index", "Register", new { @title = "Register Your Product" }, new { @class = "" })
+                        </li>
+                        <li>@Html.ActionLink("Recall Info", "Index", "Recalls", new { @title = "Check for Product Recalls" }, new { @class = "" })
+                        </li>
+                        <li>@Html.ActionLink("Contact Us", "Contact", "About", new { @title = "Contact Regal Lager" }, new { @class = "" })
+                        </li>
+                        <li>@Html.ActionLink("CPS Techs", "CPS", "Home", new { @title = "A Place for CPS Techs" }, new { @class = "" })
+                        </li>
+                        <li><a href="~/Internal/Security/Login.aspx" title="Retailer and Rep Login">Retailer
+                            Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="subhead" class="content-wrapper clear-fix">
+            @RenderSection("movie", required: false)
+        </section>
+    </section>
+    <section id="belowfold">
+        <nav>
+            <div class="menuwrapper">
+                <ul id="menu">
+                    <li><a href="#" class="drop" title="Shop Our Brands">SHOP OUR BRANDS</a>
+                        <div class="dropdown_5columns">
+                            <div class="col_1">
+                                <div class="menubrand">
+                                    <img src="../../Images/bambinomio.png" />
+                                </div>
+                                <p class="branddesc">
+                                    Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                    system with a full range of accessories.
+                                </p>
+                                <p>@Html.ActionLink("Coming Soon", "Index", "Home", null, new { @title = "Shop for Bambino Mio in Our Store" })
+                                </p>
+                            </div>
+                            <div class="col_1">
+                                <div class="menubrand">
+                                    <img src="../../Images/cybex.png" />
+                                </div>
+                                <p class="branddesc">
+                                    CYBEX is known for creating safe and fashion oriented products for children including
+                                    Car Seats, Strollers, and Carriers, all designed in Germany.
+                                </p>
+                                <p>@Html.ActionLink("Coming Soon", "Index", "Home", null, new { @title = "Shop for Cybex in Our Store" })
+                                </p>
+                            </div>
+                            <div class="col_1">
+                                <div class="menubrand">
+                                    <img src="../../Images/dekor.png" />
+                                </div>
+                                <p class="branddesc">
+                                    D&egrave;kor offers you a hands free solution to diaper disposal. Just Step on the
+                                    pedal and Drop the diaper in! Economical refills make the decision even easier.
+                                </p>
+                                <p>@Html.ActionLink("Coming Soon", "Index", "Home", null, new { @title = "Shop for D&eacute;kor in Our Store" })
+                                </p>
+                            </div>
+                            <div class="col_1">
+                                <div class="menubrand">
+                                    <img src="../../Images/lascal.png" />
+                                </div>
+                                <p class="branddesc">
+                                    Lascal&reg; brings you smart products for your child including the BuggyBoard stroller
+                                    board and KiddyGuard gates that "disappear" into your homes decor.
+                                </p>
+                                <p>@Html.ActionLink("Coming Soon", "Index", "Home", null, new { @title = "Shop for Lascal in Our Store" })
+                                </p>
+                            </div>
+                            <div class="col_1">
+                                <div class="menubrand">
+                                    <img src="../../Images/mycarrypotty.png" />
+                                </div>
+                                <p class="branddesc">
+                                    The My Carry Potty&trade; is the only potty your child will every need and will
+                                    prove to be an invaluable when potty training.
+                                </p>
+                                <p>@Html.ActionLink("Coming Soon", "Index", "Home", null, new { @title = "Shop for My Carry Potty in Our Store" })
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="drop" title="Find a Store">FIND A STORE</a>
+                        <div class="dropdown_2columns">
+                            <div class="col_2 last">
+                                <input id="txtStore" type="text" placeholder="Find a Local Store" />&nbsp;<input id="Button1"
+                                    type="button" value="GO" class="smallbutton" />
+                                <input id="btnOnline" type="button" value="Find Online Stores" />
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="drop" title="Customer Care">CUSTOMER CARE</a>@* <div class="col_2 last">
+                                <p style="padding-bottom: 0px;">
+                                    Call us Toll Free at <strong style="color: #303233;">800-593-5522</strong> Monday&ndash;Friday from 8:30 am&ndash;5:30 pm (EST)
+                                </p>
+                            </div>*@
+                        <div class="dropdown_1column">
+                            <div class="col_1">
+                                <ul>
+                                    <li>@Html.ActionLink("Get Great Support", "Index", "Support", null, new { @title = "Get Support" })
+                                    </li>
+                                    <li>@Html.ActionLink("Frequent Questions", "Faqs", "Support", null, new { @title = "Frequently Asked Questions" })
+                                    </li>
+                                    <li>@Html.ActionLink("Recall Information", "Index", "Recalls", null, new { @title = "Register a Product" })
+                                    </li>
+                                    @*<li>@Html.ActionLink("Product Videos", "Videos", "Support", null, new { @title = "Product Videos" })
+                                    </li>*@
+                                    <li><a href="http://www.youtube.com/rlcreative" target="_blank" title="Watch Our Videos">
+                                        Product Videos</a></li>
+                                    <li>@Html.ActionLink("Instructions", "Downloads", "Support", null, new { @title = "Downloads" })
+                                    </li>
+                                    <li>@Html.ActionLink("Register a Product", "Index", "Register", null, new { @title = "Register a Product" })
+                                    </li>
+                                    <li>@Html.ActionLink("Warranty Info", "Warranty", "Support", null, new { @title = "Warranty and Return Information" })
+                                    </li>
+                                    <li>@Html.ActionLink("Product Safety", "Testing", "Support", null, new { @title = "See Our Product Testing Results" })
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#" class="drop" title="All Your Media Needs">PRESS ROOM</a>
+                        <div class="dropdown_1column">
+                            <div class="col_1">
+                                <ul>
+                                    <li>@Html.ActionLink("Press Releases", "PressReleases", "Press", null, new { @title = "Press Releases" })
+                                    </li>
+                                    <li>@Html.ActionLink("Downloads", "Downloads", "Press", null, new { @title = "Downloads" })
+                                    </li>
+                                    <li>@Html.ActionLink("Media Inquiries", "Media", "Press", null, new { @title = "Media Inquiries" })
+                                    </li>
+                                    <li>@Html.ActionLink("Our Awards", "Awards", "Press", null, new { @title = "Our Awards" })
+                                    </li>
+                                    <li>@Html.ActionLink("Download Logos", "Logos", "Press", null, new { @title = "Download Logos" })
+                                    </li>
+                                    <li><a href="http://regallager.wordpress.com" target="_blank" title="See Our Mentions and Celebrity Sightings">
+                                        In the Press</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="drop"><a href="#">COMPANY</a>
+                        <div class="dropdown_1column">
+                            <div class="col_1 last">
+                                <ul>
+                                    <li>@Html.ActionLink("About Us", "Index", "About", null, new { @title = "About Us" })
+                                    </li>
+                                    <li>@Html.ActionLink("Our Team", "OurTeam", "About", null, new { @title = "Our Team" })
+                                    </li>
+                                    <li>@Html.ActionLink("Our Mission", "Mission", "About", null, new { @title = "Mission Statement" })
+                                    </li>
+                                    <li>@Html.ActionLink("Contact Us", "Contact", "About", null, new { @title = "Contact Us" })
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="content" class="content-wrapper">
+            @RenderBody()
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="content-wrapper">
+            <section class="footer">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#" title="Customer Care">Get Help</a></li>
+                    <li><a href="#" title="Recalls">Check for Recalls</a></li>
+                    <li><a href="#" title="Product Videos">Product Videos</a></li>
+                    <li><a href="#" title="FAQ's">Frequently Asked Questions</a></li>
+                    <li><a href="#" title="FAQ's">Downloads</a></li>
+                    <li><a href="#" title="Contact Us">Register a Product</a></li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">1-800-593-5522</a></li>
+                    <li><a href="#">Send Us an Email</a></li>
+                    <li><a href="#">Become a Retailer</a></li>
+                    <li><a href="#">Media Inquiries</a></li>
+                    <li><a href="#">Give us Feedback</a></li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Press Room</h3>
+                <ul>
+                    <li><a href="#" title="About Us">About Us</a></li>
+                    <li><a href="#" title="Become a Retailer">Press Releases</a></li>
+                    <li><a href="#" title="In the Press">In the Press</a></li>
+                    <li><a href="#" title="In the Press">Awards</a></li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Store</h3>
+                <ul>
+                    <li><a href="#" title="Legal Disclaimer">Shopping Cart</a></li>
+                    <li><a href="#" title="Privacy Policy">Shop By Brand</a></li>
+                    <li><a href="#" title="Privacy Policy">Track Order</a></li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Legal Info</h3>
+                <ul>
+                    <li>@Html.ActionLink("Terms and Conditions", "Terms", "Home", null, new { @title = "Terms and Conditions" })
+                    </li>
+                    <li>@Html.ActionLink("Privacy Policy", "Privacy", "Home", null, new { @title = "Privacy Policy" })
+                    </li>
+                </ul>
+            </section>
+            <div class="copyright">
+                &copy; @DateTime.Now.Year. Regal Lager, Inc. All Rights Reserved.
+            </div>
+            <div class="connect">
+                <div style="float: left;">
+                    <ul id="social">
+                        <li class="facebook"><a href="#">Like Us</a></li>
+                        <li class="twitter"><a href="#">Follow Us</a></li>
+                        <li class="youtube"><a href="#">Watch Us</a></li>
+                        @*<li class="pinterest"><a href="#">Pin it</a></li>
+                        <li class="googleplus"><a href="#">Add Us</a></li>*@
+                        <li class="newsletter"><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div style="float: right;">
+                    <a href="http://www.jpma.org" target="_blank">
+                        <img src="../../Images/JPMAicon.jpg" alt="JPMA Member" height="35" width="35" class="jpma"
+                            title="JMPA Member" /></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Html.Partial("_GoogleTrack")
+    @RenderSection("nivoscript", required: false)
+</body>
+</html>

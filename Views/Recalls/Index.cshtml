@@ -1,0 +1,39 @@
+﻿@{ViewBag.SubTitle = "Product Recall Information";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+</hgroup>
+<article>
+    <p>
+        The safety of your child is of utmost importance to Regal Lager, Inc. When a safety
+        issue is either discovered by us or brought to our attention, we issue a recall
+        or safety notification to inform consumers of the issue. Some notifications ask
+        consumers to contact us for a kit to correct the problem free of charge. Others
+        ask that the product be shipped back to us for either a repair or exchange. If you
+        have registered a product with Regal Lager, either on this web site or by mailing
+        in a card, we will make every reasonable attempt to contact you.
+    </p>
+    <section> <form method="post" id="myForm">@*
+
+<span class="message">@TempData["Message"]</span>
+*@
+
+<select id="CategoryID" name="CategoryID" onchange="document.getElementById('myForm').submit();">
+    <option value="0" selected="selected">----------------------- Select a Recall ----------------------- </option>
+    <option value="1">Solution X-Fix High Back Booster July 2010</option>
+    <option value="2">CYBEX 2.GO Carrier June 2010</option>
+    <option value="3">CYBEX Ruby, Onyx and Topaz Stroller January 2010</option>
+    <option value="4">Lascal® BuggyBoard™ Recall September 2003</option>
+</select>
+</form>
+</section>
+    <hr />
+    <p>Recall information may also be found at the following websites:</p>
+    <ul class="default">
+        <li><a href="http://www.cpsc.gov" target="_blank" title="Consumer Products Safety Commission">
+            Consumer Products Saftey Commission (CPSC)</a></li>
+        <li><a href="http://www.nhtsa.gov" target="_blank" title="National Highway Traffic and Safety Administration">
+            National Highway Traffic and Safety Administration(NHTSA)</a></li>
+    </ul>
+</article>
+<aside></aside>

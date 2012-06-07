@@ -1,0 +1,300 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="internal.master.cs" Inherits="Viceroy.Internal._internal" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="System.Web.UI" TagPrefix="asp" %>
+<!DOCTYPE html>
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="MetaData" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="../Content/Site.css" />
+    <link rel="stylesheet" type="text/css" href="content/screen.css" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery-ui-1.8.19.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
+    <script type="text/javascript" src="../../Scripts/2012.1.419/telerik.all.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/toastr.js"></script>
+</head>
+<body id="home">
+    <form id="Form1" runat="server">
+    <asp:ScriptManager runat="server" ID="menuscriptmanager">
+    </asp:ScriptManager>
+    <section id="abovefold">
+        <header>
+            <div class="content-wrapper">
+                <div id="internallogo">
+                    <ul id="internalmenu">
+                        <asp:LoginView ID="MasterLoginView" runat="server">
+                            <AnonymousTemplate>
+                                <li><a href="../../home">Home</a></li>
+                                <li><a href="../../register">Register Product</a></li>
+                                <li><a href="../../home/contact">Contact Us</a></li>
+                                <li><a href="../../home/about">About Us</a></li>
+                                <li><a href="../../home/search">Search</a></li>
+                                <li><a href="../../internal/security/login.aspx">Retailer Login</a></li>
+                            </AnonymousTemplate>
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="retailer">
+                                    <ContentTemplate>
+                                        <li><a href="../../home">Home</a></li>
+                                        <li><a href="../../register">Register Product</a></li>
+                                        <li><a href="../../home/contact">Contact Us</a></li>
+                                        <li><a href="../../home/about">About Us</a></li>
+                                        <li><a href="../../home/search">Search</a></li>
+                                        <ul>
+                                            <div id="adminpanel">
+                                                <li><a href="#" class="drop">Welcome:&nbsp;<strong><asp:LoginName ID="MasterLoginName"
+                                                    runat="server" /></a></strong>
+                                                    <div id="admin" class="dropdownlog_1column">
+                                                        <p>
+                                                            <a href="../../internal/vieworders.aspx" title="View Orders">View Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="../../internal/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="../../internal/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                                Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="../../internal/viewstock.aspx" title="Stock">View Stock</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="../../internal/retailers/downloads.aspx">Downloads</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="loginbutton" LogoutAction="Redirect"
+                                                                LogoutPageUrl="~/home" />
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                                <asp:RoleGroup Roles="salesrep">
+                                    <ContentTemplate>
+                                        <li><a href="../../home">Home</a></li>
+                                        <li><a href="../../register">Register Product</a></li>
+                                        <li><a href="../../home/contact">Contact Us</a></li>
+                                        <li><a href="../../home/about">About Us</a></li>
+                                        <li><a href="../../home/search">Search</a></li>
+                                        <ul>
+                                            <div id="adminpanel">
+                                                <li><a href="#" class="drop">Welcome:&nbsp;<strong><asp:LoginName ID="MasterLoginName"
+                                                    runat="server" /></a></strong>
+                                                    <div id="admin" class="dropdownlog_1column">
+                                                        <p>
+                                                            <a href="~/internal/retailers/vieworders.aspx" title="View Orders">View Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                                Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/viewstock.aspx" title="Stock">View Stock</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/downloads.aspx">Downloads</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="loginbutton" LogoutAction="Redirect"
+                                                                LogoutPageUrl="~/home" />
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                                <asp:RoleGroup Roles="admin">
+                                    <ContentTemplate>
+                                        <li><a href="../../home">Home</a></li>
+                                        <li><a href="../../register">Register Product</a></li>
+                                        <li><a href="../../home/contact">Contact Us</a></li>
+                                        <li><a href="../../home/about">About Us</a></li>
+                                        <li><a href="../../home/search">Search</a></li>
+                                        <ul>
+                                            <div id="adminpanel">
+                                                <li><a href="#" class="drop">Welcome:&nbsp;<strong><asp:LoginName ID="MasterLoginName"
+                                                    runat="server" /></a></strong>
+                                                    <div id="admin" class="dropdownlog_1column">
+                                                        <p>
+                                                            <a href="~/internal/retailers/vieworders.aspx" title="View Orders">View Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                                Orders</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/viewstock.aspx" title="Stock">View Stock</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/internal/retailers/downloads.aspx">Downloads</a>
+                                                        </p>
+                                                        <p>
+                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            </a>
+                                                        </p>
+                                                        <p>
+                                                            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="loginbutton" LogoutAction="Redirect"
+                                                                LogoutPageUrl="~/home" />
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                    </ul>
+                    <h5 class="internallogo"><a href="/home"></a></h5>
+                    
+                </div>
+                <div class="menupanel">
+                    <%--<div class="storebar">
+                        Search:
+                        <input id="Text1" type="text" />
+                    </div>--%>
+                    
+                </div>
+            </div>
+        </header>
+        <section id="subhead" class="content-wrapper clear-fix">
+            @RenderSection("subhead", required: false)
+        </section>
+    </section>
+    <div id="content">
+        <div class="menuwrapper">
+            <nav>
+                <ul id="menu">
+                    <li class="drop"><a href="../../home">Shop Our Brands</a>
+                        <div class="dropdown_5columns">
+                            <p class="col_1">
+                                <img alt="" src="../../Images/bambinomio.png" /><br />
+                                Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                system. <a href="../../home">Shop Bambino Mio</a>
+                            </p>
+                            <p class="col_1">
+                                <img alt="" src="../../Images/cybex.png" /><br />
+                                Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                system. <a href="../../home">Shop Cybex</a>
+                            </p>
+                            <p class="col_1">
+                                <img alt="" src="../../Images/dekor.png" /><br />
+                                Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                system. <a href="../../home">Shop Dekor</a>
+                            </p>
+                            <p class="col_1">
+                                <img alt="" src="../../Images/lascal.png" /><br />
+                                Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                system. <a href="../../home">Shop Lascal</a>
+                            </p>
+                            <p class="col_1 last">
+                                <img alt="" src="../../Images/mycarrypotty.png" /><br />
+                                Bambino Mio goes beyond just cloth diapers, and is actually a complete cloth diapering
+                                system. <a href="../../home">Shop My Carry Potty</a>
+                            </p>
+                        </div>
+                    </li>
+                    <li><a href="../../home">Find a Store</a></li>
+                    <li><a href="../../home">Customer Service</a></li>
+                    <li><a href="../../home">Press Room</a></li>
+                    <li><a href="../../home">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END MENU -->
+        <!-- MAIN CONTENT -->
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </section>
+        <!-- END MAIN CONTENT -->
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="content-wrapper">
+                <section class="footer">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#" title="Customer Care">Get Help</a></li>
+                        <li><a href="#" title="Recalls">Check for Recalls</a></li>
+                        <li><a href="#" title="Product Videos">Product Videos</a></li>
+                        <li><a href="#" title="FAQ's">Frequently Asked Questions</a></li>
+                        <li><a href="#" title="FAQ's">Downloads</a></li>
+                        <li><a href="#" title="Contact Us">Register a Product</a></li>
+                    </ul>
+                </section>
+                <section class="footer">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">1-800-593-5522</a></li>
+                        <li><a href="#">Send Us an Email</a></li>
+                        <li><a href="#">Become a Retailer</a></li>
+                        <li><a href="#">Media Inquiries</a></li>
+                        <li><a href="#">Give us Feedback</a></li>
+                    </ul>
+                </section>
+                <section class="footer">
+                    <h3>Press Room</h3>
+                    <ul>
+                        <li><a href="#" title="About Us">About Us</a></li>
+                        <li><a href="#" title="Become a Retailer">Press Releases</a></li>
+                        <li><a href="#" title="In the Press">In the Press</a></li>
+                        <li><a href="#" title="In the Press">Awards</a></li>
+                    </ul>
+                </section>
+                <section class="footer">
+                    <h3>Store</h3>
+                    <ul>
+                        <li><a href="#" title="Legal Disclaimer">Shopping Cart</a></li>
+                        <li><a href="#" title="Privacy Policy">Shop By Brand</a></li>
+                        <li><a href="#" title="Privacy Policy">Track Order</a></li>
+                    </ul>
+                </section>
+                <section class="footer">
+                    <h3>Legal Info</h3>
+                    <ul>
+                        <li><a href="~/home/terms">Terms and Conditions</a></li>
+                        <li><a href="~/home/privacy">Privacy</a></li>
+                    </ul>
+                </section>
+                <div class="copyright">
+                    &copy; <%=DateTime.Now.Year%>. Regal Lager, Inc. All Rights Reserved.
+                </div>
+                <div class="connect">
+                    <ul id="social">
+                        <li class="facebook"><a href="#">Like Us</a></li>
+                        <li class="twitter"><a href="#">Follow Us</a></li>
+                        <li class="youtube"><a href="#">Watch Us</a></li>
+                        <li class="pinterest"><a href="#">Pin it</a></li>
+                        <li class="googleplus"><a href="#">Add Us</a></li>
+                        <li class="newsletter"><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+    </form>
+</body>
+</html> 

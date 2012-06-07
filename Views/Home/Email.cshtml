@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Email";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Email</h2>
+<form method="post">
+Here is my crappy email page.<br />
+<div>
+<span class="message">@TempData["Message"]</span><br />
+</div>
+<div style="@ViewBag.show">
+<table>
+    <tr>
+        <td>First Name:</td>
+        <td>
+            <input type="text" name="txtFirstName" /></td>
+    </tr>
+    <tr>
+        <td>Last Name:</td>
+        <td>
+            <input type="text" name="txtLastName" /></td>
+    </tr>
+    <tr>
+        <td>Email:</td>
+        <td>
+            <input type="text" name="txtEmail" /></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Submit!"></td>
+    </tr>
+
+</table>
+</div>
+</form>

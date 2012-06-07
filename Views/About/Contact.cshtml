@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Subtitle = "Contact Us";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+</hgroup>
+<article>
+    <h2>Customer Care Department</h2>
+    <p>
+            If you need to speak with a Customer Care agent directly, please call our Customer
+            Care Department at <strong>1-800-593-5522</strong>. They can assist you with any
+            questions you may have about the Regal Lager line up of products.
+        </p> <h3>Our Hours:</h3>
+    <p>
+        Monday&ndash;Friday&nbsp;<strong>8:30 am&ndash;5:30 pm (EST)</strong>
+        <br />
+        Saturday&ndash;Sunday&nbsp;<strong>Voicemail Only</strong>
+    </p>
+    <p>Closed on all major holidays.</p>
+    <h2>Email Us</h2>
+    <p>
+        Send us an email and we will respond within one business day.
+    </p><p> @Html.ActionLink("Send E-mail", "Request", "Support", null, new { @title = "Send Us an Email" })</p>
+    <h2>Telephone</h2>
+    <p>
+        770-955-5060<br />
+        Fax: 770-955-1997
+    </p>
+   
+    <h2>Media Inquiries:</h2>
+    <p>
+        If you have a media inquiry, please contact <strong>Elisabeth Bergoo </strong>at
+        770-955-5060 x117. If you are a blogger and are looking to partner with us, please
+        complete this form.
+    </p>
+    <h2>Sales Inquiries:</h2>
+    <p>
+        If you are interested in joining our team as a retailer, contact <strong>Jeff Durkee
+        </strong>at 770-955-5060 x120
+    </p>
+    <h2>Our Address:</h2>
+    <p>
+        Regal Lager, Inc.<br />
+        1100 Cobb Place Blvd. Suite 120<br />
+        Kennesaw, GA 30144
+    </p>
+    <p>
+        <a href="http://www.regallager.com/storelocator/mapit.aspx?CustID=0000&CustName=Regal%20Lager,%20Inc.&Address1=1100%20Cobb%20Place%20Blvd&City=Kennesaw&State=GA&Zip=30144&Phone=8005935522"
+            target="_blank">Get Driving Directions to Regal Lager</a>
+    </p>
+</article>
+<aside>
+    <img src="../Images/rl-contact.png" alt="Contact Us" class="drop-shadow" />
+</aside>

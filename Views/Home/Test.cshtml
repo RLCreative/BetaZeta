@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Viceroy.Models.SOPPDFHeader>
+
+@{
+    ViewBag.Title = "Test";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+    function showToast() {
+        
+        toastr.options.fadeIn = 1000,
+        toastr.options.fadeOut = 1000,
+        toastr.options.timeOut = 10000,        
+        toastr.success('Are you the six fingered man?', 'Inigo Montoya');  
+
+        }
+
+
+</script>
+<h2>Test</h2>
+
+
+@(Html.Telerik().Grid(Model)
+        .Name("Grid")
+        .Columns(columns =>
+        {
+            columns.Bound(o => o.PDFRefNum).Width(100);
+            columns.Bound(o => o.CustomerNum).Width(120);
+            columns.Bound(o => o.OrderDate).Format("{0:MM/dd/yyyy}").Width(120);
+            columns.Bound(o => o.PONum).Width(120);
+            columns.Bound(o => o.Company).Width(200);
+            columns.Bound(o => o.OrderedBy).Width(200);
+            columns.Bound(o => o.OrderTotal).Width(100);
+        })        
+    .Pageable(settings => settings.PageSize(20))
+    .Sortable()
+    .Filterable()
+        
+        
+        
+)
+<br /><br />Toast Test<br /><br />
+<button id="test" onclick="showToast();">Test Toast</button>
+
+
+

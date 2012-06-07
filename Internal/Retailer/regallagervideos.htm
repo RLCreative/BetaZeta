@@ -1,0 +1,591 @@
+<html>
+<head>
+    <title>How to Link to Regal Lager Videos</title>
+    <style type="text/css">
+        body
+        {
+            font-family: 'Trebuchet MS' , arial, verdana, sans-serif;
+            font-size: 10pt;
+            color: #414b4c;
+            width: 98%;
+        }
+        table.invodo
+        {
+            background-color: #e6f1f2;
+            border: 1px dotted #00bac6;
+            width: 100%;
+            border-collapse: collapse;
+            margin-left: 25px;
+        }
+        table.invodo td
+        {
+            white-space: nowrap;
+            padding: .5em;
+            border: 1px dotted #00bac6;
+        }
+        table.invodo th
+        {
+            padding: .5em;
+            text-align: left;
+            border: 1px solid #00bac6;
+            font-family: 'trebuchet ms' , arial, verdana;
+            background-color: #c6d5d6;
+        }
+        table.notes
+        {
+            background-color: #dcf4f5;
+            width: 100%;
+            font-size: 1em;
+            padding: 1em;
+            margin-left: 25px;
+        }
+        table.legal
+        {
+            width: 100%;
+            font-size: 8pt;
+            color: #666666;
+            text-align: center;
+            padding: 1em;
+        }
+        table td.code
+        {
+            white-space: pre;
+            font-family: 'courier new' , monospace;
+            font-size: 1em;
+            padding: .5em;
+        }
+        h1
+        {
+            font-size: 14pt;
+        }
+        h2
+        {
+            color: #00B6C1;
+            font-size: 11pt;
+            font-weight: bold;
+            margin: 25px 0 0;
+            padding-left: 10px;
+            background: transparent url(http://www.invodo.com/images/sectionTab.gif) no-repeat left;
+        }
+        span.step
+        {
+            color: #B1D23D;
+            font-weight: bold;
+        }
+        div.container
+        {
+            padding-left: 10px;
+        }
+        hr
+        {
+            height: 2px;
+            color: #ABCF33;
+            background-color: #ABCF33;
+            margin: 10px;
+            border: none;
+        }
+        td.sample a
+        {
+            color: #515D52;
+            font-weight: bold;
+            font-family: tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.invodo.com" target="_blank">
+        <img src="http://e.invodo.com/2.1/i/ext/invodo_logo.gif" alt="invodo" width="170"
+            height="68" border="0" align="right" />
+    </a>
+    <br />
+    <h1>
+        <img src="http://e.invodo.com/2.1/i/ext/titletab.gif" alt="invodo" width="12" height="24"
+            align="top" />
+        How to Link to Regal Lager Videos
+    </h1>
+    <br />
+    <table class="notes">
+        <tr>
+            <td>
+                <b>Notes:</b>
+                <br />
+                <img src="http://e.invodo.com/2.1/i/ext/bullet_green.gif" alt="invodo" width="8"
+                    height="9" />
+                Invodo links&mdash;including the ones here and those in your own web pages&mdash;may
+                not work correctly when viewed <strong><i>locally</i> </strong>in Internet Explorer.
+                <br />
+                <img src="http://e.invodo.com/2.1/i/ext/bullet_green.gif" alt="invodo" width="8"
+                    height="9" />
+                When viewed in other web browsers (e.g., FireFox), the links will work properly.
+                <br />
+                <img src="http://e.invodo.com/2.1/i/ext/bullet_green.gif" alt="invodo" width="8"
+                    height="9" />
+                When you post your changes to a live web server, the links will behave correctly
+                in all browsers.
+                <br />
+                <img src="http://e.invodo.com/2.1/i/ext/bullet_green.gif" alt="invodo" width="8"
+                    height="9" />
+                When implemented correctly, a new [correctly-sized] window should pop up and display
+                the requested video pod without any "active content" or security warnings.
+                <br />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <h2>
+        Adding Video to the Product Pages</h2>
+    <div class="container">
+        <p>
+            <b>Step 1: </b>For compatibility with secure pages, be sure to add the necessary
+            Invodo script references to <i>every</i> page containing Invodo video links (whether
+            in a Video Library list or on a product description page):
+        </p>
+        <table style="border: 1px solid #00bac6">
+            <tr>
+                <td class="code">
+                    &lt;script type="text/javascript" charset="utf-8"> /* &lt;![CDATA[ */if(typeof(Invodo)!='function')document.write('&lt;sc'+'ript
+                    src="http'+(document.location.protocol=='https:'?'s':'')+'://e.invodo.com/2.1/js/invodo-auto.js">&lt;/sc'+'ript>')/*
+                    ]]> */ &lt;/script&gt;
+                </td>
+            </tr>
+        </table>
+        <p>
+            For best performance, we recommend adding that line just before the closing &lt;/Body&gt;
+            tag on the page, but it can also go in the header. Depending on how your site is
+            set up (with product databases, page templates, etc.), there may be a single file
+            responsible for its insertion on every page, or it may be easier to add the &lt;script&gt;
+            reference in the body of each product description page alongside the links. Regardless,
+            this reference must appear somewhere on the page in order to enable the necessary
+            JavaScript functionality.</p>
+    </div>
+    <hr />
+    <div class="container">
+        <p>
+            <b>Step 2: </b>Design a conspicuous and effective link on each
+            product page to launch Invodo videos for that item. We recommend using a text link
+            that utilizes the product name with the link code provided by Invodo.
+        </p>
+        <p>
+            To attract a shopper's attention to the link, you can add one of these video icons
+            by copying the appropriate image tag:</p>
+        <table class="invodo">
+            <th>
+                Image
+            </th>
+            <th>
+                HTML tag
+            </th>
+            <tr>
+                <td>
+                    <img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon16px.gif" />
+                </td>
+                <td class="code">
+                    &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon16px.gif"
+                    /&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon24px.gif" />
+                </td>
+                <td class="code">
+                    &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon24px.gif"
+                    /&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon36px.gif" />
+                </td>
+                <td class="code">
+                    &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon36px.gif"
+                    /&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon48px.gif" />
+                </td>
+                <td class="code">
+                    &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon48px.gif"
+                    /&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon64px.gif" />
+                </td>
+                <td class="code">
+                    &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon64px.gif"
+                    /&gt;
+                </td>
+            </tr>
+        </table>
+        <p>
+            So, for example, a video link on one of the Regal Lager product pages might look
+            something like this:</p>
+        <table style="margin-left: 25px;">
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">
+                        <img style="vertical-align: middle" border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon16px.gif" />
+                    </a>
+                </td>
+                <td class="sample">
+                    <a href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Folding Bambino Mio Mionappies</a>
+                </td>
+            </tr>
+        </table>
+        <p>
+            Of course, you can style the link any way you like to fit with the look-and-feel
+            of your web site, and we are happy to add any HTML or style details to the link
+            code below to make the copy-and-paste process easier.</p>
+    </div>
+    <hr />
+    <br />
+    <div class="container">
+        <p>
+            <b>Step 3: </b>Insert the anchor link provided by Invodo for each
+            product.The anchor link code for each chosen product is listed below. You will use
+            this code to insert a video link on each product description page using a method
+            like the one above. This is for the link only&mdash;<i>it does not include the HTML
+                for the table/image as above</i>. To see the full HTML snippet for the example
+            above, <a href="#full_html">scroll down</a>.
+        </p>
+        <table class="invodo" cellspacing="5" cellpadding="5">
+            <tr>
+                <th style="font-size: 18px;" colspan="3">
+                    Links
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Product/Video
+                </th>
+                <th>
+                    Anchor link code
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Folding Bambino Mio Mionappies</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Folding Bambino Mio Mionappies Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Miosoft-Cover-and-Liner/p/WOM3GML6?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Miosoft Covers</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Miosoft-Cover-and-Liner/p/WOM3GML6?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Miosoft Covers Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Swim-Diapers/p/IBRFMDET?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Swimwear</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Swim-Diapers/p/IBRFMDET?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Swimwear Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Training-Pants/p/7H7OO0AI?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Training Pants</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Training-Pants/p/7H7OO0AI?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Training Pants Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Miosoft-Laundry/p/9QIVKJK9?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Washing Bambino Mio Cloth Diapers</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Miosoft-Laundry/p/9QIVKJK9?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Washing Bambino Mio Cloth Diapers Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Who/p/FY58YQ4D?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">What is Bambino Mio?</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Who/p/FY58YQ4D?a=regallager.com" class="InvodoPL"
+                    target="InvodoPlayer"&gt;What is Bambino Mio? Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Bambino-Mio-Why/p/MS7XCX28?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">Why use the Bambino Mio 2-Piece System?</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Bambino-Mio-Why/p/MS7XCX28?a=regallager.com" class="InvodoPL"
+                    target="InvodoPlayer"&gt;Why use the Bambino Mio 2-Piece System? Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-2Go-Carrier/p/LPC01Z4Y?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">CYBEX 2.GO Carrier </a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-2Go-Carrier/p/LPC01Z4Y?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX 2.GO Carrier Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Callisto-Carry-Cot/p/FKVENHTV?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">CYBEX Callisto Carry Cot</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Callisto-Carry-Cot/p/FKVENHTV?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Callisto Carry Cot Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Callisto-Stroller/p/778NZX58?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">CYBEX Callisto Stroller</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Callisto-Stroller/p/778NZX58?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Callisto Stroller Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Infant-Car-Seat-Adapter/p/DPZJYBKV?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">CYBEX Infant Car Seat Adapters</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Infant-Car-Seat-Adapter/p/DPZJYBKV?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Infant Car Seat Adapters Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Latch-Guides/p/JBUH2B28?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">CYBEX LATCH Guides</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Latch-Guides/p/JBUH2B28?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX LATCH Guides Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Onyx-Stroller/p/7K7ZJTFY?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">CYBEX Onyx Stroller</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Onyx-Stroller/p/7K7ZJTFY?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Onyx Stroller Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Ruby-Stroller/p/HZPN7PD5?a=regallager.com" class="InvodoPL"
+                        target="InvodoPlayer">CYBEX Ruby Stroller</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Ruby-Stroller/p/HZPN7PD5?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Ruby Stroller Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Solution-X-Fix/p/5H8I87I7?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">CYBEX Solution X-fix</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Solution-X-Fix/p/5H8I87I7?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Solution X-fix Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Topaz-Stroller/p/TWG3EURK?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">CYBEX Topaz Stroller</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Topaz-Stroller/p/TWG3EURK?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;CYBEX Topaz Stroller Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Cybex-Solution-X-Fix-Latch-Guides/p/34QII403?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Installing the Solution X-fix</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Cybex-Solution-X-Fix-Latch-Guides/p/34QII403?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Installing the Solution X-fix Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Dekor-Step-and-Drop-Regular/p/1KATNRLI?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Demonstration</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Dekor-Step-and-Drop-Regular/p/1KATNRLI?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Demonstration Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Dekor-Step-and-Drop-Liner-Sizes/p/8KK06DT8?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Diaper Dekor Refill Sizes</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Dekor-Step-and-Drop-Liner-Sizes/p/8KK06DT8?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Diaper Dekor Refill Sizes Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Dekor-Step-and-Drop-Plus/p/SLH3T169?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Plus Demonstration</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Dekor-Step-and-Drop-Plus/p/SLH3T169?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Plus Demonstration Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Dekor-Step-and-Drop-Replace-Liner-Plus/p/E5OFRE3O?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Replacing the refills on a Dekor Plus</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Dekor-Step-and-Drop-Replace-Liner-Plus/p/E5OFRE3O?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Replacing the refills on a Dekor Plus
+                    Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Dekor-Step-and-Drop-Replace-Liner-Regular/p/F65BUANM?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Replacing the refills on a Dekor Regular</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Dekor-Step-and-Drop-Replace-Liner-Regular/p/F65BUANM?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Replacing the refills on a Dekor Regular
+                    Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Buggy-Board-Maxi/p/QNTFA1F5?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Buggy Board Maxi</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Buggy-Board-Maxi/p/QNTFA1F5?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Buggy Board Maxi Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Buggy-Board-Mini/p/CKN5ZH5W?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Buggy Board Mini</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Buggy-Board-Mini/p/CKN5ZH5W?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Buggy Board Mini Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Kiddy-Board-Maxi/p/2LLQ6LDK?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Kiddy Board Maxi</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Kiddy-Board-Maxi/p/2LLQ6LDK?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Kiddy Board Maxi Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Kiddy-Guard-Avant-Gate/p/2DL1PSBO?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Kiddy Guard Avant</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Kiddy-Guard-Avant-Gate/p/2DL1PSBO?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Kiddy Guard Avant Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Kiddy-Guard-Banister-Installment/p/Z1BG1002?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Kiddy Guard Banister Installment</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Kiddy-Guard-Banister-Installment/p/Z1BG1002?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Kiddy Guard Banister Installment Videos&lt;/a&gt;
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="http://www.invodo.com/Lascal-Kiddy-Guard-Gate/p/VPN019XG?a=regallager.com"
+                        class="InvodoPL" target="InvodoPlayer">Kiddy Guard Gate</a>
+                </td>
+                <td class="code">
+                    &lt;a href="http://www.invodo.com/Lascal-Kiddy-Guard-Gate/p/VPN019XG?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"&gt;Kiddy Guard Gate Videos&lt;/a&gt;
+                </td>
+            </tr>
+       </table>
+        <br />
+    </div>
+    <hr />
+    <div class="container">
+        <a name="full_html"></a>
+        <p>
+            <span class="step">Summary:</span>The full HTML necessary to produce that example
+            link would look like this:
+        </p>
+        <table style="border: 1px solid #00bac6; margin-left: 25px;">
+            <tr>
+                <td style="font-family: 'courier new',monospace; white-space: pre; padding: 5px 10px;">
+                    &lt;table> &lt;tr> &lt;td> &lt;a href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                    class="InvodoPL" target="InvodoPlayer"> &lt;img border="0" src="http://e.invodo.com/2.1/i/ext/Invodo_VideoIcon16px.gif"
+                    /> &lt;/a> &lt;/td> &lt;td> &lt;strong>&lt;a class="InvodoPL" href="http://www.invodo.com/Bambino-Mio-Miosoft-Folds/p/K145NKMT?a=regallager.com"
+                    target="InvodoPlayer"> Folding Bambino Mio Mionappies &lt;/a>&lt;/strong> &lt;/td>
+                    &lt;/tr> &lt;/table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <hr />
+    <div class="container">
+        <p>
+            <strong>If you have trouble implementing these links, please contact Allen 
+            Bourne at Regal Lager directly at 678-819-5803 or via e-mail: </strong>
+            <a href="mailto:allen@regallager.com"><strong>allen@regallager.com</strong></a></p>
+        <p>
+            &nbsp;</p>
+        <br />
+    </div>
+    <!-- Required Invodo script reference -->
+    <script type="text/javascript" charset="utf-8">        var invodoJsHost = (("https:" == document.location.protocol) ? "https" : "http");
+        document.write(unescape("%3Cscript src='" + invodoJsHost + "://e.invodo.com/2.1/js/invodo-auto.js' type='text/javascript'%3E%3C/script%3E")); </script>
+    <!-- End Invodo script reference -->
+</body>
+</html>

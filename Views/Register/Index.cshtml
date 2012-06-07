@@ -1,0 +1,40 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutReg.cshtml"; 
+    ViewBag.SubTitle = "Product Registration for Safety Alert or Recall Only"; 
+            
+}
+@section script {
+<style>
+    ul#topmenu li a.registerselected {
+        color: rgb(251, 188, 0);
+        text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 1px dotted rgb(251, 188, 0);
+    }
+    ul#topmenu li a.registerselected:before {
+            content: " ";
+            display: block;
+            border-color: rgb(251, 188, 0) transparent;
+            border-style: solid;
+            border-width: 7px 7px 0px;
+            left: 50%;
+            margin: 0 0 0 240px;
+            position: absolute;
+            top: 55px;
+            width: 0;
+        }
+</style>
+}
+@Html.Partial("_RegHeader")
+<section>
+    <form method="post" id="myForm">
+
+<select id="CategoryID" name="CategoryID" onchange="document.getElementById('myForm').submit();">
+    <option value="0" selected="selected">----------------------- Select a Product to Register ----------------------- </option>
+    <option value="1">Cybex® Strollers, 2.GO Carriers, or Carry Cots</option>
+    <option value="2">Cybex® Child Restraints</option>
+    <option value="3">Lascal® Stroller Boards or Gates</option>
+</select>
+</form>
+</section>
+</article>

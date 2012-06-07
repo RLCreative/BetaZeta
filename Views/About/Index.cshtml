@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Subtitle = "About Us";
+    ViewBag.Message = "It's a Family Affair!";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+<article>
+    <p>
+        Regal Lager is a distributor of high quality baby and children's products located
+        in the surburbs of Atlanta, Georgia. We started out as a small, family owned business
+        and have grown into a large, family owned business. Family is the best way to describe
+        what we do: from the ownership, to the esprit de corps of our employees, to our
+        family of quality brands, to our family of retailers, and most importantly, to our
+        commitment to you and your families.
+    </p>
+    <p>
+        When most people think of a distributor, boxes, warehouses, fork-lifts and trucks
+        usually come to mind. True, that is part of who we are, but the part that really
+        makes us different from other distributors is our commitment to our customers and
+        to our brands. Our focus daily is on serving each customer in the best way we can.
+        Our Customer Care Department is dedicated to providing you with a friendly and fast
+        solution to any concern you may have.
+    </p>
+    <p>
+        Our brands are carefully selected, and all offer practical, stylish, well-designed,
+        and safe products. Not all of our brands are well known to the general public as
+        we are bringing them into the United States and Canada from several countries across
+        the globe We create awareness of these brands through excellent customer care, distribution
+        to quality retailers, catalogs, select websites, and by national advertising in
+        the most informative magazines for expecting and new parents. Building Quailty Brands
+        and offering the best in Customer Care is what we have been doing since 1991.
+    </p>
+    <p>
+        We look forward to serving you and your family in the future!
+    </p>
+    <ul id="aside">
+        <li>@Html.ActionLink("Read our Mission Statement", "Mission", "About")</li>
+        <li><a href="http://www.wikipedia.org/RegalLagerInc" target="_blank">Read about us on
+            Wikipedia</a></li>
+    </ul>
+</article>
+<aside>
+    <img src="../Images/rl-aboutus.png" alt="About Regal Lager" class="drop-shadow" />
+</aside>

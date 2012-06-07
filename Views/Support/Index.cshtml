@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.SubTitle = "Customer Care";
+    ViewBag.Message = "How Can We Help You?";
+            
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+<article>
+    <header>
+        <p>
+            Do you need product information, having a problem with a product, or need to return
+            a product? Our Customer Care Department is ready to assist you with any questions
+            or concerns you have. <strong>Please give us a call Toll Free at <span class="yellow">1-800-593-5522
+            </span></strong>
+        </p>
+    </header>
+    <h2>Our Hours:</h2>
+    <p>
+        <strong>Monday&ndash;Friday</strong><span>&nbsp;8:30 am&ndash;5:30 pm (EST) </span>
+        <br />
+        <strong>Saturday&ndash;Sunday</strong><span>&nbsp;Voicemail Only</span>
+    </p>
+    <p>Closed on all major holidays.</p>
+    <h2>E-mail Us:</h2>
+    <p>
+        Would you rather send us and email, or have images to help with your question?<br />
+        Fill out the form and we will respond to you within one business day.
+    </p>
+    <p>
+        @Html.ActionLink("Send E-mail", "Request", "Support", null, new { @title = "Send Us an Email" })
+    </p>
+    <h2>Frequently Asked Questions</h2>
+    <p>
+        We have an extensive list of frequent questions. Please take a look before deciding
+        to call.
+    </p>
+    @*<h2>More Resources</h2>
+    <ul>
+        <li>@Html.ActionLink("FA", "Frequently Asked Questions", "Home")</li>
+        <li>@Html.ActionLink("Support", "Register", "Home")</li>
+        <li>@Html.ActionLink("Support", "Warranty and Returns", "Home")</li>
+    </ul>*@
+</article>
+<aside id="aside">
+    <img src="../Images/rl-customercare.png" alt="Contact Us" class="drop-shadow" />
+</aside>

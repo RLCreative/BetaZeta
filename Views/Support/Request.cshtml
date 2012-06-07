@@ -1,0 +1,231 @@
+﻿@{
+    ViewBag.SubTitle = "Send Us an Email";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+</hgroup>
+<article>
+    @Html.ValidationSummary("Create was unsuccessful. Please correct the errors and try again.")
+    @using (Html.BeginForm())
+    {
+        <fieldset>
+            <legend></legend>
+            <label for="FirstName">First Name</label>
+            @Html.TextBox("FirstName", "", new { @style = "width:250px;" })
+            <span class="floatleft">
+                @Html.ValidationMessage("FirstName", "*")</span>
+        </fieldset>
+        <fieldset>
+            <legend></legend>
+            <label for="LastName">Last Name</label>
+            @Html.TextBox("LastName", "", new { @style = "width:250px;" })
+            <span class="floatleft">
+                @Html.ValidationMessage("LastName", "*")</span>
+        </fieldset>
+        
+@*<fieldset>
+            <legend></legend>
+            <label for="Address">Address</label>
+            @Html.TextBox("Address", "", new { @style = "width:250px;" })
+            @Html.ValidationMessage("Address", "*")
+            <label for="SuiteApt">Suite/Apt.</label>
+            @Html.TextBox("SuiteApt", "", new { @style = "width:35px;" })
+        </fieldset>
+       
+        <fieldset>
+            <legend></legend>
+            <label for="City">City</label>
+            @Html.TextBox("SuiteApt", "", new { @style = "width:250px;" })
+            @Html.ValidationMessage("SuiteApt", "*")
+            <label for="State">State</label>
+             @Html.TextBox("State", "", new { @style = "width:35px;" })
+            @Html.ValidationMessage("State", "*")
+           
+            <label for="Zip">ZIP&reg; Code</label>
+            @Html.TextBox("Zip", "", new { @style = "width:50px;" })
+            @Html.ValidationMessage("Zip", "*")
+        </fieldset>
+        *@<fieldset>
+            <legend></legend>
+            <label for="Phone">Phone</label>
+            @Html.TextBox("Phone", "", 
+            new { placeholder = "Numbers Only", @style = "width:100px;" }) 
+            @Html.ValidationMessage("Phone", "*")
+        </fieldset>
+        
+        <fieldset>
+            <legend></legend>
+            <label for="Email">Email</label>
+            @Html.TextBox("Email", "", 
+            new { placeholder = "email@yourdomain.com", @style = "width:250px;" })
+            @Html.ValidationMessage("Email", "*")
+        </fieldset>
+        <fieldset>
+            <legend></legend>
+            <label for="Comment">Comment</label>
+            @Html.TextArea("Profile", new { placeholder = "Be specific with your issue. If you know your Model and Model Numbers, please include them.", cols = 60, rows = 10 })
+        </fieldset>
+        <fieldset>
+            <legend></legend>
+            <p>Do you have an image that would help us assist you?</p>
+            @Html.TextBox("Upload", "",
+            new { @style = "width:250px;" })
+            <input type="submit" value="Browse" class="smallbutton" />
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit" class="button" />
+        </p>
+    }
+</article>
+@*<article id="form">
+    <form>
+    <p>
+        If you are having a problem with one of our products, please fill in the form below
+        and a Customer Care agent will respond to you shortly.
+    </p>
+    <p>
+        <strong>If you want to give us your valuable feedback, <a href="feedback.aspx">fill
+            out our Feedback form</a>.</strong>
+    </p>
+    How can we help you?&nbsp;<span class="textsmall">(Required)</span>Select the brands
+    you are requesting information about:
+    <asp:checkboxlist id="chkbListBrands" runat="server">
+                                        <asp:ListItem Value="BambinoMio">Bambino Mio&reg;</asp:ListItem>
+                                        <asp:ListItem Value="Cybex">Cybex&reg;</asp:ListItem>
+                                        <asp:ListItem Value="Dekor">D&eacute;kor&reg;</asp:ListItem>
+                                        <asp:ListItem Value="Lascal">Lascal&reg;</asp:ListItem>
+                                        <asp:ListItem Value="MyCarryPotty">My Carry Potty&trade;</asp:ListItem>
+                                    </asp:checkboxlist>
+    What are you requesting?
+    <asp:dropdownlist id="ddlRequest" runat="server" cssclass="dropdown">
+                                        <asp:ListItem Value="0" Selected="True">-- Select --</asp:ListItem>
+                                        <asp:ListItem Value="Cybex Available">Tell Me When a Product is Available</asp:ListItem>
+                                        <asp:ListItem Value="Retail Location">Retail Location</asp:ListItem>
+                                        <asp:ListItem Value="Sales Information">Sales Information</asp:ListItem>
+                                        <asp:ListItem Value="Help with Product">Help with Product</asp:ListItem>
+                                        <asp:ListItem Value="Return Authorization">Return Authorization</asp:ListItem>
+                                        <asp:ListItem Value="Other">Other</asp:ListItem>
+                                    </asp:dropdownlist>
+    How did you first hear about the brand(s)?
+    <asp:dropdownlist id="ddlHowHeared" runat="server" cssclass="dropdown">
+                                        <asp:ListItem Value="0" Selected="True">-- Select --</asp:ListItem>
+                                        <asp:ListItem Value="American Baby">American Baby</asp:ListItem>
+                                        <asp:ListItem Value="Baby Couture">Baby Couture</asp:ListItem>
+                                        <asp:ListItem Value="Baby Talk">Baby Talk</asp:ListItem>
+                                        <asp:ListItem Value="Blog">Blog</asp:ListItem>
+                                        <asp:ListItem Value="Consumer Reports">Consumer Reports</asp:ListItem>
+                                        <asp:ListItem Value="Facebook">Facebook</asp:ListItem>
+                                        <asp:ListItem Value="Fit Pregnancy">Fit Pregnancy</asp:ListItem>
+                                        <asp:ListItem Value="New Parent">New Parent</asp:ListItem>
+                                        <asp:ListItem Value="One Step Ahead">One Step Ahead</asp:ListItem>
+                                        <asp:ListItem Value="Parents">Parents</asp:ListItem>
+                                        <asp:ListItem Value="Pregnancy">Pregnancy</asp:ListItem>
+                                        <asp:ListItem Value="Pregnancy & Newborn">Pregnancy & Newborn</asp:ListItem>
+                                        <asp:ListItem Value="Search Engine">Search Engine</asp:ListItem>
+                                        <asp:ListItem Value="Twitter">Twitter</asp:ListItem>
+                                        <asp:ListItem Value="Word of Mouth">Word of Mouth</asp:ListItem>
+                                        <asp:ListItem Value="Other">Other</asp:ListItem>
+                                    </asp:dropdownlist>
+    Comments
+    <asp:textbox id="txtComments" runat="server" cssclass="combox" rows="4" textmode="MultiLine"
+        maxlength="500" columns="35"></asp:textbox>
+    
+        
+       <h2>Contact Information</h2>
+        First&nbsp;Name:&nbsp;<%= Html.TextBox("name", "hi", new { @class = "textbox" }) %>
+    <asp:textbox id="txtFirstName" runat="server" cssclass="textbox" maxlength="30" columns="30"></asp:textbox>
+    Last&nbsp;Name
+    <asp:textbox id="txtLastName" runat="server" cssclass="textbox" maxlength="30" columns="30"></asp:textbox>
+    Address
+    <asp:textbox id="txtAddress1" runat="server" cssclass="textbox" maxlength="30" columns="30"></asp:textbox>
+    Address2
+    <asp:textbox id="txtAddress2" runat="server" cssclass="textbox" maxlength="30" columns="30"></asp:textbox>
+    <span class="textsmall">&nbsp;(Optional)</span>City
+    <asp:textbox id="txtCity" runat="server" cssclass="textbox" maxlength="30" columns="20"></asp:textbox>
+    State/Province
+    <asp:dropdownlist id="ddlState" runat="server" cssclass="dropdown">
+                                        <asp:ListItem Value="0" Selected="True">-- Select --</asp:ListItem>
+                                        <asp:ListItem Value="AL">AL</asp:ListItem>
+                                        <asp:ListItem Value="AK">AK</asp:ListItem>
+                                        <asp:ListItem Value="AZ">AZ</asp:ListItem>
+                                        <asp:ListItem Value="AR">AR</asp:ListItem>
+                                        <asp:ListItem Value="CA">CA</asp:ListItem>
+                                        <asp:ListItem Value="CO">CO</asp:ListItem>
+                                        <asp:ListItem Value="CT">CT</asp:ListItem>
+                                        <asp:ListItem Value="DC">DC</asp:ListItem>
+                                        <asp:ListItem Value="DE">DE</asp:ListItem>
+                                        <asp:ListItem Value="FL">FL</asp:ListItem>
+                                        <asp:ListItem Value="GA">GA</asp:ListItem>
+                                        <asp:ListItem Value="HI">HI</asp:ListItem>
+                                        <asp:ListItem Value="ID">ID</asp:ListItem>
+                                        <asp:ListItem Value="IL">IL</asp:ListItem>
+                                        <asp:ListItem Value="IN">IN</asp:ListItem>
+                                        <asp:ListItem Value="IA">IA</asp:ListItem>
+                                        <asp:ListItem Value="KS">KS</asp:ListItem>
+                                        <asp:ListItem Value="KY">KY</asp:ListItem>
+                                        <asp:ListItem Value="LA">LA</asp:ListItem>
+                                        <asp:ListItem Value="ME">ME</asp:ListItem>
+                                        <asp:ListItem Value="MD">MD</asp:ListItem>
+                                        <asp:ListItem Value="MA">MA</asp:ListItem>
+                                        <asp:ListItem Value="MI">MI</asp:ListItem>
+                                        <asp:ListItem Value="MN">MN</asp:ListItem>
+                                        <asp:ListItem Value="MS">MS</asp:ListItem>
+                                        <asp:ListItem Value="MO">MO</asp:ListItem>
+                                        <asp:ListItem Value="MT">MT</asp:ListItem>
+                                        <asp:ListItem Value="NE">NE</asp:ListItem>
+                                        <asp:ListItem Value="NV">NV</asp:ListItem>
+                                        <asp:ListItem Value="NH">NH</asp:ListItem>
+                                        <asp:ListItem Value="NJ">NJ</asp:ListItem>
+                                        <asp:ListItem Value="NM">NM</asp:ListItem>
+                                        <asp:ListItem Value="NY">NY</asp:ListItem>
+                                        <asp:ListItem Value="NC">NC</asp:ListItem>
+                                        <asp:ListItem Value="ND">ND</asp:ListItem>
+                                        <asp:ListItem Value="OH">OH</asp:ListItem>
+                                        <asp:ListItem Value="OK">OK</asp:ListItem>
+                                        <asp:ListItem Value="OR">OR</asp:ListItem>
+                                        <asp:ListItem Value="PA">PA</asp:ListItem>
+                                        <asp:ListItem Value="RI">RI</asp:ListItem>
+                                        <asp:ListItem Value="SC">SC</asp:ListItem>
+                                        <asp:ListItem Value="SD">SD</asp:ListItem>
+                                        <asp:ListItem Value="TN">TN</asp:ListItem>
+                                        <asp:ListItem Value="TX">TX</asp:ListItem>
+                                        <asp:ListItem Value="UT">UT</asp:ListItem>
+                                        <asp:ListItem Value="VT">VT</asp:ListItem>
+                                        <asp:ListItem Value="VA">VA</asp:ListItem>
+                                        <asp:ListItem Value="WA">WA</asp:ListItem>
+                                        <asp:ListItem Value="WV">WV</asp:ListItem>
+                                        <asp:ListItem Value="WI">WI</asp:ListItem>
+                                        <asp:ListItem Value="WY">WY</asp:ListItem>
+                                        <asp:ListItem Value="AB">Canada-AB</asp:ListItem>
+                                        <asp:ListItem Value="BC">Canada-BC</asp:ListItem>
+                                        <asp:ListItem Value="MB">Canada-MB</asp:ListItem>
+                                        <asp:ListItem Value="NB">Canada-NB</asp:ListItem>
+                                        <asp:ListItem Value="NF">Canada-NF</asp:ListItem>
+                                        <asp:ListItem Value="NS">Canada-NS</asp:ListItem>
+                                        <asp:ListItem Value="NT">Canada-NT</asp:ListItem>
+                                        <asp:ListItem Value="ON">Canada-ON</asp:ListItem>
+                                        <asp:ListItem Value="QC">Canada-QC</asp:ListItem>
+                                        <asp:ListItem Value="SK">Canada-SK</asp:ListItem>
+                                    </asp:dropdownlist>
+    ZIP/Postal Code
+    <asp:textbox id="txtZip" runat="server" cssclass="textbox" maxlength="7" columns="9"></asp:textbox>
+    <asp:requiredfieldvalidator id="rfvZip" runat="server" cssclass="textsmall" display="Dynamic"
+        controltovalidate="txtZip">Required</asp:requiredfieldvalidator>
+    <asp:regularexpressionvalidator id="revZip" runat="server" cssclass="textsmall" display="Dynamic"
+        controltovalidate="txtZip" validationexpression="^(\d{5}|[a-zA-Z][0-9][a-zA-Z]( ){0,1}[0-9][a-zA-Z][0-9])$">Invalid</asp:regularexpressionvalidator>
+    Country
+    <asp:dropdownlist id="ddlCountry" runat="server" cssclass="dropdown">
+                                        <asp:ListItem Value="0" Selected="True">-- Select --</asp:ListItem>
+                                        <asp:ListItem Value="CA">Canada</asp:ListItem>
+                                        <asp:ListItem Value="US">United States</asp:ListItem>
+                                    </asp:dropdownlist>
+    Phone
+    <asp:textbox id="txtPhone" runat="server" cssclass="textbox" maxlength="10" columns="20"></asp:textbox>
+    <span class="textsmall">&nbsp;Numbers Only&nbsp;(Optional) E-mail
+        <asp:textbox id="txtEmail" runat="server" cssclass="textbox" maxlength="200" columns="30"></asp:textbox>
+        Submit Request&nbsp;
+        <asp:hyperlink id="lnkPrivacyPolicy" runat="server" cssclass="tableheader" target="_blank"
+            navigateurl="/privacy.aspx">View Privacy Policy</asp:hyperlink>
+        <asp:button id="btnSubmit" runat="server" cssclass="submitbutton" text="Submit" onclick="btnSubmit_Click">
+    </form>
+</article>*@ 

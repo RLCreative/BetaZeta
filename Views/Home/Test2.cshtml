@@ -1,0 +1,104 @@
+﻿@model Viceroy.Models.SOPPDFHeader
+
+@{
+    ViewBag.Title = "Test2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test2</h2>
+@*<div id="example" class="k-content">
+    <div id="grid" style="width: 600px;">
+    </div>
+    <script>
+    $(document).ready(function () {
+        var crudServiceBaseUrl = "http://localhost:53809/home",
+                        dataSource = new kendo.data.DataSource({
+                            transport: {
+                                read: {
+                                    url: crudServiceBaseUrl + "/test2",
+                                    dataType: "json"
+                                }
+                                //,
+                                //update: {
+                                //    url: crudServiceBaseUrl + "/Update",
+                                //    dataType: "json"
+                                //},
+                                //destroy: {
+                                //    url: crudServiceBaseUrl + "/Destroy",
+                                //    dataType: "json"
+                                //},
+                                //create: {
+                                //    url: crudServiceBaseUrl + "/Create",
+                                //    dataType: "json"
+                                //},
+                                //parameterMap: function (options, operation) {
+                                //    if (operation !== "read" && options.models) {
+                                //        return { models: kendo.stringify(options.models) };
+                                //    }
+                                //}
+                            },
+                            batch: true,
+                            pageSize: 15,
+                            schema: {
+                                model: {
+                                    fields: {
+                                        PDFRefNum: { type: "number" },
+                                        CustomerNum: { type: "number" },
+                                        OrderDate: { type: "date" },
+                                        PONum: { type: "string" },
+                                        Company: { type: "string" },
+                                        OrderedBy: { type: "date" },
+                                        OrderTotal: { type: "string" }
+                                    }
+                                }
+                            });
+    }
+                $("#grid").kendoGrid({
+                    dataSource: dataSource,
+                    navigatable: true,
+                    pageable: true,
+                    height: 620,
+                    toolbar: ["create", "save", "cancel"],
+                    columns: [{
+                        field:"OrderID",
+                        filterable: false
+                    },
+                            "Freight",
+                            {
+                                field: "PDFRefNum",
+                                title: "PDFRefNum",
+                                width: 100,
+                                format: "{0:MM/dd/yyyy}"
+                            }, {
+                                field: "CustomerNum",
+                                title: "CustomerNum",
+                                width: 200
+                            }, {
+                                field: "OrderDate",
+                                title: "OrderDate",
+                                width: 100,
+                                format: "{0:MM/dd/yyyy}"
+                            }, {
+                                field: "PONum",
+                                title: "PONum",
+                                width: 100
+                            }, {
+                                field: "Company",
+                                title: "Company",
+                                width: 100
+                            }, {
+                                field: "OrderedBy",
+                                title: "OrderedBy",
+                                width: 100,
+                                format: "{0:MM/dd/yyyy}"
+                            }, {
+                                field: "OrderTotal",
+                                title: "OrderTotal",
+                                width: 100
+                            }
+                    ],
+                    editable: true
+                });
+            });
+    </script>
+</div>*@
