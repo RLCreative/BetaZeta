@@ -50,24 +50,24 @@
                                                     runat="server" /></a></strong>
                                                     <div id="admin" class="dropdownlog_1column">
                                                         <p>
-                                                            <a href="../../internal/vieworders.aspx" title="View Orders">View Orders</a>
+                                                            <a href="../retailer/vieworders.aspx" title="View Orders">View Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="../../internal/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            <a href="../retailer/orderinfo.aspx" title="Create an Order">Creat an Order
                                                             </a>
                                                         </p>
                                                         <p>
-                                                            <a href="../../internal/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                            <a href="../retailer/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
                                                                 Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="../../internal/viewstock.aspx" title="Stock">View Stock</a>
+                                                            <a href="../retailer/viewstock.aspx" title="Stock">View Stock</a>
                                                         </p>
                                                         <p>
-                                                            <a href="../../internal/retailers/downloads.aspx">Downloads</a>
+                                                            <a href="../retailer/downloads.aspx">Downloads</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            <a href="../security/changepassword.aspx" title="Change Password">Change Password
                                                             </a>
                                                         </p>
                                                         <p>
@@ -93,24 +93,24 @@
                                                     runat="server" /></a></strong>
                                                     <div id="admin" class="dropdownlog_1column">
                                                         <p>
-                                                            <a href="~/internal/retailers/vieworders.aspx" title="View Orders">View Orders</a>
+                                                            <a href="../sales/vieworders.aspx" title="View Orders">View Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            <a href="../sales/orderinfo.aspx" title="Create an Order">Creat an Order
                                                             </a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                            <a href="../sales/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
                                                                 Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/viewstock.aspx" title="Stock">View Stock</a>
+                                                            <a href="../sales/viewstock.aspx" title="Stock">View Stock</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/downloads.aspx">Downloads</a>
+                                                            <a href="../sales/downloads.aspx">Downloads</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            <a href="../security/changepassword.aspx" title="Change Password">Change Password
                                                             </a>
                                                         </p>
                                                         <p>
@@ -136,24 +136,24 @@
                                                     runat="server" /></a></strong>
                                                     <div id="admin" class="dropdownlog_1column">
                                                         <p>
-                                                            <a href="~/internal/retailers/vieworders.aspx" title="View Orders">View Orders</a>
+                                                            <a href="../admin/vieworders.aspx" title="View Orders">View Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/orderinfo.aspx" title="Create an Order">Creat an Order
+                                                            <a href="../admin/orderinfo.aspx" title="Create an Order">Creat an Order
                                                             </a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
+                                                            <a href="../admin/trackorders.aspx?PDFRefNum=NEW" title="Track Orders">Track
                                                                 Orders</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/viewstock.aspx" title="Stock">View Stock</a>
+                                                            <a href="../admin/viewstock.aspx" title="Stock">View Stock</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/internal/retailers/downloads.aspx">Downloads</a>
+                                                            <a href="../retailer/downloads.aspx">Downloads</a>
                                                         </p>
                                                         <p>
-                                                            <a href="~/security/changepassword.aspx" title="Change Password">Change Password
+                                                            <a href="../admin/changepassword.aspx" title="Change Password">Change Password
                                                             </a>
                                                         </p>
                                                         <p>

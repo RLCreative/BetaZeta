@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Zeta.Models;
+using System.Configuration;
+using System.Net.Mail;
 
 namespace Zeta.Controllers
 {
@@ -12,48 +14,79 @@ namespace Zeta.Controllers
 
         public ActionResult Index()
         {
-             return View();
+            //ViewBag.RegHeader = "";
+            //ViewBag.RegList = "";
+            //ViewBag.Cybex = "display: none;";
+            //ViewBag.CybexCar = "display: none;";
+            //ViewBag.Lascal = "display: none;";
+            //ViewBag.ContactInfo = "display: none;";
+            return View();
         }
         [HttpPost]
-        public ActionResult Index(FormCollection form)
-        {
-            TempData["Message"] = form["CategoryID"];
-            if (form["CategoryID"] == "1")
-            {
-                //return View();
-                return Redirect("/Register/Cybex");
+        public ActionResult Index(Person validatePerson, FormCollection form)
+        {            
+             if (ModelState.IsValid)
+                {
+                    try
+                    {
+                        string strHTML;
+                        // INTERNAL EMAIL 
+
+                        SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["SMTPServer"]);
+                        MailAddress from = new MailAddress("Regal Lager, Inc. <alerts@regallager.com>");
+                        MailAddress to = new MailAddress("bill@regallager.com", "Whatever");
+
+                        strHTML = "<html><head></head><body>";
+                        strHTML = strHTML + "First Name: " + form["FirstName"] + "<br />";
+                        strHTML = strHTML + "Last Name: " + form["LastName"] + "<br />";
+                        strHTML = strHTML + "Email Name: " + form["Email"] + "<br />";
+                        strHTML = strHTML + "State: " + form["State"] + "<br />";
+                        strHTML = strHTML + "</body></html>";
+
+                        MailMessage message = new MailMessage(from, to);
+                        message.To.Add("allen@regallager.com");
+                        message.Subject = "Email Request";
+                        message.IsBodyHtml = true;
+                        message.Body = strHTML;
+                        client.EnableSsl = true;
+                        mailer.BypassCertificateError();
+                        client.Send(message);
+
+                        //TempData["Message"] = ">We will try our best to respond to your email within one business day.";
+                        //ViewBag.show = "visibility: hidden;";
+                        return View();
+                        //return Redirect("/Home/EmailSuccess");
+                    }
+                    catch (Exception)
+                    {
+                        //TempData["Message"] = "Uh oh it didn't work!!!";
+                        //ViewBag.show = "visibility: visible;";
+                        return View();
+                    }
+                    // Note to self if valid and want to capture data, this is where the magic happens.
+                    // Redirect them to the home page
+                    //return Redirect("/");
+                }
+
+                // if invalid
+                return View(validatePerson);
+
             }
-            if (form["CategoryID"] == "2")
-            {
-                return Redirect("/Register/CybexCar");
-            }
-            if (form["CategoryID"] == "3")
-            {
-                return Redirect("/Register/Lascal");
-            }
-           
-            return View();
 
         }
-        public ActionResult Cybex()
-        {
-           return View();
-        }
 
-        public ActionResult CybexCar()
-        {
+        
+        //public ActionResult Register()
+        //{
+        //    ViewBag.Header = "visibility: visible;";
+        //    return View();
+        //}
 
-            return View();
-        }
 
-        public ActionResult Lascal()
-        {
-            return View();
-        }
 
 
     }
-}
+
 
 
 

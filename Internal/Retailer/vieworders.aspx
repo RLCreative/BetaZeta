@@ -9,11 +9,9 @@
     <div class="grid_12">
         <h1>Retailer Dashboard</h1>
         <h2>Your Information:</h2>
-        <p>
-            Please review your company information below. <strong>If you are on hold you may submit
-                an order but it will not be processed.</strong>If you have questions, please
-            call Customer Care at (800) 593-5522.
-        </p>
+            Please review your company information below. <strong>&nbsp;&nbsp;If you are on hold you may submit
+            an order but it will not be processed.</strong>&nbsp;&nbsp;  If you have questions, please
+            call Customer Care at (800) 593-5522.<br /><br />
         <asp:SqlDataSource ID="GetRetailerInfo" runat="server" ConnectionString="<%$ ConnectionStrings:RLConnectionString %>"
             SelectCommand="SOP_GetRetailerInfo" SelectCommandType="StoredProcedure">
             <SelectParameters>
@@ -30,36 +28,36 @@
                 <div class="grid_3">
                     <table align="left">
                         <tr>
-                            <td width="120" align="right"><b>Company:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right; width: 120px;"><b>Company:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblCompany" runat="server" Text='<%# Bind("CUSTNAME") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td width="120" align="right"><b>Contact:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right; width: 120px;"><b>Contact:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblContact" runat="server" Text='<%# Bind("CNTCPRSN") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td width="100" align="right"><b>Phone:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right; width: 100px;"><b>Phone:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblPhone" runat="server" Text='<%# Bind("Phone") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>Fax:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>Fax:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblFax" runat="server" Text='<%# Bind("Fax") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>Shipping Method:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>Ship Method:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblShipMethod" runat="server" Text='<%# Bind("SHIPMTHD") %>' />
                             </td>
@@ -69,36 +67,36 @@
                 <div class="grid_3">
                     <table align="left">
                         <tr>
-                            <td align="right"><b>Address:</b></td>
-                            <td align="right"></td>
+                            <td style="text-align: right;"><b>Address:</b></td>
+                            <td style="text-align: right;"></td>
                             <td>
                                 <asp:Label ID="lblFVAddress1" runat="server" Text='<%# Bind("ADDRESS1") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>City:</b></td>
-                            <td align="right"></td>
+                            <td style="text-align: right;"><b>City:</b></td>
+                            <td style="text-align: right;"></td>
                             <td>
                                 <asp:Label ID="lblFVAddress2" runat="server" Text='<%# Bind("CITY") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>State:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>State:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblFVState" runat="server" Text='<%# Bind("STATE") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>Zip:</b></td>
-                            <td align="right"></td>
+                            <td style="text-align: right;"><b>Zip:</b></td>
+                            <td style="text-align: right;"></td>
                             <td>
                                 <asp:Label ID="lblFVZip" runat="server" Text='<%# Bind("ZIP") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>Country:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>Country:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblFVCountry" runat="server" Text='<%# Bind("Country") %>' />
                             </td>
@@ -108,29 +106,29 @@
                 <div class="grid_2">
                     <table align="left">
                         <tr>
-                            <td align="right"><b>Price Level:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>Price Level:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:Label ID="lblPriceLevel" runat="server" Text='<%# Bind("PRCLEVEL") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>InActive:</b></td>
-                            <td align="right"></td>
+                            <td style="text-align: right;"><b>InActive:</b></td>
+                            <td style="text-align: right;"></td>
                             <td>
                                 <asp:CheckBox Enabled="false" ID="ckbActive" runat="server" Checked='<%# Bind("Inactive") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>On Hold:</b></td>
-                            <td width="5" align="right"></td>
+                            <td style="text-align: right;"><b>On Hold:</b></td>
+                            <td style="text-align: right; width: 5px;"></td>
                             <td>
                                 <asp:CheckBox Enabled="false" ID="ckbOnHol" runat="server" Checked='<%# Bind("OnHold") %>' />
                             </td>
                         </tr>
                         <tr>
-                            <td align="right"><b>&nbsp;</b></td>
-                            <td align="right"></td>
+                            <td style="text-align: right;" ><b>&nbsp;</b></td>
+                            <td style="text-align: right;"></td>
                             <td>&nbsp; </td>
                         </tr>
                     </table>
@@ -144,11 +142,10 @@
     <div class="grid_12">
         <hr />
         <h2>Current Orders:</h2>
-        <p>
+        
             More detail about your confirmed orders is available by simply clicking on the (<strong>>
             </strong>) on the left hand side of the row.
-        </p>
-        <br />
+        
         <h4>Pending Orders:</h4>
         
             
@@ -176,8 +173,8 @@
                     <img style="margin-top: 25px;" alt="Loading..." src="../images/loading.gif" />
                 </telerik:RadAjaxLoadingPanel>
                 <telerik:RadGrid runat="server" AllowPaging="True" AllowSorting="True" ID="rgPending"
-                    DataSourceID="PendingOrders" GridLines="None" Skin="Telerik" AllowFilteringByColumn="True"
-                    OnItemCommand="rgPending_ItemCommand">
+                    EnableEmbeddedSkins="true" DataSourceID="PendingOrders" GridLines="None" Skin="Telerik"
+                    AllowFilteringByColumn="True" OnItemCommand="rgPending_ItemCommand">
                     <HeaderContextMenu EnableTheming="True">
                         <CollapseAnimation Duration="200" Type="OutQuint" />
                     </HeaderContextMenu>
@@ -222,11 +219,10 @@
                     </SelectParameters>
                 </asp:SqlDataSource>
                 <!-- CONFIRMED ORDERS -->
-                <br />
                 <h4>Confirmed Orders:</h4>
                 <telerik:RadGrid runat="server" ID="rgConfirmed" AllowFilteringByColumn="True" AllowPaging="True"
-                    AllowSorting="True" ShowStatusBar="True" DataSourceID="DropShipOrders" GridLines="None"
-                    PageSize="12" Skin="Telerik" AutoGenerateColumns="False">
+                    EnableEmbeddedSkins="true" AllowSorting="True" ShowStatusBar="True" DataSourceID="DropShipOrders"
+                    GridLines="None" PageSize="12" Skin="Telerik" AutoGenerateColumns="False">
                     <HeaderContextMenu EnableTheming="True">
                         <CollapseAnimation Type="OutQuint" Duration="200"></CollapseAnimation>
                     </HeaderContextMenu>
@@ -459,7 +455,26 @@
                     FROM dbo.wsPF_Brands INNER JOIN dbo.wsPF_ProductExtraInfo ON dbo.wsPF_Brands.BrandID = dbo.wsPF_ProductExtraInfo.Brand 
                     WHERE (dbo.wsPF_ProductExtraInfo.DisplayOnOrderForm = 1) 
                     ORDER BY dbo.wsPF_ProductExtraInfo.ProductID"></asp:SqlDataSource>
-                </div>                 
-                <br />
-                <br />
+                </div>    
+    <h2>Downloads:</h2>
+    <h4>Print/Fax</h4>             
+    <a href="../Downloads/rl order forms.pdf" target="_blank">Complete Order Form</a><br />
+    <a href="../Downloads/rl price list.pdf" target="_blank">Complete Price List</a><br />    
+    <a href="../Downloads/rl canadian order forms.pdf" target="_blank">Canadian Order Form</a><br />
+    <a href="../Downloads/rl canadian price lists.pdf" target="_blank">Canadian Price List</a><br /><br />
+    <a href="../Downloads/bm order form.pdf" target="_blank">Bambino Mio Order Form</a><br />
+    <a href="../Downloads/bm price list.pdf" target="_blank">Bambino Mio Price List</a><br />
+    <a href="../Downloads/cy order form.pdf" target="_blank">Cybex Order Form</a><br />
+    <a href="../Downloads/cy price list.pdf" target="_blank">Cybex Price List</a><br />
+    <a href="../Downloads/de order form.pdf" target="_blank">Dekor Order Form</a><br />
+    <a href="../Downloads/de price list.pdf" target="_blank">Dekor Price List</a><br />
+    <a href="../Downloads/la order form.pdf" target="_blank">Lascal Order Form</a><br />
+    <a href="../Downloads/la price list.pdf" target="_blank">Lascal Price List</a><br />
+    <a href="../Downloads/mp order form.pdf" target="_blank">My Carry Potty Order Form</a><br />
+    <a href="../Downloads/mp price list.pdf" target="_blank">My Carry Potty Price List</a><br /><br />    
+    <a href="../Downloads/item size and case pack information.pdf" target="_blank">Product Case Pack Information</a><br />
+    <h4>Electronic</h4>
+    <a href="../Downloads/RL Order Form - US.pdf" target="_blank">Complete Order Form</a><br />
+    <a href="../Downloads/RL Order Form - Canada.pdf" target="_blank">Canadian Order Form</a><br />
+<br />
 </asp:Content> 

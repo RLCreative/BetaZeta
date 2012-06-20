@@ -15,6 +15,7 @@ a:active, a:hover {
     padding-left: 0px;
     padding-right: 0px;
     text-decoration: none;
+    display:
 }
 
 a:hover {
@@ -190,7 +191,7 @@ h5.logo a {
 }
 
 .storebar {
-    margin-top: 0px;
+    margin-top: -50px;
     margin-bottom: 20px;
     background-color:  #bdbdbd; 
     border: 1px solid #CCC;
@@ -203,8 +204,14 @@ h5.logo a {
     -moz-box-shadow: inset 0px 0px 1px #edf9ff;
     -webkit-box-shadow: inset 0px 0px 1px #edf9ff;
     box-shadow: inset 0px 0px 1px #edf9ff;
+    
+    transition: margin-top 1s;
+    -moz-transition: margin-top 2s; /* Firefox 4 */
+    -webkit-transition: margin-top 2s; /* Safari and Chrome */
+    -o-transition: margin-top 2s; /* Opera */
 }
 .storebar:hover {
+    margin-top: 0px;
     opacity:1.0;
     filter:alpha(opacity=100);
     background-color: #FBBC00;
@@ -408,7 +415,7 @@ footer {
 
 #menu li a {
 	font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
-	font-size: 1em; 
+	font-size: .9em; 
 	color: #333;
 	display:block;
 	outline:0;
@@ -432,11 +439,12 @@ footer {
     font-weight: bold;
 	/*text-shadow: 1px 1px 1px #000;*/
 }
-#menu li .drop {
+#menu li a.drop {
+    font-size: 1em;
 	padding-right:21px;
     background:url("../Images/drop.png") no-repeat right 9px;
 }
-#menu li:hover .drop {
+#menu li:hover a.drop {
 	background:url("../Images/drop.png") no-repeat right 9px;
 }
 
@@ -466,10 +474,10 @@ footer {
 }
 
 .dropdown_1column  {width: 180px;}
-.dropdown_2columns {width: 360px;}
+.dropdown_2columns {width: 380px;}
 .dropdown_3columns {width: 540px;}
 .dropdown_4columns {width: 720px;}
-.dropdown_5columns {width: 900px;}
+.dropdown_5columns {width: 860px;}
 
 #menu li:hover .dropdown_1column, 
 #menu li:hover .dropdown_2columns, 
@@ -517,7 +525,7 @@ footer {
 
 #menu p, #menu h2, #menu h3, #menu ul li {
 	color: #333;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"proxima-nova", Verdana, sans-serif;
 	text-align:left;
 	text-shadow: 1px 1px 1px #FFFFFF;
     
@@ -560,28 +568,6 @@ footer {
 	-webkit-box-shadow:0px 0px 5px #666666;
 	box-shadow:0px 0px 5px #666666;
 }
-.img_left { /* Image sticks to the left */
-	width:auto;
-	float:left;
-	margin:5px 15px 5px 5px;
-}
-
-#menu li .black_box {
-	background-color:#333333;
-	color: #eeeeee;
-	text-shadow: 1px 1px 1px #000;
-	padding:4px 6px 4px 6px;
-
-	/* Rounded Corners */
-	-moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-
-	/* Shadow */
-	-webkit-box-shadow:inset 0 0 3px #000000;
-	-moz-box-shadow:inset 0 0 3px #000000;
-	box-shadow:inset 0 0 3px #000000;
-}
 
 #menu li ul {
 	list-style:none;
@@ -590,7 +576,7 @@ footer {
 }
 #menu li ul li {
 	font-size: .85em;
-    line-height: 1.9em;
+    line-height: 1.5em;
     font-kerning: auto;
 	position:relative;
 	text-shadow: 1px 1px 1px #ffffff;
@@ -775,11 +761,10 @@ input, select, textarea {
     font-size: .9em;
     font-weight: 400;
     border: 1px solid #333;
-    opacity: .75;
+    opacity: .65;
     padding: 2px 4px;
-    float: left;
     margin: 5px 5px 5px 0px;
-    min-height: 21px;
+    min-height: 20px;
     display: inline-block;
     
     border: 1px solid #999;
@@ -792,26 +777,35 @@ input, select, textarea {
 	-webkit-border-radius: 2px 2px 2px 2px;
 	border-radius: 10px 10px 10px 10px;*/
 }
-/*input:hover {
-        opacity: 1;
-        padding: 2px;
-    }*/
+input:hover {
+    opacity: 1;
+        
+    border: 1px solid #FBBC00;
+    
+    -moz-box-shadow: 1px 1px 1px #FBBC00;
+	-webkit-box-shadow: 1px 1px 1px #FBBC00;
+	box-shadow: 1px 1px 4px #FBBC00;
+    }
 fieldset {
+    margin: 0;
+    padding: 0;
+}
+.form-label {
+    margin: 4px 0px 0px 0px;
+    min-width:73px;
+    vertical-align: middle;
+    text-align: left;
+    padding-right: 10px;
+    height: 20px;
     display: block;
-    margin: 10px 0px;
 }
-label {
-    display: inline;
-    margin:2px 0px;
-    max-width: 100px;
-    min-width: 80px;
-    float: left;
-    vertical-align: text-top;
+.editor-field {
+    display: block;
+    margin: 3px 0px;
 }
-.field-validation-valid {
-    float: left;
-    padding-right: 20px;
-    color:  red;
+.field-validation-error {
+    font-size: .8em;
+    color:  #FBBC00;
 }
 select {
 border: 1px solid #333;

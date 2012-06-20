@@ -28,7 +28,7 @@ public class AutocompletItemNumbers : System.Web.Services.WebService
     public string[] AutoCompleteItemNum(string prefixText)
     {
         
-        string sql = "SELECT RTRIM([ProductID]) as ProductID FROM wsPF_ProductExtraInfo WHERE DisplayOnOrderForm = '1' and [ProductID] not like '15-%'";
+        string sql = "SELECT RTRIM([ProductID]) as ProductID FROM wsPF_ProductExtraInfo WHERE DisplayOnOrderForm = '1' and [ProductID] not like '15-%' and [ProductID] like '" + @prefixText + "%'";
         SqlDataAdapter da = new SqlDataAdapter(sql, ConfigurationManager.ConnectionStrings["RLConnectionString"].ToString());
         //da.SelectCommand.Parameters.Add("@prefixText", SqlDbType.Char, 10).Value = prefixText+ "%"; 
         DataTable dt = new DataTable();
@@ -46,8 +46,8 @@ public class AutocompletItemNumbers : System.Web.Services.WebService
     [WebMethod]
     public string[] AutoCompleteDescription(string prefixText)
     {
-        
-        string sql = "SELECT RTRIM([Name]) as Name FROM wsPF_ProductExtraInfo WHERE DisplayOnOrderForm = '1' and [Name] like 'Akord%'";
+
+        string sql = "SELECT RTRIM([Name]) as Name FROM wsPF_ProductExtraInfo WHERE DisplayOnOrderForm = '1' and [Name] not like 'Akord%' and [Name] like '" + @prefixText + "%'";
         SqlDataAdapter da = new SqlDataAdapter(sql, ConfigurationManager.ConnectionStrings["RLConnectionString"].ToString());
         //da.SelectCommand.Parameters.Add("@prefixText", SqlDbType.Char, 10).Value = prefixText+ "%"; 
         DataTable dt = new DataTable();

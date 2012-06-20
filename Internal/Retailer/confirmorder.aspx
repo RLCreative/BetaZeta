@@ -20,7 +20,7 @@
             OnRowDataBound="gvOrderConfirm_RowDataBound" OnRowCommand="gvOrderConfirm_RowCommand">
             <HeaderStyle HorizontalAlign="Left" BackColor="#7E7E7E" ForeColor="#FFFFFF" />
             <FooterStyle HorizontalAlign="Right" BackColor="#7E7E7E" ForeColor="#FFFFFF" />
-            <AlternatingRowStyle BackColor="#F8F8F8" />
+            
             <Columns>
                 <asp:BoundField DataField="ItemNum" HeaderText="ItemNum" />
                 <asp:BoundField DataField="Description" HeaderText="Description" />

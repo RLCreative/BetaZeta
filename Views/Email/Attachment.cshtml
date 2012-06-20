@@ -1,0 +1,22 @@
+﻿@model Zeta.Models.AddAttachment
+
+@{
+    ViewBag.Title = "Attachment";
+}
+
+<h2>Attachment</h2>
+@using (Html.BeginForm("Attachment", "Email", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+    
+        <div>
+            @Html.LabelFor(x => x.Question)
+            @Html.TextAreaFor(x => x.Question)
+        </div>
+        <div>
+            <label for="attachment">Attachment</label>
+            <input type="file" name="attachment" id="attachment" />
+        </div>
+        <input type="submit" value="Send" />
+    
+}

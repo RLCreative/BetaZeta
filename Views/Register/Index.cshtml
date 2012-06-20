@@ -1,40 +1,236 @@
 ﻿@{
-    Layout = "~/Views/Shared/_LayoutReg.cshtml"; 
+    Layout = "~/Views/Shared/_LayoutReg.cshtml";
     ViewBag.SubTitle = "Product Registration for Safety Alert or Recall Only"; 
             
 }
-@section script {
-<style>
-    ul#topmenu li a.registerselected {
-        color: rgb(251, 188, 0);
-        text-decoration: none;
-        padding-bottom: 3px;
-        border-bottom: 1px dotted rgb(251, 188, 0);
-    }
-    ul#topmenu li a.registerselected:before {
-            content: " ";
-            display: block;
-            border-color: rgb(251, 188, 0) transparent;
-            border-style: solid;
-            border-width: 7px 7px 0px;
-            left: 50%;
-            margin: 0 0 0 240px;
-            position: absolute;
-            top: 55px;
-            width: 0;
-        }
-</style>
-}
-@Html.Partial("_RegHeader")
-<section>
-    <form method="post" id="myForm">
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+    <h2>@ViewBag.Message</h2>
+</hgroup>
+@model Zeta.Models.Person
 
-<select id="CategoryID" name="CategoryID" onchange="document.getElementById('myForm').submit();">
-    <option value="0" selected="selected">----------------------- Select a Product to Register ----------------------- </option>
-    <option value="1">Cybex® Strollers, 2.GO Carriers, or Carry Cots</option>
-    <option value="2">Cybex® Child Restraints</option>
-    <option value="3">Lascal® Stroller Boards or Gates</option>
-</select>
-</form>
-</section>
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+<script type="text/javascript" src="../../Scripts/validator.js"></script>
+<article>
+    <section>
+        <label></label>
+        <div id="RegHeader" style="display: none;">
+            <p style="font-size: 1em; padding-bottom: 0px;">
+                We will use the information provided to contact you only if there is a safety alert
+                or recall for this product. We will not sell, rent, or share your personal information.
+                If you register on this Web site you do not need to fill out the card that came
+                with your product.
+            </p>
+            <hr />
+        </div>
+        <div id="RegList">
+            <select id="CategoryID" name="CategoryID" onchange="divChange();">
+                <option value="0" selected="selected">----------------------- Select a Product to Register
+                    ----------------------- </option>
+                <option value="1">Cybex® Strollers, 2.GO Carriers, or Carry Cots</option>
+                <option value="2">Cybex® Child Restraints</option>
+                <option value="3">Lascal® Stroller Boards or Gates</option>
+            </select>
+        </div>
+    </section>
+    <form method="post" id="myForm">
+    <section>
+        <div id="Cybex" style="display: none;">
+            Model Name:&nbsp;<br />
+            <select id="ModName">
+                <option value="">-----------</option>
+                <option value="Callisto">Callisto</option>
+                <option value="Topaz">Topaz</option>
+                <option value="Onyx">Onyx</option>
+                <option value="Ruby">Ruby</option>
+                <option value="">-----------</option>
+                <option value="CarryCot">Callisto Carry Cot</option>
+                <option value="">-----------</option>
+                <option value="2GO">2.GO Carrier</option>
+            </select><label style="display: none;" id="RequiredMessage0">Required</label>
+
+            <p>
+                Model Number:&nbsp;<br /><input type="text" id="modelNum" /><label style="display: none;"
+                    id="RequiredMessage1">Required</label>
+            </p>
+            <p>
+                Manufacture Date:&nbsp;<br /><input type="text" id="manDate" /><label style="display: none;"
+                    id="RequiredMessage2">Required</label>
+            </p>
+        </div>
+        <div id="CybexCar" style="display: none;">
+
+            <p style="font-size: 1.125em;">
+                <strong>FOR YOUR CHILD’S CONTINUED SAFETY</strong>
+            </p>
+            <p style="font-size: 1em; padding-bottom: 0px;">
+                Although child restraint systems undergo thorough testing and evaluation, it is
+                possible that a child restraint could be recalled. In case of a recall, we can reach
+                you only if we have your name and address, so please fill in the registration form
+                to be on our recall list. In order to properly register your child restraint system,
+                you will need to provide the Model Number and Date of Manufacture. This information
+                is printed on the registration card and can also be found on a white label located
+                on the bottom of the child restraint system. This registration is only applicable
+                to child restraint systems purchased in the United States.
+            </p>
+            <hr />
+            <p>
+                Model Name:&nbsp;<select id="ModNameCarSeat">
+                    <option value="">--------- Select ----------</option>
+                    <option value="Aton">Aton Infant Car Seat</option>
+                    <option value="SXFix">Solution X-fix</option>
+                    <option value="AtonBase">Aton Extra Base</option>
+                </select>
+                <label style="display: none;" id="RequiredMessage3">Required</label>
+            </p>
+            <p>
+                Model Number:&nbsp;<select id="ModNumCarSeat">
+                    <option value="">-------------------- Select --------------------</option>
+                    <option value="12-4000012">12-4000012 Aton Purple Potion</option>
+                    <option value="12-4000015">12-4000015 Aton Lipstick</option>
+                    <option value="12-4000016">12-4000016 Aton Eclipse</option>
+                    <option value="12-4000017">12-4000017 Aton Coffee</option>
+                    <option value="12-4000018">12-4000018 Aton Moonlight</option>
+                    <option value="12-4000019">12-4000019 Aton Shadow</option>
+                    <option value="12-4000020">12-4000020 Aton Pure Black</option>
+                    <option value="12-4001012">12-4001012 Aton Purple Potion Plus</option>
+                    <option value="12-4001015">12-4001015 Aton Lipstick Plus</option>
+                    <option value="12-4001016">12-4001016 Aton Eclipse Plus</option>
+                    <option value="12-4001018">12-4001018 Aton Moonlight Plus</option>
+                    <option value="12-4001019">12-4001019 Aton Shadow Plus</option>
+                    <option value="">---------------------------------------</option>
+                    <option value="12-8000005">12-8000005 Aton Extra Base</option>
+                    <option value="">---------------------------------------</option>
+                    <option value="050020015">050020015 Solution X-Fix Berry</option>
+                    <option value="050020018">050020018 Solution X-Fix Grenadine</option>
+                    <option value="050020019">050020019 Solution X-Fix Stone</option>
+                    <option value="050020020">050020020 Solution X-Fix Cinnamon</option>
+                    <option value="050020021">050020021 Solution X-Fix Navy</option>
+                    <option value="050020022">050020022 Solution X-Fix Raven</option>
+                    <option value="050076008">050076008 Solution X-Fix Berry Plus</option>
+                    <option value="050076010">050076010 Solution X-Fix Grenadine Plus</option>
+                    <option value="050076011">050076011 Solution X-Fix Stone Plus</option>
+                    <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
+                    <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
+                </select>
+                <label style="display: none;" id="RequiredMessage4">Required</label>
+            </p>
+            <p>
+                Manufacture Date:&nbsp;<select id="ManDateCarSeat">
+                    <option value="">-- Select --</option>
+                    <option value="042011">04/2011</option>
+                    <option value="032011">03/2011</option>
+                    <option value="022011">02/2011</option>
+                    <option value="042010">04/2010</option>
+                    <option value="022010">02/2010</option>
+                </select>
+                <label style="display: none;" id="RequiredMessage5">Required</label>
+            </p>
+        </div>
+        <div id="Lascal" style="display: none;">
+
+            <p>
+                Model Name:&nbsp;
+            <select id="ModNameLascal" name="ModNameLascal">
+                <option value="">-----------</option>
+                <option value="KiddyGuard Avant">KiddyGuard Avant</option>
+                <option value="">-----------</option>
+                <option value="KiddyBoard Maxi">KiddyBoard Maxi</option>
+            </select><label style="display: none;" id="RequiredMessage6">Required</label>
+            </p>
+            <p>
+                Model Number:&nbsp;<input id="ModNumLascal" type="text" /><label style="display: none;"
+                    id="RequiredMessage7">Required</label>
+            </p>
+            <p>
+                Manufacture Date:&nbsp;<input id="ManDateLascal" type="text" /><label style="display: none;"
+                    id="RequiredMessage8">Required</label>
+            </p>
+        </div>
+        <div id="ContactInfo" style="display: none;">
+            @Html.ValidationSummary(true)
+
+            <fieldset>
+                <legend></legend>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.FirstName, "First Name")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:200px;" })
+                    @Html.ValidationMessageFor(model => model.FirstName)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.LasstName, "Last Name")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.LasstName, new { @style = "width:200px;" })
+                    @Html.ValidationMessageFor(model => model.LasstName)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.Address, "Address")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
+                    @Html.ValidationMessageFor(model => model.Address)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.Address2, "Suite/Apt")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Address2, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.Address2)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.City, "City")
+                </div>
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.City, new { @style = "width:200px;" })
+                    @Html.ValidationMessageFor(model => model.City)
+                </div>
+
+                <div class="form-label">
+                    @Html.LabelFor(model => model.State, "State")
+                </div>
+
+                <div class="editor-field">
+                    <select id="State" name="State" style="width: 50px;">
+                        <option value="AK">AK</option>
+                        <option value="AL">
+                        AL<option>
+                    </select>
+                    @* @Html.TextBoxFor(model => model.State, new { @style = "width:50px;" })*@
+                    @Html.ValidationMessageFor(model => model.State)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.Zip, "ZIP® Code")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
+                    @Html.ValidationMessageFor(model => model.Zip)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.Phone, "Phone")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:100px;", placeholder = "Numbers Only" })
+                    @Html.ValidationMessageFor(model => model.Phone)
+                </div>
+                <div class="form-label">
+                    @Html.LabelFor(model => model.Email, "E-mail")
+                </div>
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Email, new { @style = "width:200px;" })
+                    @Html.ValidationMessageFor(model => model.Email)
+                </div>
+            </fieldset>
+
+            <div style="margin-top: 20px;">
+                <input type="submit" value="Submit" class="button" onclick="Validate();" />
+            </div>
+        </div>
+    </section>
+    </form>
 </article>

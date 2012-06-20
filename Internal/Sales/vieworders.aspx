@@ -1,15 +1,14 @@
-<%@ Page Title="Pending::Confirmed orders" Language="C#" MasterPageFile="~/internal/internal.master"
-    AutoEventWireup="true" Inherits="sales_vieworders" CodeBehind="vieworders.aspx.cs" %>
+<%@ Page Title="Pending::Confirmed orders" Language="C#" MasterPageFile="~/internal/internal.master" AutoEventWireup="true" Inherits="sales_vieworders" CodeBehind="vieworders.aspx.cs" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
-    <div id="salerepview">
+<div id="salerepview">
+<h1>Rep Dashboard</h1>
 <h2><strong>View Orders:</strong></h2>
 <img id="Img1" src="~/images/right.gif" alt="" runat="server" />Use this page to view both pending/confirmed orders.<br />
 <img id="Img2" src="~/images/right.gif" alt="" runat="server" />You can see more details about your confirmed orders by simply clicking 
 on the (<strong>></strong>) on the left hand side of the row.
 <h4><strong>Pending Orders:</strong></h4>
-
 <!-- PENDING ORDERS -->
 <telerik:RadAjaxManager runat="server">
     <ajaxsettings>
@@ -33,7 +32,6 @@ on the (<strong>></strong>) on the left hand side of the row.
         Width="75px" Transparency="3" MinDisplayTime="0">
         <img style="margin-top: 25px;" alt="Loading..." src="../images/loading.gif" />
 </telerik:RadAjaxLoadingPanel>
-
 <telerik:radgrid id="rgPending" runat="server" AllowPaging="True" AllowSorting="True" 
         DataSourceID="PendingOrders" GridLines="None" 
         Skin="Telerik" 
@@ -233,6 +231,30 @@ on the (<strong>></strong>) on the left hand side of the row.
 
 </asp:SqlDataSource>
 
-</div> 
+</div>
+    <h2>Downloads:</h2>
+    <h4>Print/Fax</h4>
+    <a href="../Downloads/rl order forms.pdf" target="_blank">Complete Order Form</a><br />
+    <a href="../Downloads/rl price list.pdf" target="_blank">Complete Price List</a><br />
+    <a href="../Downloads/rl canadian order forms.pdf" target="_blank">Canadian Order Form</a><br />
+    <a href="../Downloads/rl canadian price lists.pdf" target="_blank">Canadian Price List</a><br />
+    <br />
+    <a href="../Downloads/bm order form.pdf" target="_blank">Bambino Mio Order Form</a><br />
+    <a href="../Downloads/bm price list.pdf" target="_blank">Bambino Mio Price List</a><br />
+    <a href="../Downloads/cy order form.pdf" target="_blank">Cybex Order Form</a><br />
+    <a href="../Downloads/cy price list.pdf" target="_blank">Cybex Price List</a><br />
+    <a href="../Downloads/de order form.pdf" target="_blank">Dekor Order Form</a><br />
+    <a href="../Downloads/de price list.pdf" target="_blank">Dekor Price List</a><br />
+    <a href="../Downloads/la order form.pdf" target="_blank">Lascal Order Form</a><br />
+    <a href="../Downloads/la price list.pdf" target="_blank">Lascal Price List</a><br />
+    <a href="../Downloads/mp order form.pdf" target="_blank">My Carry Potty Order Form</a><br />
+    <a href="../Downloads/mp price list.pdf" target="_blank">My Carry Potty Price List</a><br />
+    <br />
+    <a href="../Downloads/item size and case pack information.pdf" target="_blank">Product
+        Case Pack Information</a><br />
+    <h4>Electronic</h4>
+    <a href="../Downloads/RL Order Form - US.pdf" target="_blank">Complete Order Form</a><br />
+    <a href="../Downloads/RL Order Form - Canada.pdf" target="_blank">Canadian Order Form</a><br />
+    <br />
 </asp:Content>
 

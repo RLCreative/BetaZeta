@@ -22,13 +22,13 @@
                     <asp:TextBox ID="txtItemNum" runat="server" AutoPostBack="True" OnTextChanged="txtItemNum_TextChanged"></asp:TextBox>
                 </td>
                 <cc1:AutoCompleteExtender ID="aceItemNumber" runat="server" TargetControlID="txtItemNum"
-                    ServicePath="~/Autocomplete.asmx" ServiceMethod="AutoCompleteItemNum" MinimumPrefixLength="1">
+                    ServicePath="../Autocomplete.asmx" ServiceMethod="AutoCompleteItemNum" MinimumPrefixLength="1">
                 </cc1:AutoCompleteExtender>
                 <td style="vertical-align: top;">
                     <asp:TextBox ID="txtDescription" Width="300" runat="server" AutoPostBack="True" OnTextChanged="txtDescription_TextChanged"></asp:TextBox>
                 </td>
                 <cc1:AutoCompleteExtender ID="aceDescription" runat="server" TargetControlID="txtDescription"
-                    ServicePath="~/Autocomplete.asmx" ServiceMethod="AutoCompleteDescription" MinimumPrefixLength="1">
+                    ServicePath="../Autocomplete.asmx" ServiceMethod="AutoCompleteDescription" MinimumPrefixLength="1">
                 </cc1:AutoCompleteExtender>
                 <td style="vertical-align: top;">
                     <asp:Label ID="lblPrice" runat="server"></asp:Label></td>
@@ -59,7 +59,7 @@
             OnRowDataBound="gvShoppingCart_RowDataBound" OnRowCommand="gvShoppingCart_RowCommand">
             <HeaderStyle HorizontalAlign="Left" BackColor="#7E7E7E" ForeColor="#FFFFFF" />
             <FooterStyle HorizontalAlign="Right" BackColor="#7E7E7E" ForeColor="#FFFFFF" />
-            <AlternatingRowStyle BackColor="#F8F8F8" />
+            
             <Columns>
                 <asp:BoundField DataField="ItemNum" HeaderText="ItemNum" />
                 <asp:BoundField DataField="Description" HeaderText="Description" />

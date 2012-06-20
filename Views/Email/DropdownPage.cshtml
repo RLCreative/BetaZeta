@@ -1,0 +1,58 @@
+﻿@model Zeta.Models.DropDownViewModel
+
+<div>
+    @Html.DropDownList("State", Model.StateList, new { onchange = "getVal()" })
+  @*  @Html.DropDownList("fruit", Model.FruitsList)
+    <br />
+    <label id="label1"></label>
+    <br />
+    <label id="label2"></label>
+    <br />
+    <label id="label3"></label>
+    <br />
+    <label id="label4"></label>*@
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('#fruit').change(function()
+        {
+            var value = this.value;
+            var txt = this.textContent;
+            document.getElementById('label1').textContent = value;
+            document.getElementById('label2').textContent = txt;            
+        });
+    });
+    //function getVal() {
+    //    //var input = $('#fruit').value();
+    //    //var label1 = document.getElementById('label1');
+    //    //var label2 = document.getElementById('label2');
+    //    //var label3 = document.getElementById('label3');
+    //    //var label4 = document.getElementById('label4');
+
+    //    //var dropdownval = document.getElementById('fruit').valueOf();
+    //    //$("#fruit option:selected").each(function () {
+    //    //    strSelected += $(this)[0].value;
+    //    //});
+    //
+    //    if (fruit.value == "1") {            
+    //        document.getElementById('label1').textContent = "1";            
+    //        document.getElementById('label2').textContent = "I changed";
+    //        document.getElementById('label3').textContent = "I am label 3";
+    //        document.getElementById('label4').textContent = input;
+
+    //    } else if (fruit.value == "2") {
+    //        document.getElementById('label1').textContent = "2";
+    //        document.getElementById('label2').textContent = "I changed again";
+    //        document.getElementById('label3').textContent = "I am label 3";
+    //        document.getElementById('label4').textContent = input;
+    //    } else if (fruit.value == "3") {
+    //        document.getElementById('label1').textContent = "3";
+    //        document.getElementById('label2').textContent = "I changed once more";
+    //        document.getElementById('label3').textContent = "I am label 3";
+    //        document.getElementById('label4').textContent = input;
+    //    }
+    //    // do something if necessary
+
+    //    return false;
+    //
+</script>

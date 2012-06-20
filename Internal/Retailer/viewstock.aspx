@@ -10,7 +10,7 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" Runat="Server">
 <div id="retailersview">
-<h2><strong>View Stock Status:</strong></h2>
+<h2>View Stock Status:</h2>
 <img id="Img1" src="~/images/right.gif" runat="server" alt="" />Use this page to view the 
     stock status/availability of products.<br /><br />
 <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
@@ -169,9 +169,10 @@
                       IV00102 ON wsPF_ProductExtraInfo.ProductID = IV00102.ITEMNMBR INNER JOIN
                       IV00101 ON IV00102.ITEMNMBR = IV00101.ITEMNMBR INNER JOIN
                       wsPF_Brands ON wsPF_ProductExtraInfo.Brand = wsPF_Brands.BrandID
-WHERE     (IV00101.INACTIVE <> '1') AND (wsPF_ProductExtraInfo.DisplayOnOrderForm = '1') AND (IV00102.LOCNCODE = 'MAIN') AND (IV00102.ITEMNMBR LIKE '15-%')
+WHERE     (IV00101.INACTIVE <> '1') AND (wsPF_ProductExtraInfo.DisplayOnOrderForm = '1') AND (IV00102.LOCNCODE = 'MAIN')
 ORDER BY wsPF_ProductExtraInfo.ProductID">
 </asp:SqlDataSource>  
+    <br /><br />
 </div> 
 </asp:Content>
 

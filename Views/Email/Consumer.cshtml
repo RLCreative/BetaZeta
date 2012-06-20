@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.SubTitle = "Send Us an Email";
+}
+@model Zeta.Models.Person
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+</hgroup>
+@section script{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+
+</script>
+}
+<article>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <span class="message">@TempData["Message"]</span>
+        <fieldset>
+            <legend></legend>
+            <div class="form-label">
+                @Html.LabelFor(model => model.FirstName, "First Name")
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.FirstName, "",
+            new { @style = "width:250px;" })
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+            <div class="form-label">
+                @Html.LabelFor(model => model.LasstName, "Last Name")
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.LasstName, "",
+            new { @style = "width:250px;" })
+                @Html.ValidationMessageFor(model => model.LasstName)
+            </div>
+            <div class="form-label">
+                @Html.LabelFor(model => model.Phone)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Phone, "Phone",
+            new { placeholder = "Numbers Only", @style = "width:100px;" })
+                @Html.ValidationMessageFor(model => model.Phone)
+            </div>
+            <div class="form-label">
+                @Html.LabelFor(model => model.Email)
+            </div>
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.Email, "Email",
+            new { @style = "width:250px;" })
+                @Html.ValidationMessageFor(model => model.Email)
+            </div>
+            <div class="form-label">
+                <label for="Comments">Comments</label>
+            </div>
+            @Html.TextArea("Profile", new { placeholder = "Be specific with your issue. If you know your Model and Model Numbers, please include them.", cols = 60, rows = 10 })
+            <p>
+                Do you have an image that would help us assist you? Please attach it to your e-mail.
+            </p>
+            @Html.TextBoxFor(model => model.Upload, "Attach",
+            new { @style = "width:300px;", placeholder = "We only accept .jpg files up to 2 Mb in size." })
+            <input type="submit" value="Browse" class="smallbutton" />
+            <input type="submit" value="Submit" class="button" />
+        </fieldset>
+    }
+</article>
