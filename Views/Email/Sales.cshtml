@@ -1,0 +1,88 @@
+﻿@{   ViewBag.SubTitle = "Sales Inquiry";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+</hgroup>
+<article>
+    <section>
+        <div id="pnlGreeting" runat="server">
+            <p>
+                Regal Lager distributes brands that offer quality and innovative products to your
+                customer. If you are interested in becoming a retailer for the brands we distribute,
+                please complete the form below once you have secured a retail location.
+            </p>
+        </div>
+    </section>
+    <section>
+        <label class="form">How did you hear us or or brands?</label>
+        <select>
+            <option selected="selected" value="0">---------- Select ----------</option>
+            <option value="American Baby">American Baby</option>
+            <option value="Baby Couture">Baby Couture</option>
+            <option value="Baby Talk">Baby Talk</option>
+            <option value="Blog">A Blog</option>
+            <option value="Consumer Reports">Consumer Reports</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Fit Pregnancy">Fit Pregnancy</option>
+            <option value="New Parent">New Parent</option>
+            <option value="One Step Ahead">One Step Ahead</option>
+            <option value="Parents">Parents</option>
+            <option value="Pregnancy">Pregnancy</option>
+            <option value="Pregnancy &amp; Newborn">Pregnancy &amp; Newborn</option>
+            <option value="Search Engine">Search Engine</option>
+            <option value="Facebook">Facebook</option>
+            <option value="Twitter">Twitter</option>
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Other">Other</option>
+        </select>
+        <label class="form">Type of Business</label>
+        <select>
+            <option selected="selected" value="0">-- Select --</option>
+            <option value="Juvenile">Juvenile</option>
+            <option value="Toy">Toy</option>
+            <option value="Gift">Gift</option>
+            <option value="Internet">Internet</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label class="form">
+            Years in Business</label>
+
+        <input type="text" />
+        <label class="form">
+            Size of Store</label>
+
+        <input type="text" />
+        <label class="form">Resale ID#</label>
+
+        <input type="text" />
+
+        <label class="form">Are you a blogger?</label>
+        <div class="editor-field">
+            <input type="checkbox" name="blogger" />Yes&nbsp;
+        <input type="checkbox" name="blogger" />No
+        </div>
+
+       <label class="form">What brands interest you?</label>
+
+        <select id="ddlBrands">
+            <option value="BambinoMio">Bambino Mio&reg;</option>
+            <option value="Cybex">Cybex&reg;</option>
+            <option value="Dekor">D&eacute;kor&reg;</option>
+            <option value="Lascal">Lascal&reg;</option>
+            <option value="MyCarryPotty">My Carry Potty&trade;</option>
+        </select>
+
+        <label class="form">
+            What specific products you are interested in?</label>
+
+        <textarea id="txtProducts" style="width: 300px; min-height: 100px;"></textarea>
+
+        <label class="form">Any additional information about your request</label>
+
+        <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">
+</section>
+</article>
+<aside>
+    <img src="~/Images/rl-sales.png" alt="Regal Lager Sales Inquiry" />
+</aside>

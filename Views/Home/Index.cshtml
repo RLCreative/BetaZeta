@@ -35,33 +35,13 @@
         });
     });
     </script>
-    <style>
-    ul#topmenu li a.homeselected {
-        color: rgb(251, 188, 0);
-        text-decoration: none;
-        padding-bottom: 3px;
-        border-bottom: 1px dotted rgb(251, 188, 0);
-    }
-
-        ul#topmenu li a.homeselected:before {
-            content: " ";
-            display: block;
-            border-color: rgb(251, 188, 0) transparent;
-            border-style: solid;
-            border-width: 7px 7px 0px;
-            left: 50%;
-            margin: 0 0 0 -45px;
-            position: absolute;
-            top: 55px;
-            width: 0;
-        }
-</style>
     @*--END SLIDER PARAMETERS--*@
 }
 @section movie {
     <div id="movie" class="content-wrapper">
         <div id="slider" class="nivoSlider">
             <img src="~/Images/slider-00.jpg" alt="CYBEX Aton" width="960" height="500" />
+            <img src="~/Images/slider-01.jpg" alt="CYBEX Aton" width="960" height="500" />
         </div>
         <div id="htmlcaption" class="nivo-html-caption">
             <strong>This</strong>is an example of a <em>HTML</em>caption with <a href="#">a link
@@ -98,7 +78,7 @@
             Like our Facebook Pages, follow us on Twitter, or sign up for our Newsletter!
         </p>
         <a href="http://regallager.us4.list-manage2.com/subscribe?u=76ee5d27b971623fdcd36b824&id=aa44790b5e"
-            target="_self" title="Subscribe to Our Newsletter">Subscribe!</a>
+            target="_self" title="Subscribe to Our Newsletter" class="button">Subscribe!</a>
     </section>
 </section>
 @section nivoscript {

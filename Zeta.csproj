@@ -404,7 +404,6 @@
     </Compile>
     <Compile Include="Models\AddAttachment.cs" />
     <Compile Include="Models\Email.cs" />
-    <Compile Include="Models\ProductRegistration.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1108,10 +1107,10 @@
     <Content Include="Views\Email\Consumer.cshtml" />
     <Content Include="Views\Support\FormResults.cshtml" />
     <Content Include="Views\Shared\_FormConsumerContact.cshtml" />
-    <Content Include="Views\Email\Media.cshtml" />
     <Content Include="Views\Email\Attachment.cshtml" />
     <Content Include="Views\Email\AutoComplete.cshtml" />
     <Content Include="Views\Email\DropdownPage.cshtml" />
+    <Content Include="Views\Email\Sales.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

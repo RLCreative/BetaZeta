@@ -9,18 +9,30 @@ body {
     font-weight: 400;
 }
 
-a:link, a:visited,
-a:active, a:hover {
-    color: rgb(251, 188, 0);
+a {
+    color:rgb(100, 200, 255);
+}
+
+a:link {
+    color:rgb(2, 159, 235);
     padding-left: 0px;
     padding-right: 0px;
     text-decoration: none;
-    display:
+    display: inline;
 }
 
-a:hover {
-     color: rgb(255, 255, 255);
+a:active, a:hover {
+    color:rgb(255, 255, 255);
 }
+
+a:visited {
+    /*color: rgb(251, 188, 0);*/
+    color: red;
+}
+a:visited:hover {
+    color:rgb(255, 255, 255);
+}
+
 header, footer, hgroup,
 nav, section {
     display: block;
@@ -736,7 +748,7 @@ aside img {
     border-radius: 10px 10px 10px 10px;
     border: 1px solid rgba(0, 0, 0, .7);
     margin-bottom: 30px;
-    opacity: .85;
+    opacity: .95;
 }
 img.rounded {
     border-radius: 10px 10px 10px 10px;
@@ -758,20 +770,20 @@ img.rounded {
 input, select, textarea {
     font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
 	color: #333;
-    font-size: .9em;
+    font-size: 1em;
     font-weight: 400;
     border: 1px solid #333;
-    opacity: .65;
-    padding: 2px 4px;
-    margin: 5px 5px 5px 0px;
-    min-height: 20px;
+    opacity: .75;
+    padding: 4px 6px;
+    margin: 2px 5px 5px 0px;
     display: inline-block;
+    background-color:rgb(255, 255, 255);
     
     border: 1px solid #999;
     
-    -moz-box-shadow:inset 1px 1px 1px #1e1e1e;
-	-webkit-box-shadow:inset 1px 1px 1px #1e1e1e;
-	box-shadow:inset 1px 1px 1px #1e1e1e;
+    -moz-box-shadow:inset 1px 1px 2px #1e1e1e;
+	-webkit-box-shadow:inset 1px 1px 2px #1e1e1e;
+	box-shadow:inset 1px 1px 2px #1e1e1e;
     
     /*-moz-border-radius: 5px 2px 2px 2px;
 	-webkit-border-radius: 2px 2px 2px 2px;
@@ -780,24 +792,39 @@ input, select, textarea {
 input:hover {
     opacity: 1;
         
-    border: 1px solid #FBBC00;
+    border: 1px solid #999;
     
-    -moz-box-shadow: 1px 1px 1px #FBBC00;
-	-webkit-box-shadow: 1px 1px 1px #FBBC00;
-	box-shadow: 1px 1px 4px #FBBC00;
+    -moz-box-shadow: 1px 1px 1px #FFF;
+	-webkit-box-shadow: 1px 1px 1px #FFF;
+	box-shadow: 1px 1px 4px #FFF;
     }
+.inputglow {
+    opacity: 1;
+        
+    border: 1px solid #999;
+    
+    -moz-box-shadow: 1px 1px 1px #FFF;
+	-webkit-box-shadow: 1px 1px 1px #FFF;
+	box-shadow: 1px 1px 4px #FFF;
+}
 fieldset {
     margin: 0;
     padding: 0;
 }
-.form-label {
-    margin: 4px 0px 0px 0px;
-    min-width:73px;
+label {
     vertical-align: middle;
     text-align: left;
-    padding-right: 10px;
-    height: 20px;
-    display: block;
+}
+label.form {
+    margin: 5px 0px 0px 0px;
+    font-size: .9em;
+    font-weight:400;
+    display:block;
+}
+label.required {
+    font-size: .9em;
+    color:rgb(251, 188, 0);
+    display:inline;
 }
 .editor-field {
     display: block;
@@ -856,7 +883,7 @@ border: 1px solid #333;
 }
 .smallbutton {
     display: inline-block;
-    padding: 4px 8px;
+    padding: 5px 8px;
     font-size: .75em;
     color: rgb(255, 255, 255);
     cursor: pointer;

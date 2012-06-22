@@ -7,38 +7,51 @@
 <article>
     <h2>Customer Care Department</h2>
     <p>
-            If you need to speak with a Customer Care agent directly, please call our Customer
-            Care Department at <strong>1-800-593-5522</strong>. They can assist you with any
-            questions you may have about the Regal Lager line up of products.
-        </p> <h3>Our Hours:</h3>
+        If you need to speak with a Customer Care agent directly, please call our Customer
+        Care Department at <strong>1-800-593-5522</strong>. They can assist you with any
+        questions you may have about the Regal Lager line up of products.
+    </p>
+    <h3>Our Hours:</h3>
     <p>
         Monday&ndash;Friday&nbsp;<strong>8:30 am&ndash;5:30 pm (EST)</strong>
         <br />
         Saturday&ndash;Sunday&nbsp;<strong>Voicemail Only</strong>
     </p>
     <p>Closed on all major holidays.</p>
-    <h2>Email Us</h2>
+    <hr /><h2>E-mail Us</h2>
     <p>
-        Send us an email and we will respond within one business day.
-    </p><p>@Html.ActionLink("E-mail Us", "Consumer", "Email", null, 
-    new { @title = "Send Us an Email", @class = "button" })</p>
-    <h2>Telephone</h2>
+        Send us an e-mail and our Customer Care team will respond to you within one business
+        day.
+    </p>
+    <p>@Html.ActionLink("E-mail Us", "Consumer", "Email", null,
+    new { @title = "Send Us an Email", @class = "button" })
+    </p>
+    <hr /><h2>Telephone</h2>
     <p>
         770-955-5060<br />
         Fax: 770-955-1997
     </p>
-   
-    <h2>Media Inquiries:</h2>
+    <hr />
+    <h2>Media Contact:</h2>
     <p>
-        If you have a media inquiry, please contact <strong>Elisabeth Bergoo </strong>at
-        770-955-5060 x117. If you are a blogger and are looking to partner with us, please
-        complete this form.
+        If you have a media inquiry, please contact Elisabeth Berg&ouml;&ouml; at
+        678-819-5801 or @Html.ActionLink("send her an e-mail", "Media", "Email", null,
+    new { @title = "Send Us an Email" }) and she will respond to you.
     </p>
+    <h3>Bloggers</h3>
+    <p>
+        If you are a blogger, please sumbit your information 
+        @Html.ActionLink("by clicking here", "Media", "Email", null,
+    new { @title = "Blogger" }).
+    </p>
+    <hr />
     <h2>Sales Inquiries:</h2>
     <p>
-        If you are interested in joining our team as a retailer, contact <strong>Jeff Durkee
-        </strong>at 770-955-5060 x120
+        If you are interested in joining our team as a retailer, contact Jeff Durkee at
+        770-955-5060 x120 or @Html.ActionLink("send him an e-mail", "Sales", "Email", null,
+    new { @title = "Send Us an Email" }).
     </p>
+    <hr />
     <h2>Our Address:</h2>
     <p>
         Regal Lager, Inc.<br />

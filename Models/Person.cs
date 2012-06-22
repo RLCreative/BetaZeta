@@ -9,8 +9,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Zeta.Models
 {
     public class Person
-    {
-
+    {        
         //string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}";
         //strRegex = strRegex + "@\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\";
         //strRegex = strRegex + "@.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
@@ -21,7 +20,7 @@ namespace Zeta.Models
 
         [Required(ErrorMessage = "Required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
-        public string LasstName { get; set; }
+        public string LastName { get; set; }
 
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         [Required(ErrorMessage = "Required")]
@@ -34,17 +33,18 @@ namespace Zeta.Models
         [Required(ErrorMessage = "Required")]
         public string City { get; set; }
 
-        //public SelectList StateList { get; set; }
-
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "Must have a minimum length of 2.")]
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a state.")]
+        [Required(ErrorMessage = "Required")]
         public string State { get; set; }
 
-        //Add Country validate this way, else not required
-        //[RegularExpression("^({5}|[a-zA-Z][0-9][a-zA-Z]( ){0,1}[0-9][a-zA-Z][0-9])$", ErrorMessage = "Not a valid Zip Code")] 
-
         [StringLength(10)]
+        [Required(ErrorMessage = "Required")]
         [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Not a valid ZIP Code")] //US ZIP 
         public string Zip { get; set; }
+
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a country.")]
+        [Required(ErrorMessage = "Required")]
+        public string Country { get; set; }
 
         [StringLength(12)]
         [Required(ErrorMessage = "Required")]
@@ -58,20 +58,7 @@ namespace Zeta.Models
 
         [RegularExpression(@"^.*\.(jpg|JPG|)$", ErrorMessage = "Not a valid file")]
         public string Upload { get; set; }
-
-        //[Required(ErrorMessage = "Required")]
-        //[Range(0, 120, ErrorMessage = "Age must be between 0 and 120")]
-        //public string Age { get; set; }
-
-        //if ((person.Zipcode.Trim().Length > 0) && (!Regex.IsMatch(person.Zipcode, @"^\d{5}$|^\d{5}-\d{4}$")))
-        //{
-        //    ModelState.AddModelError("Zipcode", "Zipcode is invalid.");
-        //}
-        //if (!Regex.IsMatch(person.Phone, @"((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}"))
-        //{
-        //    ModelState.AddModelError("Phone", "Phone number is invalid.");
-        //}
-        //if (!Regex.IsMatch(person.Email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
-        //    } 
+        
+        public HttpPostedFileBase Attachment { get; set; }
     }
 }

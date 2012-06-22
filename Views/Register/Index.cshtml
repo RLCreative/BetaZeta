@@ -29,36 +29,34 @@
             <select id="CategoryID" name="CategoryID" onchange="divChange();">
                 <option value="0" selected="selected">----------------------- Select a Product to Register
                     ----------------------- </option>
-                <option value="1">Cybex® Strollers, 2.GO Carriers, or Carry Cots</option>
-                <option value="2">Cybex® Child Restraints</option>
-                <option value="3">Lascal® Stroller Boards or Gates</option>
+                <option value="2">Cybex® Child Restraint</option>
+                <option value="1">Cybex® Stroller, 2.GO Carrier, or Carry Cot</option>
+                <option value="3">Lascal® Stroller Board or Gate</option>
             </select>
         </div>
     </section>
     <form method="post" id="myForm">
     <section>
         <div id="Cybex" style="display: none;">
-            Model Name:&nbsp;<br />
+            <label class="form">Model Name:</label>
             <select id="ModName">
-                <option value="">-----------</option>
+                <option value="">------- Select --------</option>
                 <option value="Callisto">Callisto</option>
                 <option value="Topaz">Topaz</option>
                 <option value="Onyx">Onyx</option>
                 <option value="Ruby">Ruby</option>
-                <option value="">-----------</option>
                 <option value="CarryCot">Callisto Carry Cot</option>
-                <option value="">-----------</option>
                 <option value="2GO">2.GO Carrier</option>
-            </select><label style="display: none;" id="RequiredMessage0">Required</label>
+            </select><label style="display: none;" class="required" id="RequiredMessage0">Required</label>
 
-            <p>
-                Model Number:&nbsp;<br /><input type="text" id="modelNum" /><label style="display: none;"
-                    id="RequiredMessage1">Required</label>
-            </p>
-            <p>
-                Manufacture Date:&nbsp;<br /><input type="text" id="manDate" /><label style="display: none;"
-                    id="RequiredMessage2">Required</label>
-            </p>
+            <label class="form">Model Number</label>
+            <input type="text" id="modelNum" />
+            <label style="display: none;" class="required" id="RequiredMessage1">Required</label>
+            <label class="form">Manufacture Date</label>
+            <input type="text" id="manDate" placeholder="MM/YYYY" /><label style="display: none;"
+                class="required"
+                id="RequiredMessage2">Required</label>
+
         </div>
         <div id="CybexCar" style="display: none;">
 
@@ -76,153 +74,212 @@
                 to child restraint systems purchased in the United States.
             </p>
             <hr />
-            <p>
-                Model Name:&nbsp;<select id="ModNameCarSeat">
-                    <option value="">--------- Select ----------</option>
-                    <option value="Aton">Aton Infant Car Seat</option>
-                    <option value="SXFix">Solution X-fix</option>
-                    <option value="AtonBase">Aton Extra Base</option>
-                </select>
-                <label style="display: none;" id="RequiredMessage3">Required</label>
+            <label class="form">Model Name</label>
+            <select id="ModNameCarSeat">
+                <option value="">--------- Select ----------</option>
+                <option value="Aton">Aton Infant Car Seat</option>
+                <option value="SXFix">Solution X-fix</option>
+                <option value="AtonBase">Aton Extra Base</option>
+            </select>
+            <label style="display: none;" class="required" id="RequiredMessage3">Required</label>
             </p>
-            <p>
-                Model Number:&nbsp;<select id="ModNumCarSeat">
-                    <option value="">-------------------- Select --------------------</option>
-                    <option value="12-4000012">12-4000012 Aton Purple Potion</option>
-                    <option value="12-4000015">12-4000015 Aton Lipstick</option>
-                    <option value="12-4000016">12-4000016 Aton Eclipse</option>
-                    <option value="12-4000017">12-4000017 Aton Coffee</option>
-                    <option value="12-4000018">12-4000018 Aton Moonlight</option>
-                    <option value="12-4000019">12-4000019 Aton Shadow</option>
-                    <option value="12-4000020">12-4000020 Aton Pure Black</option>
-                    <option value="12-4001012">12-4001012 Aton Purple Potion Plus</option>
-                    <option value="12-4001015">12-4001015 Aton Lipstick Plus</option>
-                    <option value="12-4001016">12-4001016 Aton Eclipse Plus</option>
-                    <option value="12-4001018">12-4001018 Aton Moonlight Plus</option>
-                    <option value="12-4001019">12-4001019 Aton Shadow Plus</option>
-                    <option value="">---------------------------------------</option>
-                    <option value="12-8000005">12-8000005 Aton Extra Base</option>
-                    <option value="">---------------------------------------</option>
-                    <option value="050020015">050020015 Solution X-Fix Berry</option>
-                    <option value="050020018">050020018 Solution X-Fix Grenadine</option>
-                    <option value="050020019">050020019 Solution X-Fix Stone</option>
-                    <option value="050020020">050020020 Solution X-Fix Cinnamon</option>
-                    <option value="050020021">050020021 Solution X-Fix Navy</option>
-                    <option value="050020022">050020022 Solution X-Fix Raven</option>
-                    <option value="050076008">050076008 Solution X-Fix Berry Plus</option>
-                    <option value="050076010">050076010 Solution X-Fix Grenadine Plus</option>
-                    <option value="050076011">050076011 Solution X-Fix Stone Plus</option>
-                    <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
-                    <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
-                </select>
-                <label style="display: none;" id="RequiredMessage4">Required</label>
-            </p>
-            <p>
-                Manufacture Date:&nbsp;<select id="ManDateCarSeat">
-                    <option value="">-- Select --</option>
-                    <option value="042011">04/2011</option>
-                    <option value="032011">03/2011</option>
-                    <option value="022011">02/2011</option>
-                    <option value="042010">04/2010</option>
-                    <option value="022010">02/2010</option>
-                </select>
-                <label style="display: none;" id="RequiredMessage5">Required</label>
-            </p>
+            <label class="form">Model Number</label>
+            <select id="ModNumCarSeat">
+                <option value="">-------------------- Select --------------------</option>
+                <option value="12-4000012">12-4000012 Aton Purple Potion</option>
+                <option value="12-4000015">12-4000015 Aton Lipstick</option>
+                <option value="12-4000016">12-4000016 Aton Eclipse</option>
+                <option value="12-4000017">12-4000017 Aton Coffee</option>
+                <option value="12-4000018">12-4000018 Aton Moonlight</option>
+                <option value="12-4000019">12-4000019 Aton Shadow</option>
+                <option value="12-4000020">12-4000020 Aton Pure Black</option>
+                <option value="12-4001012">12-4001012 Aton Purple Potion Plus</option>
+                <option value="12-4001015">12-4001015 Aton Lipstick Plus</option>
+                <option value="12-4001016">12-4001016 Aton Eclipse Plus</option>
+                <option value="12-4001018">12-4001018 Aton Moonlight Plus</option>
+                <option value="12-4001019">12-4001019 Aton Shadow Plus</option>
+                <option value="12-8000005">12-8000005 Aton Extra Base</option>
+                <option value="050020015">050020015 Solution X-Fix Berry</option>
+                <option value="050020018">050020018 Solution X-Fix Grenadine</option>
+                <option value="050020019">050020019 Solution X-Fix Stone</option>
+                <option value="050020020">050020020 Solution X-Fix Cinnamon</option>
+                <option value="050020021">050020021 Solution X-Fix Navy</option>
+                <option value="050020022">050020022 Solution X-Fix Raven</option>
+                <option value="050076008">050076008 Solution X-Fix Berry Plus</option>
+                <option value="050076010">050076010 Solution X-Fix Grenadine Plus</option>
+                <option value="050076011">050076011 Solution X-Fix Stone Plus</option>
+                <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
+                <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
+            </select>
+            <label style="display: none;" class="required" id="RequiredMessage4">Required</label>
+            <label class="form">Manufacture Date</label>
+            <select id="ManDateCarSeat">
+                <option value="">-- Select --</option>
+                <option value="042011">04/2011</option>
+                <option value="032011">03/2011</option>
+                <option value="022011">02/2011</option>
+                <option value="042010">04/2010</option>
+                <option value="022010">02/2010</option>
+            </select>
+            <label style="display: none;" class="required" id="RequiredMessage5">Required</label>
         </div>
         <div id="Lascal" style="display: none;">
 
-            <p>
-                Model Name:&nbsp;
+            <label class="form">Model Name</label>
             <select id="ModNameLascal" name="ModNameLascal">
-                <option value="">-----------</option>
+                <option value="">--------------------------</option>
                 <option value="KiddyGuard Avant">KiddyGuard Avant</option>
-                <option value="">-----------</option>
                 <option value="KiddyBoard Maxi">KiddyBoard Maxi</option>
-            </select><label style="display: none;" id="RequiredMessage6">Required</label>
-            </p>
-            <p>
-                Model Number:&nbsp;<input id="ModNumLascal" type="text" /><label style="display: none;"
-                    id="RequiredMessage7">Required</label>
-            </p>
-            <p>
-                Manufacture Date:&nbsp;<input id="ManDateLascal" type="text" /><label style="display: none;"
-                    id="RequiredMessage8">Required</label>
-            </p>
+                <option value="KiddyBoard Mini">KiddyBoard Mini</option>
+            </select><label style="display: none;" class="required" id="RequiredMessage6">Required</label>
+            <label class="form">Model Number</label>
+            <input id="ModNumLascal" type="text" /><label style="display: none;" class="required"
+                id="RequiredMessage7">Required</label>
+            <label class="form">Manufacture Date</label>
+            <input id="ManDateLascal" type="text" /><label style="display: none;" class="required"
+                id="RequiredMessage8">Required</label>
         </div>
         <div id="ContactInfo" style="display: none;">
             @Html.ValidationSummary(true)
 
             <fieldset>
                 <legend></legend>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.FirstName, "First Name")
-                </div>
+
+                @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:200px;" })
+                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:300px;" })
                     @Html.ValidationMessageFor(model => model.FirstName)
                 </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.LasstName, "Last Name")
-                </div>
+
+                @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.LasstName, new { @style = "width:200px;" })
-                    @Html.ValidationMessageFor(model => model.LasstName)
+                    @Html.TextBoxFor(model => model.LastName, new { @style = "width:300px;" })
+                    @Html.ValidationMessageFor(model => model.LastName)
                 </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.Address, "Address")
-                </div>
+
+                @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
+
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
                     @Html.ValidationMessageFor(model => model.Address)
                 </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.Address2, "Suite/Apt")
-                </div>
-                <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Address2, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.Address2)
-                </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.City, "City")
-                </div>
+                @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
 
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.City, new { @style = "width:200px;" })
+                    @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
+                    @Html.ValidationMessageFor(model => model.Address2)
+                </div>
+
+                @Html.LabelFor(model => model.City, "City", new { @class = "form" })
+
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
                     @Html.ValidationMessageFor(model => model.City)
                 </div>
 
-                <div class="form-label">
-                    @Html.LabelFor(model => model.State, "State")
-                </div>
+
+                @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
 
                 <div class="editor-field">
-                    <select id="State" name="State" style="width: 50px;">
+                    <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
+                        <option value="">----</option>
+                        <option value="AL">AL</option>
                         <option value="AK">AK</option>
-                        <option value="AL">
-                        AL<option>
-                    </select>
-                    @* @Html.TextBoxFor(model => model.State, new { @style = "width:50px;" })*@
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DC">DC</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                        <option value="">----</option>
+                        <option value="AB">AB</option>
+                        <option value="BC">BC</option>
+                        <option value="MB">MB</option>
+                        <option value="NB">NB</option>
+                        <option value="NF">NF</option>
+                        <option value="NS">NS</option>
+                        <option value="NT">NT</option>
+                        <option value="ON">ON</option>
+                        <option value="QC">QC</option>
+                        <option value="SK">SK</option>
+                    </select>                    
+                    @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
                     @Html.ValidationMessageFor(model => model.State)
-                </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.Zip, "ZIP® Code")
-                </div>
+                </div>                
+                @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
+                    @Html.TextBoxFor(model => model.Zip, new { @style = "width:150px;" })
                     @Html.ValidationMessageFor(model => model.Zip)
                 </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.Phone, "Phone")
-                </div>
+                @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:100px;", placeholder = "Numbers Only" })
+                    <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
+                        <option value="">--------------------</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                    @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
+                    @Html.ValidationMessageFor(model => model.Country)
+                </div>
+                @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:300px;", placeholder = "Numbers Only" })
                     @Html.ValidationMessageFor(model => model.Phone)
                 </div>
-                <div class="form-label">
-                    @Html.LabelFor(model => model.Email, "E-mail")
-                </div>
+
+                @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
+
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Email, new { @style = "width:200px;" })
+                    @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
                     @Html.ValidationMessageFor(model => model.Email)
                 </div>
             </fieldset>

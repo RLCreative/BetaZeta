@@ -3,8 +3,116 @@
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
-<article class="fullwidth">
-    <p>Media Inquiry stuff</p>
-    <hr />
-    @Html.Partial("_FormConsumerContact")
+<article>
+    <section>
+        <div id="pnlGreeting" runat="server">
+            <p>
+                We welcome members of the print and online media to request information about our
+                brands, new launches, and to acquire images and samples. We will be happy to assist
+                you in any way we can! Just submit your request using this form. Thank you for your interest!
+            </p>
+
+        </div>
+    </section>
+    <section>
+        <label class="form">Are you a blogger?</label><div class="editor-field">
+            <input type="checkbox" name="blogger" />Yes&nbsp;
+        <input type="checkbox" name="blogger" />No
+        </div>
+
+        <label class="form">Your main reason for contacting us</label>
+        <select id="ddlReason">
+            <option value="0">----------- Select -----------</option>
+            <option value="Editorial">Editorial Opportunity</option>
+            <option value="Review">Product Review</option>
+            <option value="Television">Product Placement for TV or Movie</option>
+            <option value="Advertising">Advertising</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label class="form">What brands interest you?</label>
+
+        <select id="ddlBrands">
+            <option value="BambinoMio">Bambino Mio&reg;</option>
+            <option value="Cybex">Cybex&reg;</option>
+            <option value="Dekor">D&eacute;kor&reg;</option>
+            <option value="Lascal">Lascal&reg;</option>
+            <option value="MyCarryPotty">My Carry Potty&trade;</option>
+        </select>
+
+        <label class="form">
+            What specific products you are interested in?</label>
+
+        <textarea id="txtProducts" style="width: 300px; min-height: 100px;"></textarea>
+
+        <label class="form">Any additional information about your request</label>
+
+        <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">
+
+        <div id="bloggerRequest" style="display: block;">
+
+            <h2>Additional Information</h2>
+
+            <p class="yellow">
+                We receive a large volume of product requests for testing and reviewing.
+                While we are always happy to send product information and images, sample requests
+                go through a selection process. To help us decide if your audience and size is a
+                good match, please tell us a little about your site.
+            </p>
+
+            <label class="form">Year Started</label>
+            <div class="editor-field">
+                <input type="text" id="txtYearStarted" style="width: 50px;">
+            </div>
+            <label class="form">Website URL</label>
+            <div class="editor-field">
+                <input type="text" id="txtWebURL" style="width: 300px;">
+            </div>
+            <hr />
+            <h3>Traffic Numbers (from Alexa&reg;, Compete&reg;, or Google&reg; Analytics)</h3>
+            <label class="form">
+                Monthly Visitors</label>
+            <div class="editor-field">
+                <input type="text" id="txtMonthlyVisitors" style="width: 100px;">
+            </div>
+            <label class="form">
+                Unique Visitors</label>
+            <div class="editor-field">
+                <input type="text" id="txtUniqueVisitors" style="width: 50px;">
+            </div>
+            <label class="form">
+                Page Views</label>
+            <div class="editor-field">
+                <input type="text" id="txtPageViews" style="width: 50px;">
+            </div>
+            <label class="form">
+                Page Ranking
+            </label>
+            <div class="editor-field">
+                <input type="text" id="txtPageRanking" style="width: 50px;">
+            </div>
+            <hr />
+            <h3>Social Media Activity
+            </h3>
+            <label class="form">
+                Facebook&reg; Likes
+            </label>
+            <div class="editor-field">
+                <input type="text" id="txtFacebookFans" style="width: 50px;">
+            </div>
+            <label class="form">
+                Twitter&reg; Followers
+            </label>
+            <div class="editor-field">
+                <input type="text" id="txtTwitterFollowers" style="width: 50px;">
+            </div>
+            <label class="form">
+                Anything else you wish to tell us about why we should choose your site?
+            </label>
+            <div class="editor-field">
+                <textarea id="txtWhy" style="width: 300px; min-height: 100px;"></textarea>
+            </div>
+        </div>
+    </section>
 </article>
+<aside><img src="~/Images/rl-media.png" /></aside>

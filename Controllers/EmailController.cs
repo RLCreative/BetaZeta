@@ -26,7 +26,7 @@ namespace Zeta.Controllers
             return View(newPerson);
         }
         [HttpPost]
-        public ActionResult Request(Person validatePerson, FormCollection form)
+        public ActionResult Consumer(Person validatePerson, FormCollection form)
         {
             if (ModelState.IsValid)
             {
@@ -98,11 +98,6 @@ namespace Zeta.Controllers
             return View(validatePerson);
         }
 
-        public ActionResult Attachment()
-        {
-            return View(new AddAttachment());
-        }
-
         [HttpPost]
         public ActionResult Attachment(AddAttachment model)
         {
@@ -125,11 +120,12 @@ namespace Zeta.Controllers
             message.Subject = "Email Request";
             message.IsBodyHtml = true;
             message.Body = strHTML;
-            if (model.Attachment != null && model.Attachment.ContentLength > 0)
-            {
-                var attachment = new Attachment(model.Attachment.InputStream, model.Attachment.FileName);
-                message.Attachments.Add(attachment);
-            }
+            //message.Attachments = new Attachment(model.Attachment.InputStream;
+            //if (model.Attachment != null && model.Attachment.ContentLength > 0)
+            //{
+            //var attachment = new Attachment(model.Attachment.InputStream, model.Attachment.FileName);
+            //    message.Attachments.Add(attachment);
+            //}
 
             client.EnableSsl = true;
             mailer.BypassCertificateError();
@@ -147,34 +143,10 @@ namespace Zeta.Controllers
             
             return View();
         }
+        public ActionResult Sales()
+        {
 
-        //public ActionResult DropdownPage()
-        //{
-        //    DropDownViewModel model = new DropDownViewModel();
-
-        //    List<SelectListItem> listItems = new List<SelectListItem>();
-        //    listItems.Add(new SelectListItem()
-        //    {                
-        //        Value = "0",
-        //        Text = "AK",
-        //    });
-        //    listItems.Add(new SelectListItem()
-        //    {
-        //        Value = "1",
-        //        Text = "AL"                
-        //    });
-        //    listItems.Add(new SelectListItem()
-        //    {
-        //        Value = "3",
-        //        Text = "Fruit 3"
-        //    });
-        //    model.StateList = new SelectList(listItems, "Value", "Text");
-
-        //    return View(model);
-        //}
-
+            return View();
+        }
     }
-
-    
-
 }
