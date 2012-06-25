@@ -402,9 +402,11 @@
     <Compile Include="Internal\security\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\AddAttachment.cs" />
-    <Compile Include="Models\Email.cs" />
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\Person.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Models\Quick.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1022,7 +1024,6 @@
     <Content Include="Views\Press\Awards.cshtml" />
     <Content Include="Views\Press\Downloads.cshtml" />
     <Content Include="Views\Press\Index.cshtml" />
-    <Content Include="Views\Press\Media.cshtml" />
     <Content Include="Views\Press\PressReleases.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Support\Instructions.cshtml" />
@@ -1107,10 +1108,12 @@
     <Content Include="Views\Email\Consumer.cshtml" />
     <Content Include="Views\Support\FormResults.cshtml" />
     <Content Include="Views\Shared\_FormConsumerContact.cshtml" />
-    <Content Include="Views\Email\Attachment.cshtml" />
-    <Content Include="Views\Email\AutoComplete.cshtml" />
-    <Content Include="Views\Email\DropdownPage.cshtml" />
     <Content Include="Views\Email\Sales.cshtml" />
+    <Content Include="Views\Email\Success.cshtml" />
+    <Content Include="Views\Email\Media.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\Register\Success.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

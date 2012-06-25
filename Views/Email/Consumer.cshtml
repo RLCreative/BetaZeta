@@ -1,7 +1,7 @@
 ﻿@{
-    ViewBag.SubTitle = "Send Us an Email";
+    ViewBag.SubTitle = "Send Us an E-mail";
 }
-@model Zeta.Models.Person
+@model Zeta.Models.Quick
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
@@ -10,8 +10,9 @@
     <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 
 }
+
 <article>
-    @using (Html.BeginForm("", "", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    @using (Html.BeginForm("Consumer", "Email", FormMethod.Post, new { enctype = "multipart/form-data", name = "form" }))
     {
         @Html.ValidationSummary(true)
         <span class="message">@TempData["Message"]</span>
@@ -49,7 +50,6 @@
             new { @style = "width:250px;" })
                 @Html.ValidationMessageFor(model => model.Email)
             </div>
-            
             <label class="form">
                 <label for="Comments">Comments</label>
             </label>
@@ -57,13 +57,11 @@
             <p>
                 Do you have an image that would help us assist you? Please attach it to your e-mail.
             
-            <input type="file" name="attachment" id="attachment" /></p>
+            @Html.TextBoxFor(model => model.Attachment, "Attachment", new { type = "file" })
+            @Html.ValidationMessageFor(model => model.Attachment)<br />
+            
             <input type="submit" value="Send" class="button" />
 
-            @* @Html.TextBoxFor(model => model.Upload, "Attach",
-            new { @style = "width:300px;", placeholder = "We only accept .jpg files up to 2 Mb in size." })*@
-            @* <input type="submit" value="Browse" class="smallbutton" /><br />
-            <input type="submit" value="Submit" class="button" />*@
         </fieldset>
     }
 </article>
@@ -86,6 +84,5 @@
             $(this).removeClass("inputglow");
         });
     });
-
 
 </script>

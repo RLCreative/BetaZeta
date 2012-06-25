@@ -18,7 +18,7 @@ namespace Zeta.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index(Person validatePerson, FormCollection form)
+        public ActionResult Index(Quick validatePerson, FormCollection form)
         {
             if (ModelState.IsValid)
             {
@@ -53,10 +53,8 @@ namespace Zeta.Controllers
                     mailer.BypassCertificateError();
                     client.Send(message);
 
-                    //TempData["Message"] = ">We will try our best to respond to your email within one business day.";
-                    //ViewBag.show = "visibility: hidden;";
-                    return View();
-                    //return Redirect("/Home/EmailSuccess");
+                    
+                    return View("Success");
                 }
                 catch (Exception)
                 {

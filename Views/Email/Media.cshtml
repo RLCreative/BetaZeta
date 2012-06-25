@@ -3,116 +3,337 @@
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
+@model Zeta.Models.Media
 <article>
-    <section>
-        <div id="pnlGreeting" runat="server">
-            <p>
-                We welcome members of the print and online media to request information about our
-                brands, new launches, and to acquire images and samples. We will be happy to assist
-                you in any way we can! Just submit your request using this form. Thank you for your interest!
-            </p>
+    @using (Html.BeginForm("Media", "Email", FormMethod.Post))
+    {
+        <section>
+            <div id="pnlGreeting" runat="server">
+                <p>
+                    We welcome members of the print and online media to request information about our
+                    brands, new launches, and to acquire images and samples. We will be happy to assist
+                    you in any way we can! Just submit your request using this form. Thank you for your
+                    interest!
+                </p>
+            </div>
+        </section>
+        <section>
+            <div id="ContactInfo">
+                @Html.ValidationSummary(true)
 
-        </div>
-    </section>
-    <section>
-        <label class="form">Are you a blogger?</label><div class="editor-field">
-            <input type="checkbox" name="blogger" />Yes&nbsp;
-        <input type="checkbox" name="blogger" />No
-        </div>
+                <fieldset>
+                    <legend></legend>
 
-        <label class="form">Your main reason for contacting us</label>
-        <select id="ddlReason">
-            <option value="0">----------- Select -----------</option>
-            <option value="Editorial">Editorial Opportunity</option>
-            <option value="Review">Product Review</option>
-            <option value="Television">Product Placement for TV or Movie</option>
-            <option value="Advertising">Advertising</option>
-            <option value="Other">Other</option>
-        </select>
+                    @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
 
-        <label class="form">What brands interest you?</label>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.FirstName, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                    @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
 
-        <select id="ddlBrands">
-            <option value="BambinoMio">Bambino Mio&reg;</option>
-            <option value="Cybex">Cybex&reg;</option>
-            <option value="Dekor">D&eacute;kor&reg;</option>
-            <option value="Lascal">Lascal&reg;</option>
-            <option value="MyCarryPotty">My Carry Potty&trade;</option>
-        </select>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.LastName, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                    @Html.LabelFor(model => model.Company, "Company/Publication/Site", new { @class = "form" })
 
-        <label class="form">
-            What specific products you are interested in?</label>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Company, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Company)
+                    </div>
 
-        <textarea id="txtProducts" style="width: 300px; min-height: 100px;"></textarea>
+                    @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
 
-        <label class="form">Any additional information about your request</label>
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Address)
+                    </div>
+                    @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
 
-        <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
+                        @Html.ValidationMessageFor(model => model.Address2)
+                    </div>
 
-        <div id="bloggerRequest" style="display: block;">
+                    @Html.LabelFor(model => model.City, "City", new { @class = "form" })
 
-            <h2>Additional Information</h2>
 
-            <p class="yellow">
-                We receive a large volume of product requests for testing and reviewing.
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
+                        @Html.ValidationMessageFor(model => model.City)
+                    </div>
+
+
+                    @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
+
+                    <div class="editor-field">
+                        <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
+                            <option value="">----</option>
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                            <option value="">----</option>
+                            <option value="AB">AB</option>
+                            <option value="BC">BC</option>
+                            <option value="MB">MB</option>
+                            <option value="NB">NB</option>
+                            <option value="NF">NF</option>
+                            <option value="NS">NS</option>
+                            <option value="NT">NT</option>
+                            <option value="ON">ON</option>
+                            <option value="QC">QC</option>
+                            <option value="SK">SK</option>
+                        </select>
+                        @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
+                        @Html.ValidationMessageFor(model => model.State)
+                    </div>
+                    @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Zip, new { @style = "width:150px;" })
+                        @Html.ValidationMessageFor(model => model.Zip)
+                    </div>
+                    @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
+
+                    <div class="editor-field">
+                        <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
+                            <option value="">--------------------</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                        @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
+                        @Html.ValidationMessageFor(model => model.Country)
+                    </div>
+                    @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Phone, new { @style = "width:300px;", placeholder = "Numbers Only" })
+                        @Html.ValidationMessageFor(model => model.Phone)
+                    </div>
+
+                    @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+        <section>
+            <label class="form">What brands interest you?</label>
+
+            <select id="ddlBrands">
+                 <option value="">----------- Select -----------</option>
+                <option value="BambinoMio">Bambino Mio&reg;</option>
+                <option value="Cybex">Cybex&reg;</option>
+                <option value="Dekor">D&eacute;kor&reg;</option>
+                <option value="Lascal">Lascal&reg;</option>
+                <option value="MyCarryPotty">My Carry Potty&trade;</option>
+            </select>
+
+           @* <label class="form">
+                What specific products you are interested in?</label>
+
+            <textarea id="txtProducts" style="width: 300px; min-height: 100px;"></textarea>*@
+
+
+            <label class="form">Your main reason for contacting us</label>
+            <select id="ContactReason">
+                <option value="0">----------- Select -----------</option>
+                <option value="Editorial">Editorial Opportunity</option>
+                <option value="Review">Product Review</option>
+                <option value="Television">Product Placement for TV or Movie</option>
+                <option value="Advertising">Advertising</option>
+                <option value="Other">Other</option>
+            </select>
+            @* <label class="form">Any additional information about your request</label>
+
+            <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">*@
+            <hr />
+            <label class="form">Are you a blogger?</label>
+            
+            <div class="editor-field">
+            <input name="blog" type="radio" value="yes" id="yes" onclick="blogYes();" />Yes
+            <input name="blog" type="radio" value="no" id="no" onclick="blogNo();" />No
+            </div><label style="display: none;" class="required" id="RequiredMessageBlog">Required</label>
+        </section>
+@*------- BLOGGER SECTION --------*@
+        <section>
+            <div id="desc" style="display: none;">
+
+                <hr />
+                <h2>Additional Blog Information</h2>
+
+                <p>
+                    We receive a large volume of product requests for testing and reviewing.
                 While we are always happy to send product information and images, sample requests
                 go through a selection process. To help us decide if your audience and size is a
                 good match, please tell us a little about your site.
-            </p>
+                </p>
 
-            <label class="form">Year Started</label>
-            <div class="editor-field">
-                <input type="text" id="txtYearStarted" style="width: 50px;">
+                @Html.LabelFor(model => model.YearStarted, "Year Started", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.YearStarted, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.YearStarted)
+                </div>
+
+                @Html.LabelFor(model => model.WebURL, "Web URL", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.WebURL, new { @style = "width:300px;" })
+                    @Html.ValidationMessageFor(model => model.WebURL)
+                </div>
+                <hr />
+                <h3>Traffic Numbers (from Alexa&reg;, Compete&reg;, or Google&reg; Analytics)</h3>
+                @Html.LabelFor(model => model.MonthlyVisitors, "Monthly Visitors", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.MonthlyVisitors, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.MonthlyVisitors)
+                </div>
+
+                @Html.LabelFor(model => model.UniqueVisitors, "Unique Visitors", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.UniqueVisitors, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.UniqueVisitors)
+                </div>
+
+                @Html.LabelFor(model => model.PageViews, "Page Views", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.PageViews, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.PageViews)
+                </div>
+
+                @Html.LabelFor(model => model.PageRanking, "Page Ranking", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.PageRanking, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.PageRanking)
+                </div>
+                <hr />
+                <h3>Social Media Activity</h3>
+
+                @Html.LabelFor(model => model.Facebook, "Facebook® Likes", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Facebook, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.Facebook)
+                </div>
+
+                @Html.LabelFor(model => model.Twitter, "Twitter® Followers", new { @class = "form" })
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Twitter, new { @style = "width:50px;" })
+                    @Html.ValidationMessageFor(model => model.Twitter)
+                </div>
+
+                <label class="form">
+                    Who are your testers?
+                </label>
+                <div class="editor-field">
+                    <textarea id="Tester" style="width: 300px; min-height: 100px;"></textarea>
+                </div>
+
+                <label class="form">
+                    Anything else you wish to tell us about why we should choose your site?
+                </label>
+                <div class="editor-field">
+                    <textarea id="txtWhy" style="width: 300px; min-height: 100px;"></textarea>
+                </div>
             </div>
-            <label class="form">Website URL</label>
-            <div class="editor-field">
-                <input type="text" id="txtWebURL" style="width: 300px;">
-            </div>
-            <hr />
-            <h3>Traffic Numbers (from Alexa&reg;, Compete&reg;, or Google&reg; Analytics)</h3>
-            <label class="form">
-                Monthly Visitors</label>
-            <div class="editor-field">
-                <input type="text" id="txtMonthlyVisitors" style="width: 100px;">
-            </div>
-            <label class="form">
-                Unique Visitors</label>
-            <div class="editor-field">
-                <input type="text" id="txtUniqueVisitors" style="width: 50px;">
-            </div>
-            <label class="form">
-                Page Views</label>
-            <div class="editor-field">
-                <input type="text" id="txtPageViews" style="width: 50px;">
-            </div>
-            <label class="form">
-                Page Ranking
-            </label>
-            <div class="editor-field">
-                <input type="text" id="txtPageRanking" style="width: 50px;">
-            </div>
-            <hr />
-            <h3>Social Media Activity
-            </h3>
-            <label class="form">
-                Facebook&reg; Likes
-            </label>
-            <div class="editor-field">
-                <input type="text" id="txtFacebookFans" style="width: 50px;">
-            </div>
-            <label class="form">
-                Twitter&reg; Followers
-            </label>
-            <div class="editor-field">
-                <input type="text" id="txtTwitterFollowers" style="width: 50px;">
-            </div>
-            <label class="form">
-                Anything else you wish to tell us about why we should choose your site?
-            </label>
-            <div class="editor-field">
-                <textarea id="txtWhy" style="width: 300px; min-height: 100px;"></textarea>
-            </div>
+        </section>
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Submit" class="button" onclick="Validate(); valMedia();" />
         </div>
-    </section>
+    }
 </article>
-<aside><img src="~/Images/rl-media.png" /></aside>
+<aside>
+    <img src="~/Images/rl-media.png" />
+</aside>
+
+<script type="text/javascript">
+    function blogYes() {
+        if (document.getElementById('yes').value = 'yes') {
+            document.getElementById('desc').style.display = '';
+        }
+
+    };
+
+    function blogNo() {
+        if (document.getElementById('no').value = 'no') {
+            document.getElementById('desc').style.display = 'none';
+        }
+    };
+
+    function valMedia() {
+        if ((document.getElementById('yes').value == '') || (document.getElementById('no').value == '')) {
+            document.getElementById('RequiredMessageBlog').style.display = '';
+            return false;
+        }
+        else if (document.getElementById('yes').value = 'yes') {
+            document.getElementById('RequiredMessageBlog').style.display = 'none';
+            return false;
+        }
+        else if (document.getElementById('no').value = 'no') {
+            document.getElementById('RequiredMessageBlog').style.display = 'none';
+            return false;
+        }
+        else {
+            document.getElementById('RequiredMessageBlog').style.display = '';
+            return true;
+        }
+    };
+</script>

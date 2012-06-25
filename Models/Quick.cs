@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Zeta.Models
 {
-    public class Person
+    public class Quick
     {        
         //string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}";
         //strRegex = strRegex + "@\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\";
@@ -21,30 +21,6 @@ namespace Zeta.Models
         [Required(ErrorMessage = "Required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         public string LastName { get; set; }
-
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
-        [Required(ErrorMessage = "Required")]
-        public string Address { get; set; }
-
-        [StringLength(50)]
-        public string Address2 { get; set; }
-
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
-        [Required(ErrorMessage = "Required")]
-        public string City { get; set; }
-
-        [StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a state.")]
-        [Required(ErrorMessage = "Required")]
-        public string State { get; set; }
-
-        [StringLength(10)]
-        [Required(ErrorMessage = "Required")]
-        [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Not a valid ZIP Code")] //US ZIP 
-        public string Zip { get; set; }
-
-        [StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a country.")]
-        [Required(ErrorMessage = "Required")]
-        public string Country { get; set; }
 
         [StringLength(12)]
         [Required(ErrorMessage = "Required")]
@@ -59,7 +35,7 @@ namespace Zeta.Models
         
         //public string Upload { get; set; }
 
-        //[RegularExpression(@"^.*\.(jpg|JPG|)$", ErrorMessage = "Not a valid file")]
+        [RegularExpression(@"^.*\.(jpg|JPG|)$", ErrorMessage = "Not a valid file")]
         public HttpPostedFileBase Attachment { get; set; }
     }
 }

@@ -102,16 +102,12 @@ function divChange()
                     document.getElementById('RequiredMessage0').style.display = 'none';
                     document.getElementById('RequiredMessage1').style.display = 'none';
                     document.getElementById('RequiredMessage2').style.display = 'none';
-                    //return true;
-                    ValidateStateCountry();
                 }
             }
             else {
                 document.getElementById('RequiredMessage0').style.display = 'none';
                 document.getElementById('RequiredMessage1').style.display = 'none';
                 document.getElementById('RequiredMessage2').style.display = 'none';
-                //return true;
-                ValidateStateCountry();
             }
         }
             /////Cybex Car Seats
@@ -162,17 +158,13 @@ function divChange()
                 else if ((document.getElementById('ModNameCarSeat').value != '') && (document.getElementById('ModNumCarSeat').value != '') && (document.getElementById('ManDateCarSeat').value != '')) {
                     document.getElementById('RequiredMessage3').style.display = 'none';
                     document.getElementById('RequiredMessage4').style.display = 'none';
-                    document.getElementById('RequiredMessage5').style.display = 'none';
-                    //return true;
-                    ValidateStateCountry();
+                    document.getElementById('RequiredMessage5').style.display = 'none'; 
                 }
             }
             else {
                 document.getElementById('RequiredMessage3').style.display = 'none';
                 document.getElementById('RequiredMessage4').style.display = 'none';
                 document.getElementById('RequiredMessage5').style.display = 'none';
-                //return true;
-                ValidateStateCountry();
             }
         }
             //    /////Lascal
@@ -224,18 +216,12 @@ function divChange()
                     document.getElementById('RequiredMessage6').style.display = 'none';
                     document.getElementById('RequiredMessage7').style.display = 'none';
                     document.getElementById('RequiredMessage8').style.display = 'none';
-                    //ValidateStateCountry();
-                    //return true;
-                    ValidateStateCountry();
                 }
             }
             else {
                 document.getElementById('RequiredMessage6').style.display = 'none';
                 document.getElementById('RequiredMessage7').style.display = 'none';
                 document.getElementById('RequiredMessage8').style.display = 'none';
-                //ValidateStateCountry();
-                //return true;
-                ValidateStateCountry();
             }
         }
     };
