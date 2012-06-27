@@ -62,6 +62,19 @@ namespace Zeta.Models
 
         [Required(ErrorMessage = "Required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string whatBrands { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string ContactReason { get; set; }
+
+        [Required(ErrorMessage = "Required")]        
+        public bool Blogger { get; set; }
+
+        // Blogger Specific
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         public string YearStarted { get; set; }
 
         [Required(ErrorMessage = "Required")]
@@ -91,6 +104,10 @@ namespace Zeta.Models
         [Required(ErrorMessage = "Required")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         public string Twitter { get; set; }
+
+        //[Required(ErrorMessage = "Required")]
+        //[StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        //public string Testers { get; set; }
 
 
     }

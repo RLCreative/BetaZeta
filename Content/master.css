@@ -21,17 +21,21 @@ a:link {
     display: inline;
 }
 
-a:active, a:hover {
+a:hover {
+    color:rgb(2, 85, 235);
+}
+
+a:active {
     color:rgb(255, 255, 255);
 }
 
-a:visited {
-    /*color: rgb(251, 188, 0);*/
-    color: red;
+/*a:visited {
+    color: rgb(251, 188, 0);
 }
+
 a:visited:hover {
     color:rgb(255, 255, 255);
-}
+}*/
 
 header, footer, hgroup,
 nav, section {
@@ -57,7 +61,7 @@ h1, h2 {
 
 
 h1 { /*Main Page Header*/
-    font-size: 2.25em;
+    font-size: 2em;
     font-weight: 700;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
@@ -71,7 +75,7 @@ h2 { /*Sub Header*/
     
 }
 h3 { /*Paragraph Heading */
-    font-size: 1.125em;
+    font-size: 1.25em;
        
 }
 h4 { /*Use for Paragraph Sub-Headings*/
@@ -79,7 +83,7 @@ h4 { /*Use for Paragraph Sub-Headings*/
     font-style: italic;
 }
 p {
-    font-size: .95em;
+    font-size: .90em;
     line-height: 1.75em;
     padding-bottom: 15px;
     font-weight: 300;
@@ -767,6 +771,7 @@ img.rounded {
 }
 
 /*-------------- FORMS ---------------*/
+
 input, select, textarea {
     font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
 	color: #333;
@@ -775,7 +780,7 @@ input, select, textarea {
     border: 1px solid #333;
     opacity: .75;
     padding: 4px 6px;
-    margin: 2px 5px 5px 0px;
+    margin: 2px 20px 5px 0px;
     display: inline-block;
     background-color:rgb(255, 255, 255);
     
@@ -825,6 +830,7 @@ label.required {
     font-size: .9em;
     color:rgb(251, 188, 0);
     display:inline;
+    margin-left: -10px;
 }
 .editor-field {
     display: block;
@@ -925,7 +931,23 @@ border: 1px solid #333;
 	box-shadow:3px 3px 5px #0e0d0d;*/
 }
 
+.productinfo {
+    background-color:rgba(0, 0, 0, .3);
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 20px 0px;
+    min-width: 80%;
+    display: inline-block;
+    
+    border-radius: 10px 10px 10px 10px;
+    
+    -moz-box-shadow:inset 0px 0px 1px #000;
+	-webkit-box-shadow:inset 0px 0px 1px #000;
+	box-shadow:inset 0px 0px 3px #000;
+    
+}
 /*--------------AWARDS--------------*/
+
 div.award {
     width: 160px;
     float: left;
@@ -950,7 +972,9 @@ div.awardtext {
 }
 
 /*--------------END AWARDS--------------*/
+
 /* HOME PAGE FEATURES */
+
 section.feature {
     width: 290px;
     float: left;
@@ -1097,13 +1121,12 @@ li.regal {
 
 ul.default {
     list-style: disc inside none;
-    color: #FBBC00;
+    color:rgb(100, 200, 255);
     margin-bottom: 10px;
 }
 
 ul.default li {
     color: #FFF;
-    font-size: .9em;
     font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
 	/*background: url("../Images/bullet.png") no-repeat 0 50%;*/
     line-height: 2em;
@@ -1111,12 +1134,12 @@ ul.default li {
 }
 
 ul.default li a, ol.default a {
-	color: #FFF;
+	color:rgb(100, 200, 255);
 	display:inline;
 }
 
 ul.default li a:hover, ol.default li a:hover {
-	color: #FBBC00;
+	color:rgb(2, 85, 235);
 	display:inline;
 }
 
@@ -1126,7 +1149,6 @@ ol.default {
 
 ol.default li {
     color: #FFF;
-    font-size: .9em;
     font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
 }
 

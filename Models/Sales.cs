@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Zeta.Models
 {
-    public class Person
+    public class Sales
     {        
         //string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}";
         //strRegex = strRegex + "@\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\";
@@ -22,6 +22,10 @@ namespace Zeta.Models
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         public string LastName { get; set; }
 
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        [Required(ErrorMessage = "Required")]
+        public string Company { get; set; }
+        
         [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
         [Required(ErrorMessage = "Required")]
         public string Address { get; set; }
@@ -42,24 +46,45 @@ namespace Zeta.Models
         [RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Not a valid ZIP Code")] //US ZIP 
         public string Zip { get; set; }
 
-        //[StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a country.")]
-        //[Required(ErrorMessage = "Required")]
-        //public string Country { get; set; }
+        [StringLength(2, MinimumLength = 2, ErrorMessage = "You must select a country.")]
+        [Required(ErrorMessage = "Required")]
+        public string Country { get; set; }
 
         [StringLength(12)]
-        //[Required(ErrorMessage = "Required")]
+        [Required(ErrorMessage = "Required")]
         [RegularExpression(@"^\s*([\(]?)\[?\s*\d{3}\s*\]?[\)]?\s*[\-]?[\.]?\s*\d{3}\s*[\-]?[\.]?\s*\d{4}$", ErrorMessage = "Invalid Phone")]
         public string Phone { get; set; }
 
         [StringLength(50)]
-        //[Required(ErrorMessage = "Required")]
-        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Not a valid email")]
+        [Required(ErrorMessage = "Required")]
+        [RegularExpression(@"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$", ErrorMessage = "Not a valid email")] 
         public string Email { get; set; }
 
-        
-        //public string Upload { get; set; }
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string whatBrands { get; set; }
 
-        //[RegularExpression(@"^.*\.(jpg|JPG|)$", ErrorMessage = "Not a valid file")]
-        public HttpPostedFileBase Attachment { get; set; }
+        // Sales Specific
+        
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string Howheard { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string Biztype { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string YearsBiz { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string StoreSize { get; set; }
+
+        [Required(ErrorMessage = "Required")]
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Must have a minimum length of 3.")]
+        public string ResaleID { get; set; }
+
     }
 }

@@ -4,11 +4,17 @@
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
 @model Zeta.Models.Media
+@section script{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script type="text/javascript" src="../../Scripts/validator.js"></script>
+
+}
 <article>
     @using (Html.BeginForm("Media", "Email", FormMethod.Post))
     {
         <section>
-            <div id="pnlGreeting" runat="server">
+            <div>
                 <p>
                     We welcome members of the print and online media to request information about our
                     brands, new launches, and to acquire images and samples. We will be happy to assist
@@ -19,8 +25,7 @@
         </section>
         <section>
             <div id="ContactInfo">
-                @Html.ValidationSummary(true)
-
+                @Html.ValidationSummary(true)                
                 <fieldset>
                     <legend></legend>
 
@@ -55,15 +60,11 @@
                         @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
                         @Html.ValidationMessageFor(model => model.Address2)
                     </div>
-
                     @Html.LabelFor(model => model.City, "City", new { @class = "form" })
-
-
                     <div class="editor-field">
                         @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
                         @Html.ValidationMessageFor(model => model.City)
                     </div>
-
 
                     @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
 
@@ -136,23 +137,26 @@
                         @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
                         @Html.ValidationMessageFor(model => model.State)
                     </div>
+
                     @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
 
                     <div class="editor-field">
                         @Html.TextBoxFor(model => model.Zip, new { @style = "width:150px;" })
                         @Html.ValidationMessageFor(model => model.Zip)
                     </div>
+
                     @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
 
                     <div class="editor-field">
                         <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
-                            <option value="">--------------------</option>
+                            <option value="">---------- Select ----------</option>
                             <option value="US">United States</option>
                             <option value="CA">Canada</option>
                         </select>
                         @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
                         @Html.ValidationMessageFor(model => model.Country)
                     </div>
+
                     @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
 
                     <div class="editor-field">
@@ -170,9 +174,10 @@
             </div>
         </section>
         <section>
+             <hr />
             <label class="form">What brands interest you?</label>
 
-            <select id="ddlBrands">
+            <select id="ddlwhatBrands" onchange="updateBrands();">
                  <option value="">----------- Select -----------</option>
                 <option value="BambinoMio">Bambino Mio&reg;</option>
                 <option value="Cybex">Cybex&reg;</option>
@@ -181,6 +186,9 @@
                 <option value="MyCarryPotty">My Carry Potty&trade;</option>
             </select>
 
+            @Html.TextBoxFor(model => model.whatBrands, "What Brands", new { @style = "display: none;" })
+            @Html.ValidationMessageFor(model => model.whatBrands)
+
            @* <label class="form">
                 What specific products you are interested in?</label>
 
@@ -188,7 +196,8 @@
 
 
             <label class="form">Your main reason for contacting us</label>
-            <select id="ContactReason">
+
+            <select id="ddlContactReason" onchange="updateContactReason();">
                 <option value="0">----------- Select -----------</option>
                 <option value="Editorial">Editorial Opportunity</option>
                 <option value="Review">Product Review</option>
@@ -196,6 +205,10 @@
                 <option value="Advertising">Advertising</option>
                 <option value="Other">Other</option>
             </select>
+
+            @Html.TextBoxFor(model => model.ContactReason, "Contact Reason", new { @style = "display: none;" })
+            @Html.ValidationMessageFor(model => model.ContactReason)
+
             @* <label class="form">Any additional information about your request</label>
 
             <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">*@
@@ -205,7 +218,10 @@
             <div class="editor-field">
             <input name="blog" type="radio" value="yes" id="yes" onclick="blogYes();" />Yes
             <input name="blog" type="radio" value="no" id="no" onclick="blogNo();" />No
-            </div><label style="display: none;" class="required" id="RequiredMessageBlog">Required</label>
+            <label style="display: none;" class="required" id="RequiredMessageBlog">Required</label>
+            @*@Html.RadioButton(model => model.Blogger, "Blogger", new { @class = "form" })
+            @Html.ValidationMessageFor(model => model.Blogger)*@
+            </div>
         </section>
 @*------- BLOGGER SECTION --------*@
         <section>
@@ -296,44 +312,80 @@
             </div>
         </section>
         <div style="margin-top: 20px;">
-            <input type="submit" value="Submit" class="button" onclick="Validate(); valMedia();" />
+            <input type="submit" value="Submit" class="button" onclick="valMedia();" />
         </div>
     }
 </article>
-<aside>
-    <img src="~/Images/rl-media.png" />
-</aside>
+<aside><img src="~/Images/rl-media.png" /></aside>
 
 <script type="text/javascript">
     function blogYes() {
-        if (document.getElementById('yes').value = 'yes') {
+        if (document.getElementById('yes').value == 'yes') {
             document.getElementById('desc').style.display = '';
+            //document.getElementById('Blogger').value = 'yes';
+            document.getElementById('YearStarted').value = '';
+            document.getElementById('WebURL').value = '';
+            document.getElementById('MonthlyVisitors').value = '';
+            document.getElementById('UniqueVisitors').value = '';
+            document.getElementById('PageViews').value = '';
+            document.getElementById('PageRanking').value = '';
+            document.getElementById('Facebook').value = '';
+            document.getElementById('Twitter').value = '';
         }
-
     };
 
     function blogNo() {
-        if (document.getElementById('no').value = 'no') {
+        //if (document.getElementById('no').value == 'no') 
+        {
+            document.getElementById('no').value == 'no';
             document.getElementById('desc').style.display = 'none';
+            //document.getElementById('Blogger').value = 'no';
+            document.getElementById('YearStarted').value = '9999';
+            document.getElementById('WebURL').value = 'www.nourl.com';
+            document.getElementById('MonthlyVisitors').value = '999';
+            document.getElementById('UniqueVisitors').value = '999';
+            document.getElementById('PageViews').value = '999';
+            document.getElementById('PageRanking').value = '999';
+            document.getElementById('Facebook').value = '999';
+            document.getElementById('Twitter').value = '999';
         }
     };
 
+    //var refreshValidation = function() {
+    //    var formToRefresh = $('form');
+    //    formToRefresh.each(function () {
+    //        var form = $(this);
+    //        form.removeData('validator');
+    //        $.validator.unobtrusive.parse(form);
+
+    //    });
+    //};
+
+
     function valMedia() {
-        if ((document.getElementById('yes').value == '') || (document.getElementById('no').value == '')) {
+        if ((document.getElementById('yes').checked != true) && (document.getElementById('no').checked != true)) {
             document.getElementById('RequiredMessageBlog').style.display = '';
-            return false;
-        }
-        else if (document.getElementById('yes').value = 'yes') {
-            document.getElementById('RequiredMessageBlog').style.display = 'none';
-            return false;
-        }
-        else if (document.getElementById('no').value = 'no') {
-            document.getElementById('RequiredMessageBlog').style.display = 'none';
             return false;
         }
         else {
-            document.getElementById('RequiredMessageBlog').style.display = '';
-            return true;
+            document.getElementById('RequiredMessageBlog').style.display = 'none';
         }
     };
+    $(document).ready(function () {
+
+        $('input').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('input').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+        $('textarea').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('textarea').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+    });
 </script>

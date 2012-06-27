@@ -3,86 +3,280 @@
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
+@model Zeta.Models.Sales
+@section script{
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script type="text/javascript" src="../../Scripts/validator.js"></script>
+
+}
 <article>
-    <section>
-        <div id="pnlGreeting" runat="server">
-            <p>
-                Regal Lager distributes brands that offer quality and innovative products to your
-                customer. If you are interested in becoming a retailer for the brands we distribute,
-                please complete the form below once you have secured a retail location.
-            </p>
+    @using (Html.BeginForm("Sales", "Email", FormMethod.Post))
+    {
+        <section>
+            <div>
+                <p>
+                    Regal Lager distributes brands that offer quality and innovative products to your
+                    customer. If you are interested in becoming a retailer for the brands we distribute,
+                    please complete the form below once you have secured a retail location.
+                </p>
+            </div>
+        </section>
+        <section>
+            <div id="ContactInfo">
+                @Html.ValidationSummary(true)
+                <fieldset>
+                    <legend></legend>
+
+                    @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.FirstName, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.FirstName)
+                    </div>
+                    @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.LastName, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.LastName)
+                    </div>
+                    @Html.LabelFor(model => model.Company, "Company/Publication/Site", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Company, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Company)
+                    </div>
+
+                    @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Address)
+                    </div>
+                    @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
+                        @Html.ValidationMessageFor(model => model.Address2)
+                    </div>
+                    @Html.LabelFor(model => model.City, "City", new { @class = "form" })
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
+                        @Html.ValidationMessageFor(model => model.City)
+                    </div>
+
+                    @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
+
+                    <div class="editor-field">
+                        <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
+                            <option value="">----</option>
+                            <option value="AL">AL</option>
+                            <option value="AK">AK</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DC">DC</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                            <option value="">----</option>
+                            <option value="AB">AB</option>
+                            <option value="BC">BC</option>
+                            <option value="MB">MB</option>
+                            <option value="NB">NB</option>
+                            <option value="NF">NF</option>
+                            <option value="NS">NS</option>
+                            <option value="NT">NT</option>
+                            <option value="ON">ON</option>
+                            <option value="QC">QC</option>
+                            <option value="SK">SK</option>
+                        </select>
+                        @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
+                        @Html.ValidationMessageFor(model => model.State)
+                    </div>
+
+                    @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
+                        @Html.ValidationMessageFor(model => model.Zip)
+                    </div>
+
+                    @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
+
+                    <div class="editor-field">
+                        <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
+                            <option value="">------- Select ------</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                        </select>
+                        @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
+                        @Html.ValidationMessageFor(model => model.Country)
+                    </div>
+
+                    @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Phone, new { @style = "width:300px;", placeholder = "Numbers Only" })
+                        @Html.ValidationMessageFor(model => model.Phone)
+                    </div>
+
+                    @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
+
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </fieldset>
+            </div>
+        </section>
+        <section>
+            <hr />
+            <label class="form">What brands interest you?</label>
+
+            <select id="ddlwhatBrands" onchange="updateBrands();">
+                <option value="">---------- Select ----------</option>
+                <option value="BambinoMio">Bambino Mio&reg;</option>
+                <option value="Cybex">Cybex&reg;</option>
+                <option value="Dekor">D&eacute;kor&reg;</option>
+                <option value="Lascal">Lascal&reg;</option>
+                <option value="MyCarryPotty">My Carry Potty&trade;</option>
+            </select>
+            @Html.TextBoxFor(model => model.whatBrands, "How Heard", new { @style = "display: none;" })
+            @Html.ValidationMessageFor(model => model.whatBrands)
+
+            <label class="form">How did you hear us or or brands?</label>
+
+            <select id="ddlHowheard" onchange="updateHowheard();">
+                <option value="">---------- Select ----------</option>
+                <option value="American Baby">American Baby</option>
+                <option value="Baby Couture">Baby Couture</option>
+                <option value="Baby Talk">Baby Talk</option>
+                <option value="Blog">A Blog</option>
+                <option value="Consumer Reports">Consumer Reports</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Fit Pregnancy">Fit Pregnancy</option>
+                <option value="New Parent">New Parent</option>
+                <option value="One Step Ahead">One Step Ahead</option>
+                <option value="Parents">Parents</option>
+                <option value="Pregnancy">Pregnancy</option>
+                <option value="Pregnancy &amp; Newborn">Pregnancy &amp; Newborn</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Word of Mouth">Word of Mouth</option>
+                <option value="Other">Other</option>
+            </select>
+            @Html.TextBoxFor(model => model.Howheard, "How Heard", new { @style = "display: none;" })
+            @Html.ValidationMessageFor(model => model.Howheard)
+
+             <hr />
+            <label class="form">Type of Business</label>
+
+            <select id="ddlBiztype" onchange="updateBiztype();">
+                <option selected="selected" value="">-- Select --</option>
+                <option value="Juvenile">Juvenile</option>
+                <option value="Toy">Toy</option>
+                <option value="Gift">Gift</option>
+                <option value="Internet">Internet</option>
+                <option value="Other">Other</option>
+            </select>
+
+            @Html.TextBoxFor(model => model.Biztype, "Business Type", new { @style = "display: none;" })
+            @Html.ValidationMessageFor(model => model.Biztype)
+            
+            @Html.LabelFor(model => model.YearsBiz, "Years in Business", new { @class = "form" })
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.YearsBiz, new { @style = "width:50px;" })
+                @Html.ValidationMessageFor(model => model.YearsBiz)
+            </div>
+
+            @Html.LabelFor(model => model.StoreSize, "Size of Store", new { @class = "form" })
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.StoreSize, new { @style = "width:50px;", @placeholder = "Sq ft" })
+                @Html.ValidationMessageFor(model => model.StoreSize)
+            </div>
+
+            @Html.LabelFor(model => model.ResaleID, "Resale ID", new { @class = "form" })
+
+            <div class="editor-field">
+                @Html.TextBoxFor(model => model.ResaleID, new { @style = "width:75px;" })
+                @Html.ValidationMessageFor(model => model.ResaleID)
+            </div>
+
+
+            <label class="form">Any additional information about your request.</label>
+
+            <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">
+        </section>
+        <div style="margin-top: 20px;">
+            <input type="submit" value="Submit" class="button" />
         </div>
-    </section>
-    <section>
-        <label class="form">How did you hear us or or brands?</label>
-        <select>
-            <option selected="selected" value="0">---------- Select ----------</option>
-            <option value="American Baby">American Baby</option>
-            <option value="Baby Couture">Baby Couture</option>
-            <option value="Baby Talk">Baby Talk</option>
-            <option value="Blog">A Blog</option>
-            <option value="Consumer Reports">Consumer Reports</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Fit Pregnancy">Fit Pregnancy</option>
-            <option value="New Parent">New Parent</option>
-            <option value="One Step Ahead">One Step Ahead</option>
-            <option value="Parents">Parents</option>
-            <option value="Pregnancy">Pregnancy</option>
-            <option value="Pregnancy &amp; Newborn">Pregnancy &amp; Newborn</option>
-            <option value="Search Engine">Search Engine</option>
-            <option value="Facebook">Facebook</option>
-            <option value="Twitter">Twitter</option>
-            <option value="Word of Mouth">Word of Mouth</option>
-            <option value="Other">Other</option>
-        </select>
-        <label class="form">Type of Business</label>
-        <select>
-            <option selected="selected" value="0">-- Select --</option>
-            <option value="Juvenile">Juvenile</option>
-            <option value="Toy">Toy</option>
-            <option value="Gift">Gift</option>
-            <option value="Internet">Internet</option>
-            <option value="Other">Other</option>
-        </select>
-
-        <label class="form">
-            Years in Business</label>
-
-        <input type="text" />
-        <label class="form">
-            Size of Store</label>
-
-        <input type="text" />
-        <label class="form">Resale ID#</label>
-
-        <input type="text" />
-
-        <label class="form">Are you a blogger?</label>
-        <div class="editor-field">
-            <input type="checkbox" name="blogger" />Yes&nbsp;
-        <input type="checkbox" name="blogger" />No
-        </div>
-
-       <label class="form">What brands interest you?</label>
-
-        <select id="ddlBrands">
-            <option value="BambinoMio">Bambino Mio&reg;</option>
-            <option value="Cybex">Cybex&reg;</option>
-            <option value="Dekor">D&eacute;kor&reg;</option>
-            <option value="Lascal">Lascal&reg;</option>
-            <option value="MyCarryPotty">My Carry Potty&trade;</option>
-        </select>
-
-        <label class="form">
-            What specific products you are interested in?</label>
-
-        <textarea id="txtProducts" style="width: 300px; min-height: 100px;"></textarea>
-
-        <label class="form">Any additional information about your request</label>
-
-        <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">
-</section>
+    }
 </article>
 <aside>
     <img src="~/Images/rl-sales.png" alt="Regal Lager Sales Inquiry" />
 </aside>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('input').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+        $('textarea').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('textarea').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+    });
+</script>

@@ -402,11 +402,14 @@
     <Compile Include="Internal\security\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\Media.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\Person.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Quick.cs" />
+    <Compile Include="Models\Sales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

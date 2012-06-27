@@ -48,6 +48,18 @@ function divChange()
         document.getElementById('Country').value = document.getElementById('ddlCountry').value;
     };
 
+    function updateBrands() {
+        document.getElementById('whatBrands').value = document.getElementById('ddlwhatBrands').value;
+    };
+
+    function updateContactReason() {
+        document.getElementById('updateHowheard').value = document.getElementById('ddlupdateHowheard').value;
+    };
+
+    function updateContactReason() {
+        document.getElementById('updateBiztype').value = document.getElementById('ddlupdateBiztype').value;
+    };
+
     function Validate() {
 
 

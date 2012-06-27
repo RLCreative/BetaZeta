@@ -13,19 +13,18 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 <script type="text/javascript" src="../../Scripts/validator.js"></script>
-<article>
+
+<article style="width:80%;">
     <section>
-        <label></label>
-        <div id="RegHeader" style="display: none;">
+        <div id="RegHeader" style="">
             <p style="font-size: 1em; padding-bottom: 0px;">
                 We will use the information provided to contact you only if there is a safety alert
                 or recall for this product. We will not sell, rent, or share your personal information.
                 If you register on this Web site you do not need to fill out the card that came
                 with your product.
             </p>
-            <hr />
         </div>
-        <div id="RegList">
+        <div id="RegList" class="productinfo">
             <select id="CategoryID" name="CategoryID" onchange="divChange();">
                 <option value="0" selected="selected">----------------------- Select a Product to Register
                     ----------------------- </option>
@@ -37,27 +36,37 @@
     </section>
     <form method="post" id="myForm">
     <section>
-        <div id="Cybex" style="display: none;">
-            <label class="form">Model Name:</label>
-            <select id="ModName">
-                <option value="">------- Select --------</option>
-                <option value="Callisto">Callisto</option>
-                <option value="Topaz">Topaz</option>
-                <option value="Onyx">Onyx</option>
-                <option value="Ruby">Ruby</option>
-                <option value="CarryCot">Callisto Carry Cot</option>
-                <option value="2GO">2.GO Carrier</option>
-            </select><label style="display: none;" class="required" id="RequiredMessage0">Required</label>
+       <div id="Cybex" style="display: none;">
+            <div style="display: inline-block;" class="productinfo">
+                <div style="float: left;">
+                    <label class="form">Model Name:</label>
+                    <select id="ModName">
+                        <option value="">------- Select --------</option>
+                        <option value="Callisto">Callisto</option>
+                        <option value="Topaz">Topaz</option>
+                        <option value="Onyx">Onyx</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="CarryCot">Callisto Carry Cot</option>
+                        <option value="2GO">2.GO Carrier</option>
+                    </select>
+                    <label style="display: none;" class="required" id="RequiredMessage0">Required</label>
+                </div>
 
-            <label class="form">Model Number</label>
-            <input type="text" id="modelNum" />
-            <label style="display: none;" class="required" id="RequiredMessage1">Required</label>
-            <label class="form">Manufacture Date</label>
-            <input type="text" id="manDate" placeholder="MM/YYYY" /><label style="display: none;"
-                class="required"
-                id="RequiredMessage2">Required</label>
+                <div style="float: left;">
+                    <label class="form">Model Number</label>
+                    <input type="text" id="modelNum" />
+                    <label style="display: none;" class="required" id="RequiredMessage1">Required</label>
+                </div>
 
-        </div>
+                <div style="float: left;">
+                    <label class="form">Manufacture Date</label>
+                    <input type="text" id="manDate" placeholder="MM/YYYY" />
+                    <label style="display: none;" class="required" id="RequiredMessage2">Required</label>
+                </div>
+            </div>
+        </div> 
+        @* --------------- CYBEX CAR SEAT --------------- *@
+
         <div id="CybexCar" style="display: none;">
 
             <p style="font-size: 1.125em;">
@@ -73,70 +82,90 @@
                 on the bottom of the child restraint system. This registration is only applicable
                 to child restraint systems purchased in the United States.
             </p>
-            <hr />
-            <label class="form">Model Name</label>
-            <select id="ModNameCarSeat">
-                <option value="">--------- Select ----------</option>
-                <option value="Aton">Aton Infant Car Seat</option>
-                <option value="SXFix">Solution X-fix</option>
-                <option value="AtonBase">Aton Extra Base</option>
-            </select>
-            <label style="display: none;" class="required" id="RequiredMessage3">Required</label>
-            <label class="form">Model Number</label>
-            <select id="ModNumCarSeat">
-                <option value="">-------------------- Select --------------------</option>
-                <option value="12-4000012">12-4000012 Aton Purple Potion</option>
-                <option value="12-4000015">12-4000015 Aton Lipstick</option>
-                <option value="12-4000016">12-4000016 Aton Eclipse</option>
-                <option value="12-4000017">12-4000017 Aton Coffee</option>
-                <option value="12-4000018">12-4000018 Aton Moonlight</option>
-                <option value="12-4000019">12-4000019 Aton Shadow</option>
-                <option value="12-4000020">12-4000020 Aton Pure Black</option>
-                <option value="12-4001012">12-4001012 Aton Purple Potion Plus</option>
-                <option value="12-4001015">12-4001015 Aton Lipstick Plus</option>
-                <option value="12-4001016">12-4001016 Aton Eclipse Plus</option>
-                <option value="12-4001018">12-4001018 Aton Moonlight Plus</option>
-                <option value="12-4001019">12-4001019 Aton Shadow Plus</option>
-                <option value="12-8000005">12-8000005 Aton Extra Base</option>
-                <option value="050020015">050020015 Solution X-Fix Berry</option>
-                <option value="050020018">050020018 Solution X-Fix Grenadine</option>
-                <option value="050020019">050020019 Solution X-Fix Stone</option>
-                <option value="050020020">050020020 Solution X-Fix Cinnamon</option>
-                <option value="050020021">050020021 Solution X-Fix Navy</option>
-                <option value="050020022">050020022 Solution X-Fix Raven</option>
-                <option value="050076008">050076008 Solution X-Fix Berry Plus</option>
-                <option value="050076010">050076010 Solution X-Fix Grenadine Plus</option>
-                <option value="050076011">050076011 Solution X-Fix Stone Plus</option>
-                <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
-                <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
-            </select>
-            <label style="display: none;" class="required" id="RequiredMessage4">Required</label>
-            <label class="form">Manufacture Date</label>
-            <select id="ManDateCarSeat">
-                <option value="">-- Select --</option>
-                <option value="042011">04/2011</option>
-                <option value="032011">03/2011</option>
-                <option value="022011">02/2011</option>
-                <option value="042010">04/2010</option>
-                <option value="022010">02/2010</option>
-            </select>
-            <label style="display: none;" class="required" id="RequiredMessage5">Required</label>
-        </div>
-        <div id="Lascal" style="display: none;">
+            <div class="productinfo">
+                <div style="float: left;">
+                    <label class="form">Model Name</label>
+                    <select id="ModNameCarSeat">
+                        <option value="">--------- Select ---------</option>
+                        <option value="Aton">Aton Infant Car Seat</option>
+                        <option value="SXFix">Solution X-fix</option>
+                        <option value="AtonBase">Aton Extra Base</option>
+                    </select>
+                    <label style="display: none;" class="required" id="RequiredMessage3">Required</label>
+                </div>
+                <div style="float: left;">
+                    <label class="form">Model Number</label>
 
-            <label class="form">Model Name</label>
-            <select id="ModNameLascal" name="ModNameLascal">
-                <option value="">--------------------------</option>
-                <option value="KiddyGuard Avant">KiddyGuard Avant</option>
-                <option value="KiddyBoard Maxi">KiddyBoard Maxi</option>
-                <option value="KiddyBoard Mini">KiddyBoard Mini</option>
-            </select><label style="display: none;" class="required" id="RequiredMessage6">Required</label>
-            <label class="form">Model Number</label>
-            <input id="ModNumLascal" type="text" /><label style="display: none;" class="required"
-                id="RequiredMessage7">Required</label>
-            <label class="form">Manufacture Date</label>
-            <input id="ManDateLascal" type="text" /><label style="display: none;" class="required"
-                id="RequiredMessage8">Required</label>
+                    <select id="ModNumCarSeat">
+                        <option value="">-------------------- Select --------------------</option>
+                        <option value="12-4000012">12-4000012 Aton Purple Potion</option>
+                        <option value="12-4000015">12-4000015 Aton Lipstick</option>
+                        <option value="12-4000016">12-4000016 Aton Eclipse</option>
+                        <option value="12-4000017">12-4000017 Aton Coffee</option>
+                        <option value="12-4000018">12-4000018 Aton Moonlight</option>
+                        <option value="12-4000019">12-4000019 Aton Shadow</option>
+                        <option value="12-4000020">12-4000020 Aton Pure Black</option>
+                        <option value="12-4001012">12-4001012 Aton Purple Potion Plus</option>
+                        <option value="12-4001015">12-4001015 Aton Lipstick Plus</option>
+                        <option value="12-4001016">12-4001016 Aton Eclipse Plus</option>
+                        <option value="12-4001018">12-4001018 Aton Moonlight Plus</option>
+                        <option value="12-4001019">12-4001019 Aton Shadow Plus</option>
+                        <option value="12-8000005">12-8000005 Aton Extra Base</option>
+                        <option value="0"></option>
+                        <option value="050020015">050020015 Solution X-Fix Berry</option>
+                        <option value="050020018">050020018 Solution X-Fix Grenadine</option>
+                        <option value="050020019">050020019 Solution X-Fix Stone</option>
+                        <option value="050020020">050020020 Solution X-Fix Cinnamon</option>
+                        <option value="050020021">050020021 Solution X-Fix Navy</option>
+                        <option value="0"></option>
+                        <option value="050020022">050020022 Solution X-Fix Raven</option>
+                        <option value="050076008">050076008 Solution X-Fix Berry Plus</option>
+                        <option value="050076010">050076010 Solution X-Fix Grenadine Plus</option>
+                        <option value="050076011">050076011 Solution X-Fix Stone Plus</option>
+                        <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
+                        <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
+                    </select>
+                    <label style="display: none;" class="required" id="RequiredMessage4">Required</label>
+                </div>
+                <div style="float: left;">
+                    <label class="form">Manufacture Date</label>
+                    <select id="ManDateCarSeat">
+                        <option value="">-- Select --</option>
+                        <option value="042011">04/2011</option>
+                        <option value="032011">03/2011</option>
+                        <option value="022011">02/2011</option>
+                        <option value="042010">04/2010</option>
+                        <option value="022010">02/2010</option>
+                    </select>
+                    <label style="display: none;" class="required" id="RequiredMessage5">Required</label>
+                </div>
+            </div>
+        </div>
+        @* --------------- LASCAL*--------------- *@
+
+        <div id="Lascal" style="display: none;">
+            <div style="display: inline-block;" class="productinfo">
+                <div style="float: left;">
+                    <label class="form">Model Name</label>
+                    <select id="ModNameLascal" name="ModNameLascal">
+                        <option value="">--------- Select --------</option>
+                        <option value="KiddyGuard Avant">KiddyGuard Avant</option>
+                        <option value="KiddyBoard Maxi">KiddyBoard Maxi</option>
+                        <option value="KiddyBoard Mini">KiddyBoard Mini</option>
+                    </select>
+                    <label style="display: none;" class="required" id="RequiredMessage6">Required</label>
+                </div>
+                <div style="float: left;">
+                    <label class="form">Model Number</label>
+                    <input id="ModNumLascal" type="text" /><label style="display: none;" class="required"
+                        id="RequiredMessage7">Required</label>
+                </div>
+                <div style="float: left;">
+                    <label class="form">Manufacture Date</label>
+                    <input id="ManDateLascal" type="text" /><label style="display: none;" class="required"
+                        id="RequiredMessage8">Required</label>
+                </div>
+            </div>
         </div>
         <div id="ContactInfo" style="display: none;">
             @Html.ValidationSummary(true)
@@ -147,117 +176,126 @@
                 @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
 
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:300px;" })
+                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:250px;" })
                     @Html.ValidationMessageFor(model => model.FirstName)
                 </div>
 
                 @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
 
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.LastName, new { @style = "width:300px;" })
+                    @Html.TextBoxFor(model => model.LastName, new { @style = "width:250px;" })
                     @Html.ValidationMessageFor(model => model.LastName)
                 </div>
 
-                @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
+                <div style="display: inline-block;">
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
 
-                <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
-                    @Html.ValidationMessageFor(model => model.Address)
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Address, new { @style = "width:250px;" })
+                            @Html.ValidationMessageFor(model => model.Address)
+                        </div>
+                    </div>
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
+
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Address2, new { @style = "width:50px;" })
+                            @Html.ValidationMessageFor(model => model.Address2)
+                        </div>
+                    </div>
                 </div>
-                @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
-
-                <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
-                    @Html.ValidationMessageFor(model => model.Address2)
-                </div>
-
                 @Html.LabelFor(model => model.City, "City", new { @class = "form" })
 
-
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
+                    @Html.TextBoxFor(model => model.City, new { @style = "width:250px;" })
                     @Html.ValidationMessageFor(model => model.City)
                 </div>
 
+                <div style="display: inline-block;">
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.State, "State", new { @class = "form" })
 
-                @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
+                        <div class="editor-field">
+                            <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
+                                <option value="">----</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                                <option value="">----</option>
+                                <option value="AB">AB</option>
+                                <option value="BC">BC</option>
+                                <option value="MB">MB</option>
+                                <option value="NB">NB</option>
+                                <option value="NF">NF</option>
+                                <option value="NS">NS</option>
+                                <option value="NT">NT</option>
+                                <option value="ON">ON</option>
+                                <option value="QC">QC</option>
+                                <option value="SK">SK</option>
+                            </select>
+                            @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
+                            @Html.ValidationMessageFor(model => model.State)
+                        </div>
+                    </div>
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.Zip, "ZIP® Code", new { @class = "form" })
 
-                <div class="editor-field">
-                    <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
-                        <option value="">----</option>
-                        <option value="AL">AL</option>
-                        <option value="AK">AK</option>
-                        <option value="AZ">AZ</option>
-                        <option value="AR">AR</option>
-                        <option value="CA">CA</option>
-                        <option value="CO">CO</option>
-                        <option value="CT">CT</option>
-                        <option value="DC">DC</option>
-                        <option value="DE">DE</option>
-                        <option value="FL">FL</option>
-                        <option value="GA">GA</option>
-                        <option value="HI">HI</option>
-                        <option value="ID">ID</option>
-                        <option value="IL">IL</option>
-                        <option value="IN">IN</option>
-                        <option value="IA">IA</option>
-                        <option value="KS">KS</option>
-                        <option value="KY">KY</option>
-                        <option value="LA">LA</option>
-                        <option value="ME">ME</option>
-                        <option value="MD">MD</option>
-                        <option value="MA">MA</option>
-                        <option value="MI">MI</option>
-                        <option value="MN">MN</option>
-                        <option value="MS">MS</option>
-                        <option value="MO">MO</option>
-                        <option value="MT">MT</option>
-                        <option value="NE">NE</option>
-                        <option value="NV">NV</option>
-                        <option value="NH">NH</option>
-                        <option value="NJ">NJ</option>
-                        <option value="NM">NM</option>
-                        <option value="NY">NY</option>
-                        <option value="NC">NC</option>
-                        <option value="ND">ND</option>
-                        <option value="OH">OH</option>
-                        <option value="OK">OK</option>
-                        <option value="OR">OR</option>
-                        <option value="PA">PA</option>
-                        <option value="RI">RI</option>
-                        <option value="SC">SC</option>
-                        <option value="SD">SD</option>
-                        <option value="TN">TN</option>
-                        <option value="TX">TX</option>
-                        <option value="UT">UT</option>
-                        <option value="VT">VT</option>
-                        <option value="VA">VA</option>
-                        <option value="WA">WA</option>
-                        <option value="WV">WV</option>
-                        <option value="WI">WI</option>
-                        <option value="WY">WY</option>
-                        <option value="">----</option>
-                        <option value="AB">AB</option>
-                        <option value="BC">BC</option>
-                        <option value="MB">MB</option>
-                        <option value="NB">NB</option>
-                        <option value="NF">NF</option>
-                        <option value="NS">NS</option>
-                        <option value="NT">NT</option>
-                        <option value="ON">ON</option>
-                        <option value="QC">QC</option>
-                        <option value="SK">SK</option>
-                    </select>                    
-                    @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
-                    @Html.ValidationMessageFor(model => model.State)
-                </div>                
-                @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
-
-                <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Zip, new { @style = "width:150px;" })
-                    @Html.ValidationMessageFor(model => model.Zip)
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
+                            @Html.ValidationMessageFor(model => model.Zip)
+                        </div>
+                    </div>
                 </div>
-                @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
+                @*@Html.LabelFor(model => model.State, "Country", new { @class = "form" })
 
                 <div class="editor-field">
                     <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
@@ -267,19 +305,21 @@
                     </select>
                     @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
                     @Html.ValidationMessageFor(model => model.Country)
-                </div>
+                </div>*@
                 @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
 
                 <div class="editor-field">
-                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:300px;", placeholder = "Numbers Only" })
-                    @Html.ValidationMessageFor(model => model.Phone)
+                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:100px;", placeholder = "Numbers Only" })
+                    @*@Html.ValidationMessageFor(model => model.Phone)*@
+                    <label class="required">Optional</label>
                 </div>
 
                 @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
-                    @Html.ValidationMessageFor(model => model.Email)
+                    @*@Html.ValidationMessageFor(model => model.Email)*@
+                    <label class="required">Optional</label>
                 </div>
             </fieldset>
 
@@ -290,3 +330,22 @@
     </section>
     </form>
 </article>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('input').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('input').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+        $('textarea').focus(function () {
+            $(this).addClass("inputglow");
+        });
+
+        $('textarea').blur(function () {
+            $(this).removeClass("inputglow");
+        });
+    });
+</script>
