@@ -435,10 +435,7 @@
     <Content Include="bin\System.Web.WebPages.dll" />
     <Content Include="bin\System.Web.WebPages.Razor.dll" />
     <Content Include="bin\Telerik.Web.Mvc.dll" />
-    <Content Include="bin\Telerik.Web.Mvc.pdb" />
-    <Content Include="bin\Telerik.Web.Mvc.xml" />
     <Content Include="bin\Telerik.Web.UI.dll" />
-    <Content Include="bin\Telerik.Web.UI.xml" />
     <Content Include="bin\Zeta.dll" />
     <Content Include="bin\Zeta.pdb" />
     <Content Include="Content\960_12_col.css" />

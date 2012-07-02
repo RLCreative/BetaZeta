@@ -14,7 +14,7 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 <script type="text/javascript" src="../../Scripts/validator.js"></script>
 
-<article style="width:80%;">
+<article style="width: 80%;">
     <section>
         <div id="RegHeader" style="">
             <p style="font-size: 1em; padding-bottom: 0px;">
@@ -35,11 +35,12 @@
         </div>
     </section>
     <form method="post" id="myForm">
+<span class="message">@TempData["Message"]</span>
     <section>
-       <div id="Cybex" style="display: none;">
+        <div id="Cybex" style="display: none;">
             <div style="display: inline-block;" class="productinfo">
                 <div style="float: left;">
-                    <label class="form">Model Name:</label>
+                    <label class="form">Model Name:<span style="display: none;" class="required" id="RequiredMessage0">&nbsp;Required</span></label>
                     <select id="ModName">
                         <option value="">------- Select --------</option>
                         <option value="Callisto">Callisto</option>
@@ -49,22 +50,22 @@
                         <option value="CarryCot">Callisto Carry Cot</option>
                         <option value="2GO">2.GO Carrier</option>
                     </select>
-                    <label style="display: none;" class="required" id="RequiredMessage0">Required</label>
+
                 </div>
 
                 <div style="float: left;">
-                    <label class="form">Model Number</label>
+                    <label class="form">Model Number<span style="display: none;" class="required" id="RequiredMessage1">&nbsp;Required</span></label>
                     <input type="text" id="modelNum" />
-                    <label style="display: none;" class="required" id="RequiredMessage1">Required</label>
                 </div>
 
                 <div style="float: left;">
-                    <label class="form">Manufacture Date</label>
+                    <label class="form">
+                        Manufacture Date<span style="display: none;" class="required"
+                            id="RequiredMessage2">&nbsp;Required</span></label>
                     <input type="text" id="manDate" placeholder="MM/YYYY" />
-                    <label style="display: none;" class="required" id="RequiredMessage2">Required</label>
                 </div>
             </div>
-        </div> 
+        </div>
         @* --------------- CYBEX CAR SEAT --------------- *@
 
         <div id="CybexCar" style="display: none;">
@@ -84,17 +85,16 @@
             </p>
             <div class="productinfo">
                 <div style="float: left;">
-                    <label class="form">Model Name</label>
+                    <label class="form">Model Name<span style="display: none;" class="required" id="RequiredMessage3">&nbsp;Required</span></label>
                     <select id="ModNameCarSeat">
                         <option value="">--------- Select ---------</option>
                         <option value="Aton">Aton Infant Car Seat</option>
                         <option value="SXFix">Solution X-fix</option>
                         <option value="AtonBase">Aton Extra Base</option>
                     </select>
-                    <label style="display: none;" class="required" id="RequiredMessage3">Required</label>
                 </div>
                 <div style="float: left;">
-                    <label class="form">Model Number</label>
+                    <label class="form">Model Number<span style="display: none;" class="required" id="RequiredMessage4">&nbsp;Required</span></label>
 
                     <select id="ModNumCarSeat">
                         <option value="">-------------------- Select --------------------</option>
@@ -125,10 +125,11 @@
                         <option value="050076012">050076012 Solution X-Fix Cinnamon Plus</option>
                         <option value="050076013">050076013 Solution X-Fix Navy Plus</option>
                     </select>
-                    <label style="display: none;" class="required" id="RequiredMessage4">Required</label>
                 </div>
                 <div style="float: left;">
-                    <label class="form">Manufacture Date</label>
+                    <label class="form">
+                        Manufacture Date<span style="display: none;" class="required"
+                            id="RequiredMessage5">&nbsp;Required</span></label>
                     <select id="ManDateCarSeat">
                         <option value="">-- Select --</option>
                         <option value="042011">04/2011</option>
@@ -137,7 +138,6 @@
                         <option value="042010">04/2010</option>
                         <option value="022010">02/2010</option>
                     </select>
-                    <label style="display: none;" class="required" id="RequiredMessage5">Required</label>
                 </div>
             </div>
         </div>
@@ -146,24 +146,25 @@
         <div id="Lascal" style="display: none;">
             <div style="display: inline-block;" class="productinfo">
                 <div style="float: left;">
-                    <label class="form">Model Name</label>
+                    <label class="form">Model Name<span style="display: none;" class="required" id="RequiredMessage6">&nbsp;Required</span></label>
                     <select id="ModNameLascal" name="ModNameLascal">
                         <option value="">--------- Select --------</option>
                         <option value="KiddyGuard Avant">KiddyGuard Avant</option>
                         <option value="KiddyBoard Maxi">KiddyBoard Maxi</option>
                         <option value="KiddyBoard Mini">KiddyBoard Mini</option>
                     </select>
-                    <label style="display: none;" class="required" id="RequiredMessage6">Required</label>
                 </div>
                 <div style="float: left;">
-                    <label class="form">Model Number</label>
-                    <input id="ModNumLascal" type="text" /><label style="display: none;" class="required"
-                        id="RequiredMessage7">Required</label>
+                    <label class="form">
+                        Model Number<span style="display: none;" class="required"
+                            id="RequiredMessage7">&nbsp;Required</span></label>
+                    <input id="ModNumLascal" type="text" />
                 </div>
                 <div style="float: left;">
-                    <label class="form">Manufacture Date</label>
-                    <input id="ManDateLascal" type="text" /><label style="display: none;" class="required"
-                        id="RequiredMessage8">Required</label>
+                    <label class="form">
+                        Manufacture Date<span style="display: none;" class="required"
+                            id="RequiredMessage8">&nbsp;Required</span></label>
+                    <input id="ManDateLascal" type="text" />
                 </div>
             </div>
         </div>
@@ -173,31 +174,30 @@
             <fieldset>
                 <legend></legend>
 
-                @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
+                @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.FirstName)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.FirstName, new { @style = "width:250px;" })
-                    @Html.ValidationMessageFor(model => model.FirstName)
                 </div>
 
-                @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
+                @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.LastName)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.LastName, new { @style = "width:250px;" })
-                    @Html.ValidationMessageFor(model => model.LastName)
                 </div>
-
                 <div style="display: inline-block;">
                     <div style="float: left;">
-                        @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
+                        @Html.LabelFor(model => model.Address, "Address", new { @class = "contact" })
+                        @Html.ValidationMessageFor(model => model.Address)
 
                         <div class="editor-field">
                             @Html.TextBoxFor(model => model.Address, new { @style = "width:250px;" })
-                            @Html.ValidationMessageFor(model => model.Address)
                         </div>
                     </div>
-                    <div style="float: left;">
-                        @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
+                    <div style="float:left;">
+                        @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "contact" })
 
                         <div class="editor-field">
                             @Html.TextBoxFor(model => model.Address2, new { @style = "width:50px;" })
@@ -205,20 +205,22 @@
                         </div>
                     </div>
                 </div>
-                @Html.LabelFor(model => model.City, "City", new { @class = "form" })
-
-                <div class="editor-field">
-                    @Html.TextBoxFor(model => model.City, new { @style = "width:250px;" })
+                <div style="display: block;">
+                    @Html.LabelFor(model => model.City, "City", new { @class = "contact" })
                     @Html.ValidationMessageFor(model => model.City)
-                </div>
 
+                    <div class="editor-field">
+                        @Html.TextBoxFor(model => model.City, new { @style = "width:250px;" })
+                    </div>
+                </div>
                 <div style="display: inline-block;">
                     <div style="float: left;">
-                        @Html.LabelFor(model => model.State, "State", new { @class = "form" })
+                        @Html.LabelFor(model => model.State, "State", new { @class = "contact" })
+                        @Html.ValidationMessageFor(model => model.State)
 
                         <div class="editor-field">
-                            <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
-                                <option value="">----</option>
+                            <select id="ddlState" name="ddlState" style="width: 100px;" onchange="updateState();">
+                                <option value="">Select</option>
                                 <option value="AL">AL</option>
                                 <option value="AK">AK</option>
                                 <option value="AZ">AZ</option>
@@ -283,15 +285,14 @@
                                 <option value="SK">SK</option>
                             </select>
                             @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
-                            @Html.ValidationMessageFor(model => model.State)
                         </div>
                     </div>
                     <div style="float: left;">
-                        @Html.LabelFor(model => model.Zip, "ZIP® Code", new { @class = "form" })
+                        @Html.LabelFor(model => model.Zip, "ZIP® Code", new { @class = "contact" })
+                        @Html.ValidationMessageFor(model => model.Zip)
 
                         <div class="editor-field">
                             @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
-                            @Html.ValidationMessageFor(model => model.Zip)
                         </div>
                     </div>
                 </div>
@@ -311,7 +312,7 @@
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Phone, new { @style = "width:100px;", placeholder = "Numbers Only" })
                     @*@Html.ValidationMessageFor(model => model.Phone)*@
-                    <label class="required">Optional</label>
+                    <label class="contact">Optional</label>
                 </div>
 
                 @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
@@ -319,7 +320,7 @@
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
                     @*@Html.ValidationMessageFor(model => model.Email)*@
-                    <label class="required">Optional</label>
+                    <label class="contact">Optional</label>
                 </div>
             </fieldset>
 

@@ -9,7 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Description" content="@ViewBag.MetaDescription" />
     <meta name="Keywords" content="@ViewBag.MetaKeywords" />
-    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>    
+    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="../../Scripts/jquery-ui-1.8.11.min.js"></script>
     <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/euk0nha.js"></script>
@@ -26,7 +26,7 @@
                     <h5 class="logo">@Html.ActionLink("Home", "Index", "Home")</h5>
                 </div>
                 <div class="storebar">
-                    <input id="Text1" type="text" placeholder="Search the site..." style="width:200px;" />
+                    <input id="Text1" type="text" placeholder="Search the site..." style="width: 200px;" />
                 </div>
                 <nav>
                     <ul id="topmenu">
@@ -38,8 +38,8 @@
                         </li>
                         <li>@Html.ActionLink("Contact Us", "Contact", "About", new { @title = "Contact Regal Lager" }, new { @class = "" })
                         </li>
-                        <li>@Html.ActionLink("CPS Techs", "CPS", "Home", new { @title = "A Place for CPS Techs" }, new { @class = "" })
-                        </li>
+                      @*  <li>@Html.ActionLink("CPS Techs", "CPS", "Home", new { @title = "A Place for CPS Techs" }, new { @class = "" })
+                        </li>*@
                         <li><a href="~/Internal/Security/Login.aspx" title="Retailer and Rep Login">Retailer
                             Login</a></li>
                     </ul>
@@ -118,7 +118,7 @@
                             <div class="col_2 last">
                                 <input id="txtStore" type="text" placeholder="Enter your ZIP" />&nbsp;<input id="Button1"
                                     type="button" value="GO" class="smallbutton" />
-                                <input id="btnOnline" type="button" value="Find Online Stores" class ="smallbutton"/>
+                                <input id="btnOnline" type="button" value="Find Online Stores" class="smallbutton" />
                             </div>
                         </div>
                     </li>
@@ -134,15 +134,17 @@
                                     </li>
                                     <li>@Html.ActionLink("Frequent Questions", "Faqs", "Support", null, new { @title = "Frequently Asked Questions" })
                                     </li>
-                                    <li>@Html.ActionLink("Recall Information", "Index", "Recalls", null, new { @title = "Register a Product" })
-                                    </li>
+
                                     @*<li>@Html.ActionLink("Product Videos", "Videos", "Support", null, new { @title = "Product Videos" })
                                     </li>*@
                                     <li><a href="http://www.youtube.com/rlcreative" target="_blank" title="Watch Our Videos">
                                         Product Videos</a></li>
-                                    <li>@Html.ActionLink("Instructions", "Downloads", "Support", null, new { @title = "Downloads" })
+                                    <li><a href="http://www.scribd.com/RLCreative/collections" target="_blank" title="Read or Download Instructions">
+                                        Product Instructions</a>@*@Html.ActionLink("Instructions", "Downloads", "Support", null, new { @title = "Downloads" })*@
                                     </li>
                                     <li>@Html.ActionLink("Register a Product", "Index", "Register", null, new { @title = "Register a Product" })
+                                    </li>
+                                    <li>@Html.ActionLink("Recall Information", "Index", "Recalls", null, new { @title = "Product Recall Information" })
                                     </li>
                                     <li>@Html.ActionLink("Warranty Info", "Warranty", "Support", null, new { @title = "Warranty and Return Information" })
                                     </li>
@@ -156,16 +158,16 @@
                         <div class="dropdown_1column">
                             <div class="col_1">
                                 <ul>
-                                    <li>@Html.ActionLink("Press Releases", "PressReleases", "Press", null, new { @title = "Press Releases" })
-                                    </li>
-                                   <li>@Html.ActionLink("Media Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
-                                    </li>
-                                     <li>@Html.ActionLink("Media Downloads", "Downloads", "Press", null, new { @title = "Download Logos" })
+                                    @* <li>@Html.ActionLink("News", "News", "Press", null, new { @title = "Regal Lager News" })
+                                    </li>*@
+                                    <li><a href="http://regallager.wordpress.com" target="_blank" title="See Our Mentions and Celebrity Sightings">
+                                        In the Press</a></li>
+                                    <li>@Html.ActionLink("Press Downloads", "Downloads", "Press", null, new { @title = "Download Logos" })
                                     </li>
                                     <li>@Html.ActionLink("Our Awards", "Awards", "Press", null, new { @title = "Our Awards" })
                                     </li>
-                                   <li><a href="http://regallager.wordpress.com" target="_blank" title="See Our Mentions and Celebrity Sightings">
-                                        In the Press</a></li>
+                                    <li>@Html.ActionLink("Media Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -198,31 +200,58 @@
             <section class="footer">
                 <h3>Customer Care</h3>
                 <ul>
-                    <li><a href="#" title="Customer Care">Get Help</a></li>
-                    <li><a href="#" title="Recalls">Check for Recalls</a></li>
-                    <li><a href="#" title="Product Videos">Product Videos</a></li>
-                    <li><a href="#" title="FAQ's">Frequently Asked Questions</a></li>
-                    <li><a href="#" title="FAQ's">Downloads</a></li>
-                    <li><a href="#" title="Contact Us">Register a Product</a></li>
+                    <li>@Html.ActionLink("Get Great Support", "Index", "Support", null, new { @title = "Get Support" })
+                    </li>
+                    <li>@Html.ActionLink("Frequent Questions", "Faqs", "Support", null, new { @title = "Frequently Asked Questions" })
+                    </li>
+                    <li><a href="http://www.youtube.com/rlcreative" target="_blank" title="Watch Our Product Videos">
+                        Product Videos</a></li>
+                    <li><a href="http://www.scribd.com/RLCreative/collections" target="_blank" title="Read or Download Instructions">
+                        Product Instructions</a></li>
+                     <li>@Html.ActionLink("Register a Product", "Index", "Register", null, new { @title = "Register a Product" })
+                    </li>
+                    <li>@Html.ActionLink("Recall Information", "Index", "Recalls", null, new { @title = "Product Recall Information" })
+                    </li>
+                    <li>@Html.ActionLink("Warranty Info", "Warranty", "Support", null, new { @title = "Warranty and Return Information" })
+                    </li>
+                    <li>@Html.ActionLink("Product Safety", "Testing", "Support", null, new { @title = "See Our Product Testing Results" })
+                    </li>
                 </ul>
             </section>
+
             <section class="footer">
                 <h3>Contact Us</h3>
                 <ul>
                     <li><a href="#">1-800-593-5522</a></li>
-                    <li><a href="#">Send Us an Email</a></li>
-                    <li><a href="#">Become a Retailer</a></li>
-                    <li><a href="#">Media Inquiries</a></li>
-                    <li><a href="#">Give us Feedback</a></li>
+                    <li>@Html.ActionLink("Send Us An Email", "Consumer", "Email", null, new { @title = "Send Us An Email" })
+                    </li>
+                    <li>@Html.ActionLink("Media Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
+                    </li>
+                    <li>@Html.ActionLink("Become a Retailer", "Sales", "Email", null, new { @title = "Become a Retailer" })
+                    </li>
+                </ul>
+                <h3>Our Company</h3>
+                <ul>
+                    <li>@Html.ActionLink("About Us", "Index", "About", null, new { @title = "About Us" })
+                    </li>
+                    <li>@Html.ActionLink("Our Team", "OurTeam", "About", null, new { @title = "Our Team" })
+                    </li>
+                    <li>@Html.ActionLink("Our Mission", "Mission", "About", null, new { @title = "Mission Statement" })
+                    </li>
                 </ul>
             </section>
             <section class="footer">
                 <h3>Press Room</h3>
                 <ul>
-                    <li><a href="#" title="About Us">About Us</a></li>
-                    <li><a href="#" title="Become a Retailer">Press Releases</a></li>
-                    <li><a href="#" title="In the Press">In the Press</a></li>
-                    <li><a href="#" title="In the Press">Awards</a></li>
+
+                    <li><a href="http://regallager.wordpress.com" target="_blank" title="See Our Mentions and Celebrity Sightings">
+                        In the Press</a></li>
+                    <li>@Html.ActionLink("Press Downloads", "Downloads", "Press", null, new { @title = "Download Logos" })
+                    </li>
+                    <li>@Html.ActionLink("Our Awards", "Awards", "Press", null, new { @title = "Our Awards" })
+                    </li>
+                    <li>@Html.ActionLink("Media Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
+                    </li>
                 </ul>
             </section>
             <section class="footer">

@@ -27,150 +27,157 @@
             <div id="ContactInfo">
                 @Html.ValidationSummary(true)                
                 <fieldset>
-                    <legend></legend>
+                <legend></legend>
 
-                    @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "form" })
+                @Html.LabelFor(model => model.FirstName, "First Name", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.FirstName)
 
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.FirstName, new { @style = "width:300px;" })
-                        @Html.ValidationMessageFor(model => model.FirstName)
-                    </div>
-                    @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "form" })
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.FirstName, new { @style = "width:250px;" })
+                </div>
 
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.LastName, new { @style = "width:300px;" })
-                        @Html.ValidationMessageFor(model => model.LastName)
-                    </div>
-                    @Html.LabelFor(model => model.Company, "Company/Publication/Site", new { @class = "form" })
+                @Html.LabelFor(model => model.LastName, "Last Name", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.LastName)
 
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Company, new { @style = "width:300px;" })
-                        @Html.ValidationMessageFor(model => model.Company)
-                    </div>
-
-                    @Html.LabelFor(model => model.Address, "Address", new { @class = "form" })
-
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Address, new { @style = "width:300px;" })
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.LastName, new { @style = "width:250px;" })
+                </div>
+                <div style="display: inline-block;">
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.Address, "Address", new { @class = "contact" })
                         @Html.ValidationMessageFor(model => model.Address)
+
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Address, new { @style = "width:250px;" })
+                        </div>
                     </div>
-                    @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "form" })
+                    <div style="float:left;">
+                        @Html.LabelFor(model => model.Address2, "Suite/Apt", new { @class = "contact" })
+
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Address2, new { @style = "width:50px;" })
+                            @Html.ValidationMessageFor(model => model.Address2)
+                        </div>
+                    </div>
+                </div>
+                <div style="display: block;">
+                    @Html.LabelFor(model => model.City, "City", new { @class = "contact" })
+                    @Html.ValidationMessageFor(model => model.City)
 
                     <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Address2, new { @style = "width:75px;" })
-                        @Html.ValidationMessageFor(model => model.Address2)
+                        @Html.TextBoxFor(model => model.City, new { @style = "width:250px;" })
                     </div>
-                    @Html.LabelFor(model => model.City, "City", new { @class = "form" })
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.City, new { @style = "width:300px;", @onblur = "City.style.backgroundColor='FBBC00';" })
-                        @Html.ValidationMessageFor(model => model.City)
-                    </div>
-
-                    @Html.LabelFor(model => model.State, "State/Province", new { @class = "form" })
-
-                    <div class="editor-field">
-                        <select id="ddlState" name="ddlState" style="width: 75px;" onchange="updateState();">
-                            <option value="">----</option>
-                            <option value="AL">AL</option>
-                            <option value="AK">AK</option>
-                            <option value="AZ">AZ</option>
-                            <option value="AR">AR</option>
-                            <option value="CA">CA</option>
-                            <option value="CO">CO</option>
-                            <option value="CT">CT</option>
-                            <option value="DC">DC</option>
-                            <option value="DE">DE</option>
-                            <option value="FL">FL</option>
-                            <option value="GA">GA</option>
-                            <option value="HI">HI</option>
-                            <option value="ID">ID</option>
-                            <option value="IL">IL</option>
-                            <option value="IN">IN</option>
-                            <option value="IA">IA</option>
-                            <option value="KS">KS</option>
-                            <option value="KY">KY</option>
-                            <option value="LA">LA</option>
-                            <option value="ME">ME</option>
-                            <option value="MD">MD</option>
-                            <option value="MA">MA</option>
-                            <option value="MI">MI</option>
-                            <option value="MN">MN</option>
-                            <option value="MS">MS</option>
-                            <option value="MO">MO</option>
-                            <option value="MT">MT</option>
-                            <option value="NE">NE</option>
-                            <option value="NV">NV</option>
-                            <option value="NH">NH</option>
-                            <option value="NJ">NJ</option>
-                            <option value="NM">NM</option>
-                            <option value="NY">NY</option>
-                            <option value="NC">NC</option>
-                            <option value="ND">ND</option>
-                            <option value="OH">OH</option>
-                            <option value="OK">OK</option>
-                            <option value="OR">OR</option>
-                            <option value="PA">PA</option>
-                            <option value="RI">RI</option>
-                            <option value="SC">SC</option>
-                            <option value="SD">SD</option>
-                            <option value="TN">TN</option>
-                            <option value="TX">TX</option>
-                            <option value="UT">UT</option>
-                            <option value="VT">VT</option>
-                            <option value="VA">VA</option>
-                            <option value="WA">WA</option>
-                            <option value="WV">WV</option>
-                            <option value="WI">WI</option>
-                            <option value="WY">WY</option>
-                            <option value="">----</option>
-                            <option value="AB">AB</option>
-                            <option value="BC">BC</option>
-                            <option value="MB">MB</option>
-                            <option value="NB">NB</option>
-                            <option value="NF">NF</option>
-                            <option value="NS">NS</option>
-                            <option value="NT">NT</option>
-                            <option value="ON">ON</option>
-                            <option value="QC">QC</option>
-                            <option value="SK">SK</option>
-                        </select>
-                        @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
+                </div>
+                <div style="display: inline-block;">
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.State, "State", new { @class = "contact" })
                         @Html.ValidationMessageFor(model => model.State)
+
+                        <div class="editor-field">
+                            <select id="ddlState" name="ddlState" style="width: 100px;" onchange="updateState();">
+                                <option value="">Select</option>
+                                <option value="AL">AL</option>
+                                <option value="AK">AK</option>
+                                <option value="AZ">AZ</option>
+                                <option value="AR">AR</option>
+                                <option value="CA">CA</option>
+                                <option value="CO">CO</option>
+                                <option value="CT">CT</option>
+                                <option value="DC">DC</option>
+                                <option value="DE">DE</option>
+                                <option value="FL">FL</option>
+                                <option value="GA">GA</option>
+                                <option value="HI">HI</option>
+                                <option value="ID">ID</option>
+                                <option value="IL">IL</option>
+                                <option value="IN">IN</option>
+                                <option value="IA">IA</option>
+                                <option value="KS">KS</option>
+                                <option value="KY">KY</option>
+                                <option value="LA">LA</option>
+                                <option value="ME">ME</option>
+                                <option value="MD">MD</option>
+                                <option value="MA">MA</option>
+                                <option value="MI">MI</option>
+                                <option value="MN">MN</option>
+                                <option value="MS">MS</option>
+                                <option value="MO">MO</option>
+                                <option value="MT">MT</option>
+                                <option value="NE">NE</option>
+                                <option value="NV">NV</option>
+                                <option value="NH">NH</option>
+                                <option value="NJ">NJ</option>
+                                <option value="NM">NM</option>
+                                <option value="NY">NY</option>
+                                <option value="NC">NC</option>
+                                <option value="ND">ND</option>
+                                <option value="OH">OH</option>
+                                <option value="OK">OK</option>
+                                <option value="OR">OR</option>
+                                <option value="PA">PA</option>
+                                <option value="RI">RI</option>
+                                <option value="SC">SC</option>
+                                <option value="SD">SD</option>
+                                <option value="TN">TN</option>
+                                <option value="TX">TX</option>
+                                <option value="UT">UT</option>
+                                <option value="VT">VT</option>
+                                <option value="VA">VA</option>
+                                <option value="WA">WA</option>
+                                <option value="WV">WV</option>
+                                <option value="WI">WI</option>
+                                <option value="WY">WY</option>
+                                <option value="">----</option>
+                                <option value="AB">AB</option>
+                                <option value="BC">BC</option>
+                                <option value="MB">MB</option>
+                                <option value="NB">NB</option>
+                                <option value="NF">NF</option>
+                                <option value="NS">NS</option>
+                                <option value="NT">NT</option>
+                                <option value="ON">ON</option>
+                                <option value="QC">QC</option>
+                                <option value="SK">SK</option>
+                            </select>
+                            @Html.TextBoxFor(model => model.State, "State", new { @style = "width:150px; display: none;" })
+                        </div>
                     </div>
-
-                    @Html.LabelFor(model => model.Zip, "ZIP®/Postal Code", new { @class = "form" })
-
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Zip, new { @style = "width:150px;" })
+                    <div style="float: left;">
+                        @Html.LabelFor(model => model.Zip, "ZIP® Code", new { @class = "contact" })
                         @Html.ValidationMessageFor(model => model.Zip)
+
+                        <div class="editor-field">
+                            @Html.TextBoxFor(model => model.Zip, new { @style = "width:100px;" })
+                        </div>
                     </div>
+                </div>
+                <div style="display: block;">
+                @Html.LabelFor(model => model.State, "Country", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.Country)
 
-                    @Html.LabelFor(model => model.State, "Country", new { @class = "form" })
-
-                    <div class="editor-field">
-                        <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
-                            <option value="">---------- Select ----------</option>
-                            <option value="US">United States</option>
-                            <option value="CA">Canada</option>
-                        </select>
-                        @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
-                        @Html.ValidationMessageFor(model => model.Country)
+                <div class="editor-field">
+                    <select id="ddlCountry" name="ddlCountry" style="width: 150px;" onchange="updateCountry();">
+                        <option value="">--------------------</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                    @Html.TextBoxFor(model => model.Country, "Country", new { @style = "width:150px; display: none;" })
+                </div>
                     </div>
+                @Html.LabelFor(model => model.Phone, "Phone", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.Phone)
 
-                    @Html.LabelFor(model => model.Phone, "Phone", new { @class = "form" })
+                <div class="editor-field">
+                    @Html.TextBoxFor(model => model.Phone, new { @style = "width:100px;", placeholder = "Numbers Only" })
+                </div>
 
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Phone, new { @style = "width:300px;", placeholder = "Numbers Only" })
-                        @Html.ValidationMessageFor(model => model.Phone)
-                    </div>
+                @Html.LabelFor(model => model.Email, "E-mail", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.Email)
 
-                    @Html.LabelFor(model => model.Email, "E-mail", new { @class = "form" })
-
-                    <div class="editor-field">
-                        @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
-                        @Html.ValidationMessageFor(model => model.Email)
-                    </div>
-                </fieldset>
+                <div class="editor-field">
+                @Html.TextBoxFor(model => model.Email, new { @style = "width:300px;" })
+                </div>
+            </fieldset>
             </div>
         </section>
         <section>
@@ -213,14 +220,11 @@
 
             <input type="text" id="txtRequestComments" style="width: 300px; min-height: 100px;">*@
             <hr />
-            <label class="form">Are you a blogger?</label>
+            <label class="contact">Are you a blogger?<span style="display: none;" class="required" id="RequiredMessageBlog">&nbsp;Required</span></label>
             
             <div class="editor-field">
             <input name="blog" type="radio" value="yes" id="yes" onclick="blogYes();" />Yes
-            <input name="blog" type="radio" value="no" id="no" onclick="blogNo();" />No
-            <label style="display: none;" class="required" id="RequiredMessageBlog">Required</label>
-            @*@Html.RadioButton(model => model.Blogger, "Blogger", new { @class = "form" })
-            @Html.ValidationMessageFor(model => model.Blogger)*@
+            <input name="blog" type="radio" value="no" id="no" onclick="blogNo();" style="margin-left:10px;" />No
             </div>
         </section>
 @*------- BLOGGER SECTION --------*@
@@ -228,7 +232,7 @@
             <div id="desc" style="display: none;">
 
                 <hr />
-                <h2>Additional Blog Information</h2>
+                <h2>Additional Blogger Information</h2>
 
                 <p>
                     We receive a large volume of product requests for testing and reviewing.
@@ -237,63 +241,64 @@
                 good match, please tell us a little about your site.
                 </p>
 
-                @Html.LabelFor(model => model.YearStarted, "Year Started", new { @class = "form" })
+                @Html.LabelFor(model => model.YearStarted, "Year Started", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.YearStarted)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.YearStarted, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.YearStarted)
                 </div>
 
-                @Html.LabelFor(model => model.WebURL, "Web URL", new { @class = "form" })
+                @Html.LabelFor(model => model.WebURL, "Web URL", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.WebURL)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.WebURL, new { @style = "width:300px;" })
-                    @Html.ValidationMessageFor(model => model.WebURL)
+                   
                 </div>
                 <hr />
                 <h3>Traffic Numbers (from Alexa&reg;, Compete&reg;, or Google&reg; Analytics)</h3>
-                @Html.LabelFor(model => model.MonthlyVisitors, "Monthly Visitors", new { @class = "form" })
+                @Html.LabelFor(model => model.MonthlyVisitors, "Monthly Visitors", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.MonthlyVisitors)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.MonthlyVisitors, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.MonthlyVisitors)
                 </div>
 
-                @Html.LabelFor(model => model.UniqueVisitors, "Unique Visitors", new { @class = "form" })
+                @Html.LabelFor(model => model.UniqueVisitors, "Unique Visitors", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.UniqueVisitors)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.UniqueVisitors, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.UniqueVisitors)
                 </div>
 
-                @Html.LabelFor(model => model.PageViews, "Page Views", new { @class = "form" })
+                @Html.LabelFor(model => model.PageViews, "Page Views", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.PageViews)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.PageViews, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.PageViews)
                 </div>
 
-                @Html.LabelFor(model => model.PageRanking, "Page Ranking", new { @class = "form" })
+                @Html.LabelFor(model => model.PageRanking, "Page Ranking", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.PageRanking)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.PageRanking, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.PageRanking)
                 </div>
                 <hr />
                 <h3>Social Media Activity</h3>
 
-                @Html.LabelFor(model => model.Facebook, "Facebook® Likes", new { @class = "form" })
+                @Html.LabelFor(model => model.Facebook, "Facebook® Likes", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.Facebook)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Facebook, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.Facebook)
                 </div>
 
-                @Html.LabelFor(model => model.Twitter, "Twitter® Followers", new { @class = "form" })
+                @Html.LabelFor(model => model.Twitter, "Twitter® Followers", new { @class = "contact" })
+                @Html.ValidationMessageFor(model => model.Facebook)
 
                 <div class="editor-field">
                     @Html.TextBoxFor(model => model.Twitter, new { @style = "width:50px;" })
-                    @Html.ValidationMessageFor(model => model.Twitter)
                 </div>
 
                 <label class="form">

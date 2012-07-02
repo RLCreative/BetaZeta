@@ -5,31 +5,25 @@
     <h1>@ViewBag.SubTitle</h1>
 </hgroup>
 <article>
-    <h2>Customer Care Department</h2>
+     <h2>Telephone</h2>
     <p>
-        If you need to speak with a Customer Care agent directly, please call our Customer
-        Care Department at <strong>1-800-593-5522</strong>. They can assist you with any
-        questions you may have about the Regal Lager line up of products.
+        Customer Care: 1-800-593-5522 Toll Free<br />
+        Local: 770-955-5060<br />
+        Fax: 770-955-1997
     </p>
-    <h3>Our Hours:</h3>
+    <hr />
+    <h2>E-mail Us</h2>
+    <p>
+        @Html.ActionLink("Send us an e-mail", "Consumer", "Email") and our Customer Care team will respond to you within one business
+        day.
+    </p>
+    <hr />
+    <h2>Our Hours:</h2>
     <p>
         Monday&ndash;Friday&nbsp;<strong>8:30 am&ndash;5:30 pm (EST)</strong>
         <br />
-        Saturday&ndash;Sunday&nbsp;<strong>Voicemail Only</strong>
-    </p>
-    <p>Closed on all major holidays.</p>
-    <hr /><h2>E-mail Us</h2>
-    <p>
-        Send us an e-mail and our Customer Care team will respond to you within one business
-        day.
-    </p>
-    <p>@Html.ActionLink("E-mail Us", "Consumer", "Email", null,
-    new { @title = "Send Us an Email", @class = "button" })
-    </p>
-    <hr /><h2>Telephone</h2>
-    <p>
-        770-955-5060<br />
-        Fax: 770-955-1997
+        Saturday&ndash;Sunday&nbsp;,<strong>Voicemail Only</strong><br />
+        Closed on all major holidays.
     </p>
     <hr />
     <h2>Media Contact:</h2>
@@ -47,7 +41,9 @@
     <hr />
     <h2>Sales Inquiries:</h2>
     <p>
-        If you are interested in joining our team as a retailer, contact Jeff Durkee at
+        If you are interested in joining our team as a retailer, contact our Director of
+        Sales @Html.ActionLink("Jeff Durkee", "OurTeam", "About", null,
+    new { @title = "Jeff Durkee" }) at
         770-955-5060 x120 or @Html.ActionLink("send him an e-mail", "Sales", "Email", null,
     new { @title = "Send Us an Email" }).
     </p>

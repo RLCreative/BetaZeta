@@ -58,7 +58,7 @@ namespace Zeta.Controllers
                 }
                 catch (Exception)
                 {
-                    //TempData["Message"] = "Uh oh it didn't work!!!";
+                    TempData["Message"] = "Please fill in all the required fields";
                     //ViewBag.show = "visibility: visible;";
                     return View();
                 }
