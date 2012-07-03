@@ -44,6 +44,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PackageAsSingleFile>false</PackageAsSingleFile>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit">
@@ -500,14 +501,18 @@
     <Content Include="Images\rl-aboutus.png" />
     <Content Include="Images\rl-contact.png" />
     <Content Include="Images\rl-customercare.png" />
+    <Content Include="Images\rl-media.png" />
     <Content Include="Images\rl-mission.png" />
+    <Content Include="Images\rl-pressdownload.png" />
     <Content Include="Images\rl-safetytesting.png" />
+    <Content Include="Images\rl-sales.png" />
     <Content Include="Images\rl-warehouse.jpg" />
     <Content Include="Images\rl-warranty.png" />
     <Content Include="Images\save.png" />
     <Content Include="Images\shopping_cart.png" />
     <Content Include="Images\shopping_cart2.png" />
     <Content Include="Images\slider-00.jpg" />
+    <Content Include="Images\slider-01.jpg" />
     <Content Include="Images\solutionxfix.jpg" />
     <Content Include="Images\sprite_foot.png" />
     <Content Include="Images\submit_order.png" />
