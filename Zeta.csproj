@@ -471,6 +471,7 @@
     <Content Include="Images\drop.gif" />
     <Content Include="Images\drop.png" />
     <Content Include="Images\edit_order.png" />
+    <Content Include="Images\facebook-full.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\flickr.png" />
     <Content Include="Images\GEMStrollers.jpg" />
@@ -491,6 +492,7 @@
     <Content Include="Images\miosolo-in-Coral.jpg" />
     <Content Include="Images\mycarrypotty.png" />
     <Content Include="Images\new_cart.png" />
+    <Content Include="Images\onyx-whatsnew.png" />
     <Content Include="Images\orderedListOne.png" />
     <Content Include="Images\orderedListThree.png" />
     <Content Include="Images\orderedListTwo.png" />
@@ -513,10 +515,15 @@
     <Content Include="Images\shopping_cart2.png" />
     <Content Include="Images\slider-00.jpg" />
     <Content Include="Images\slider-01.jpg" />
+    <Content Include="Images\slider-02.jpg" />
+    <Content Include="Images\slider-03.jpg" />
+    <Content Include="Images\slider-04.jpg" />
     <Content Include="Images\solutionxfix.jpg" />
     <Content Include="Images\sprite_foot.png" />
+    <Content Include="Images\strollertraffic-aton.png" />
     <Content Include="Images\submit_order.png" />
     <Content Include="Images\truck.gif" />
+    <Content Include="Images\twitter-full.png" />
     <Content Include="Images\twitter.png" />
     <Content Include="Images\view_orders.png" />
     <Content Include="Images\windowsLive.png" />
@@ -1029,7 +1036,7 @@
     <Content Include="Views\Press\Awards.cshtml" />
     <Content Include="Views\Press\Downloads.cshtml" />
     <Content Include="Views\Press\Index.cshtml" />
-    <Content Include="Views\Press\PressReleases.cshtml" />
+    <Content Include="Views\Press\New.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Support\Instructions.cshtml" />
     <Content Include="Views\Support\Faqs.cshtml" />

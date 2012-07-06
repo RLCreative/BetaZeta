@@ -7,12 +7,11 @@ body {
     font-family: "proxima-nova", sans-serif;
     font-style: normal;
     font-weight: 400;
+    letter-spacing: normal;
 }
-
 a {
-    color:rgb(100, 200, 255);
+    color:rgb(2, 159, 235);
 }
-
 a:link {
     color:rgb(2, 85, 235);
     padding-left: 0px;
@@ -20,11 +19,9 @@ a:link {
     text-decoration: none;
     display: inline;
 }
-
 a:hover {
     color:rgb(2, 85, 235);
 }
-
 a:active {
     color:rgb(255, 255, 255);
 }
@@ -42,45 +39,43 @@ nav, section {
     display: block;
     width: 100%;
 }
-
 h1, h2 {
-    font-family: "ff-tisa-web-pro", sans-serif;
+    font-family: "chaparral-pro-display", /*"ff-tisa-web-pro",*/ serif;
     font-style: normal;
     margin: 10px 0px 15px 0px;
     line-height: 1;
 }
-
  h3, h4 {
-    font-family: "proxima-nova", serif;
+    font-family: "proxima-nova", sans-serif;
     font-style: normal;
-    font-weight: 600;
     margin: 0px 0px 10px 0px;
     color: rgb(255, 255, 255);
     line-height: 1;
 }
-
-
 h1 { /*Main Page Header*/
     font-size: 2em;
-    font-weight: 700;
+    font-style: normal;
+    font-weight:700;
+    letter-spacing: .01em;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
 }
-
 h2 { /*Sub Header*/
     font-size: 1.5em;
-    text-shadow: 1px 1px 1px #000;
     color: rgb(251, 188, 0);
     font-weight: 400;
-    
+    letter-spacing: .03em;
+    text-shadow: 1px 1px 1px #000;
 }
 h3 { /*Paragraph Heading */
     font-size: 1.25em;
+    font-weight: 600;
        
 }
 h4 { /*Use for Paragraph Sub-Headings*/
     font-size: 1em;
     font-style: italic;
+    font-weight: 600;
 }
 p {
     font-size: .90em;
@@ -133,14 +128,14 @@ strong {
     height: 0;
     visibility: hidden;
 }
-.wf-loading h1, h2 {
-  /* styles to use before Typekit is loaded */
-   font-family: "ff-tisa-web-pro", serif;
+ .wf-loading h1, h2 {
+  /*styles to use before Typekit is loaded*/ 
+   font-family: "chaparral-pro-displa", serif;
    visibility: hidden;
 }
 .wf-active  h1, h2 {
-  /* styles to use after Typekit is loaded */
-   font-family: "ff-tisa-web-pro", serif;
+   /*styles to use after Typekit is loaded */
+   font-family: "chaparral-pro-displa", serif;
    visibility: visible;
 }
 a[href $='.pdf'] {
@@ -237,17 +232,21 @@ h5.logo a {
 
 .imgwrapper {
     position: relative;
-    width: 280px;
+    width: 260px;
 }
 .imgcontainer {
-    background-color: #dcdedf;
+    /*background-color:rgb(2, 159, 235);*/
+    background: transparent;
     width: 260px;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
     max-height: 185px;
     vertical-align: middle;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+}
+.new {
+    float:right; 
+    margin: 5px 0px 8px 0px;
 }
 footer {
     clear: both;

@@ -22,13 +22,8 @@ namespace Zeta.Controllers
         {
             return View();
         }
-        
-        public ActionResult Media()
-        {
-            return View();
-        }
 
-        public ActionResult PressReleases()
+        public ActionResult New()
         {
             return View();
         }
