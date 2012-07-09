@@ -78,7 +78,7 @@ h4 { /*Use for Paragraph Sub-Headings*/
     font-weight: 600;
 }
 p {
-    font-size: .90em;
+    font-size: .9em;
     line-height: 1.75em;
     padding-bottom: 15px;
     font-weight: 300;
@@ -89,7 +89,15 @@ hr {
     clear: both;
     margin: 20px 0px;
 }
-
+em {
+    font-style: italic;
+}
+blockquote {
+    margin-left: 40px;
+}
+strong {
+    font-weight:bold;
+}
 .worktitle {
     font-family: "proxima-nova", sans-serif;
     color: rgb(255, 255, 255);
@@ -98,12 +106,6 @@ hr {
     font-style: italic;
     font-weight: 600;
     margin: 10px 0px 5px 0px;
-}
-em {
-    font-style: italic;
-}
-strong {
-    font-weight:bold;
 }
 .yellow {
      color: rgb(251, 188, 0);
@@ -1028,7 +1030,14 @@ section.footer {
 #footer h3 {
     color: #1b1b1b;
     font-weight: bold;
-    margin: 10px 0px;
+    margin: 5px 0px 0px 0px;
+}
+#footer hr {
+    border: none 0;
+    border-bottom: 1px dotted #1b1b1b;
+    clear: both;
+    margin: 5px 0px;
+    width:60%;
 }
 
 .copyright {
@@ -1179,8 +1188,7 @@ ul.default li.sublist {
 /*END LISTS */
 
 /*----------------- FAQ STYLES ----------------------*/
- article.accordion
-{
+ article.accordion{
 	display: block;
 	width: 60em;
 	/*padding: 0.5em 0.5em 1px 0.5em;*/
@@ -1189,11 +1197,10 @@ ul.default li.sublist {
 	/*border-radius: 5px;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.3);*/
 }
-article.accordion section
-{
+article.accordion section{
 	display: block;
 	width: 57em;
-	height: 2em;
+	height: 3em;
 	padding: 0 1em;
 	margin: 0 0 0.5em 0;
 	color: rgb(255,255,255);
@@ -1206,9 +1213,8 @@ article.accordion section
 	background: -moz-linear-gradient(top, #2b2b2b, #232323);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2b2b2b), to(#232323));
 }
-article.accordion section h2
-{
-	font-size: 1em;
+article.accordion section h2{
+	/*font-size: 1em;*/
 	font-weight: bold;
 	line-height: 2em;
 	padding: 0;
@@ -1216,22 +1222,17 @@ article.accordion section h2
 	color: rgb(251, 188, 0);
     background:url("../Images/drop.png") no-repeat right 10px;
 }
-
-article.accordion section h2 a
-{
+article.accordion section h2 a{
 	display: block;
 	line-height: 2em;
 	text-decoration: none;
 	color: inherit;
 	outline: 0 none;
 }
-article.accordion section h2 a:hover
-{
+article.accordion section h2 a:hover{
 	color: #FFF;
 }
-
-article.accordion section:target
-{
+article.accordion section:target{
 	color: rgb(255,255,255);
     min-height: 30em;
     height: auto;
@@ -1239,11 +1240,10 @@ article.accordion section:target
     border:none;
     z-index: 10;
 }
-article.accordion section:target h2
-{
+article.accordion section:target h2{
 	position: relative;
     font-size: 1.5em;
-	color: rgb(255,255,255);
+	color: #FFF;
     overflow: hidden;
 	padding-left: 1em;
     z-index: 10;
@@ -1257,10 +1257,25 @@ article.accordion section:target h2
     box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 }
 
-article.accordion section:target h2 a:hover
-{
+article.accordion section:target h2 a:hover{
 	color: rgb(251, 188, 0);
 }
+article.accordion section:target h2.faqsubhead {
+    background-color: transparent;
+    background: none;
+    box-shadow: none;
+    border: none;
+    color:rgb(251, 188, 0);
+    padding-left:0em;
+}
+article.accordion section:target h3 {
+    color:rgb(251, 188, 0);
+}
+article.accordion section:target h4 {
+    font-style:normal;
+    line-height: 1.5em;
+}
+    
 div.page 
 {
     background-color: rgba(0,0,0, .1);
