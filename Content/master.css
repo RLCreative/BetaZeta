@@ -13,7 +13,7 @@ a {
     color:rgb(2, 159, 235);
 }
 a:link {
-    color:rgb(2, 85, 235);
+    color:rgb(2, 159, 235);
     padding-left: 0px;
     padding-right: 0px;
     text-decoration: none;
@@ -1270,6 +1270,9 @@ article.accordion section:target h2.faqsubhead {
 }
 article.accordion section:target h3 {
     color:rgb(251, 188, 0);
+     padding-top: 1em;
+     border-bottom: 1px dotted rgb(0, 0, 0);
+     padding-bottom: .5em;
 }
 article.accordion section:target h4 {
     font-style:normal;
@@ -1286,6 +1289,30 @@ div.page
     border-left: 1px solid #1b1b1b;
     border-bottom: 1px solid #1b1b1b;
     z-index: -1;
+}
+ul.faq {
+    list-style: disc outside none;
+    color:rgb(100, 200, 255);
+    margin-bottom: 10px;
+    font-size: .9em;
+    padding-left: 50px;
+}
+
+ul.faq li {
+    color: #FFF;
+    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+	/*background: url("../Images/bullet.png") no-repeat 0 50%;*/
+    line-height: 2em;
+}
+
+ul.faq li a {
+	color:rgb(100, 200, 255);
+	display:inline;
+}
+
+ul.faq li a:hover {
+	color:rgb(2, 85, 235);
+	display:inline;
 }
 /*article.accordion section,
 article.accordion section h2

@@ -489,6 +489,7 @@
     <Content Include="Images\left.png" />
     <Content Include="Images\lilsugarReaderChoice.png" />
     <Content Include="Images\lwl-headshot.jpg" />
+    <Content Include="Images\minus.gif" />
     <Content Include="Images\miosolo-in-Coral.jpg" />
     <Content Include="Images\mycarrypotty.png" />
     <Content Include="Images\new_cart.png" />
@@ -497,6 +498,7 @@
     <Content Include="Images\orderedListThree.png" />
     <Content Include="Images\orderedListTwo.png" />
     <Content Include="Images\pdfsm.gif" />
+    <Content Include="Images\plus.gif" />
     <Content Include="Images\PTPA-Seal-of-Approval.png" />
     <Content Include="Images\regallager.png" />
     <Content Include="Images\right.gif" />
