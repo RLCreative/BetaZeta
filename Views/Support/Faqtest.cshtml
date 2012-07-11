@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.SubTitle = "Frequently Asked Questions";
+            
+}
+<hgroup class="title">
+    <h1>FAQs</h1>
+</hgroup>
+<article class="accordion">
+    @* <a class="button expand" href="#">Expand</a>*@
+    <section id="acc1">
+        <h2><a href="#acc1">Bambino Mio&reg; Cloth Diapers</a></h2>
+        <div class="page">
+            <div style="padding-left: 10px;">
+                <dl>
+                        <dt><span class="icon"></span>Why choose Bambino Mio for your baby?</dt>
+                        <dd>Bambino Mio were one of the first companies to start the reusable nappy revolution
+                            fifteen years ago and today manufacture a range of diapers and accessories to ensure
+                            when parents choose to reuse it is as simple and easy to do as disposables.</dd>
+                    </dl>
+            </div>
+        </div>
+    </section>
+    <section id="acc2">
+        <h2><a href="#acc2">Cybex&reg; Strollers, Car Seats, and Carriers</a></h2>
+        <div class="page">
+            <div style="padding-left: 10px;">
+                <div id="faqSectionCY">
+                    <!-- The FAQs are inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+</article>
+@*<p class="createdBy"><a href="http://tutorialzine.com/2010/08/dynamic-faq-jquery-yql-google-docs/">Read &amp; Download on Tutorialzine &raquo;</a></p>*@
+
+@*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>*@
+<script type="text/javascript">
+    $('dt').live('click', function () {
+    var dd = $(this).next();
+
+    if (!dd.is(':animated')) {
+        dd.slideToggle();
+        $(this).toggleClass('opened');
+    }
+
+});</script>

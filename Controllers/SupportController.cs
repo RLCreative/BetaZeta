@@ -18,6 +18,10 @@ namespace Zeta.Controllers
             return View();
         }
 
+        public ActionResult Faqtest()
+        {
+            return View();
+        }
         public ActionResult Faqs()
         {
             return View();

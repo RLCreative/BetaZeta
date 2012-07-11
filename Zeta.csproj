@@ -447,6 +447,7 @@
     <Content Include="Content\master.css" />
     <Content Include="Content\nivo-slider.css" />
     <Content Include="Content\reset.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Content\toastr-responsive.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Global.asax" />
@@ -456,9 +457,12 @@
     <Content Include="Images\add_to_cart.png" />
     <Content Include="Images\babblesbest.png" />
     <Content Include="Images\bambinomio.png" />
+    <Content Include="Images\bg.jpg" />
     <Content Include="Images\bl-headshot.jpg" />
     <Content Include="Images\bmdistributor.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\bullets.png" />
+    <Content Include="Images\buttons.png" />
     <Content Include="Images\Cribsie-Award.jpg" />
     <Content Include="Images\Cribsie-Award.png" />
     <Content Include="Images\cy-carriersquare.jpg" />
@@ -473,6 +477,7 @@
     <Content Include="Images\edit_order.png" />
     <Content Include="Images\facebook-full.png" />
     <Content Include="Images\facebook.png" />
+    <Content Include="Images\faq_bg.jpg" />
     <Content Include="Images\flickr.png" />
     <Content Include="Images\GEMStrollers.jpg" />
     <Content Include="Images\header-bg.jpg" />

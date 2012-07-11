@@ -93,7 +93,7 @@ em {
     font-style: italic;
 }
 blockquote {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 strong {
     font-weight:bold;
@@ -1188,7 +1188,7 @@ ul.default li.sublist {
 /*END LISTS */
 
 /*----------------- FAQ STYLES ----------------------*/
- article.accordion{
+ article.accordion {
 	display: block;
 	width: 60em;
 	/*padding: 0.5em 0.5em 1px 0.5em;*/
@@ -1197,7 +1197,7 @@ ul.default li.sublist {
 	/*border-radius: 5px;
 	box-shadow: 0 3px 3px rgba(0,0,0,0.3);*/
 }
-article.accordion section{
+article.accordion section {
 	display: block;
 	width: 57em;
 	height: 3em;
@@ -1213,7 +1213,7 @@ article.accordion section{
 	background: -moz-linear-gradient(top, #2b2b2b, #232323);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2b2b2b), to(#232323));
 }
-article.accordion section h2{
+article.accordion section h2 {
 	/*font-size: 1em;*/
 	font-weight: bold;
 	line-height: 2em;
@@ -1222,17 +1222,17 @@ article.accordion section h2{
 	color: rgb(251, 188, 0);
     background:url("../Images/drop.png") no-repeat right 10px;
 }
-article.accordion section h2 a{
+article.accordion section h2 a {
 	display: block;
 	line-height: 2em;
 	text-decoration: none;
 	color: inherit;
 	outline: 0 none;
 }
-article.accordion section h2 a:hover{
+article.accordion section h2 a:hover {
 	color: #FFF;
 }
-article.accordion section:target{
+article.accordion section:target {
 	color: rgb(255,255,255);
     min-height: 30em;
     height: auto;
@@ -1240,7 +1240,7 @@ article.accordion section:target{
     border:none;
     z-index: 10;
 }
-article.accordion section:target h2{
+article.accordion section:target h2 {
 	position: relative;
     font-size: 1.5em;
 	color: #FFF;
@@ -1256,8 +1256,7 @@ article.accordion section:target h2{
     border-radius: 3px 3px 0px 0px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.3);
 }
-
-article.accordion section:target h2 a:hover{
+article.accordion section:target h2 a:hover {
 	color: rgb(251, 188, 0);
 }
 article.accordion section:target h2.faqsubhead {
@@ -1278,7 +1277,6 @@ article.accordion section:target h4 {
     font-style:normal;
     line-height: 1.5em;
 }
-    
 div.page 
 {
     background-color: rgba(0,0,0, .1);
@@ -1297,19 +1295,16 @@ ul.faq {
     font-size: .9em;
     padding-left: 50px;
 }
-
 ul.faq li {
     color: #FFF;
     font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
 	/*background: url("../Images/bullet.png") no-repeat 0 50%;*/
     line-height: 2em;
 }
-
 ul.faq li a {
 	color:rgb(100, 200, 255);
 	display:inline;
 }
-
 ul.faq li a:hover {
 	color:rgb(2, 85, 235);
 	display:inline;
@@ -1323,4 +1318,38 @@ article.accordion section h2
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }*/
+/* Definition Lists */
+
+dt{
+	color:rgb(255, 255, 255);
+    font-size: 1em;
+    font-weight:bold;
+	margin-bottom:1em;
+	padding-left:20px;
+	position:relative;
+	cursor:pointer;
+    
+    text-shadow: 1px 1px 1px #000;
+}
+dt:hover{ color:#FFF;}
+
+dt .icon{
+	background:url('../../Images/bullets.png') no-repeat;
+    height:12px;
+	left:0;
+	position:absolute;
+	top:8px;
+	width:12px;
+}
+
+dt.opened .icon{ background-position:left bottom;}
+
+dd{
+	font-size:.9em;
+	color:#FFF;
+	line-height:1.5;
+	padding: 0 0 1em 40px;
+	width:680px;
+	display:none;
+}
 /*----------------- FAQ STYLES ----------------------*/

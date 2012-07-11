@@ -6,17 +6,15 @@
     <h1>FAQs</h1>
 </hgroup>
 <script type="text/javascript">
-    function toggleDiv(divId) {
-        $("#" + divId).toggle();
+    $('dt').live('click', function () {
+        var dd = $(this).next();
 
-    }
-    function switchImg() {
-        if (document.getElementById('plus').style.display = '') {
-            document.getElementById('plus').style.display = 'none';
-            document.getElementById('minus').style.display = 'visible';
+        if (!dd.is(':animated')) {
+            dd.slideToggle();
+            $(this).toggleClass('opened');
         }
 
-    };
+    });
 </script>
 <article class="accordion">
     <p>
@@ -28,148 +26,116 @@
         <h2><a href="#acc1">Bambino Mio&reg; Cloth Diapers</a></h2>
         <div class="page">
             <div style="padding-left: 10px; position: relative;">
-                <div style="margin-left: -15px; position: absolute;">
-                    <a href="javascript:toggleDiv('faq_00');">
-                        <div id="plus" style=""><img src="../../Images/plus.gif" id="" class="plusOn" style="padding-bottom:2px;" onclick="switchImg();" />
+                <dl>
+                    <dt><span class="icon"></span>Why choose Bambino Mio for your baby?</dt>
 
-                        </div>
-                         <div id="minus" style="display:none;"><img src="../../Images/minus.gif" id="" class="minusOn" style="padding-bottom:2px;" onclick="switchImg();" />
-                         </div>
-                    </a>
-                </div>
-                <h4>Why choose Bambino Mio for your baby?</h4>
-                <div id="faq_00" style="display: none;">
-                    <p>
-                        Bambino Mio were one of the first companies to start the reusable nappy revolution
+                    <dd>Bambino Mio were one of the first companies to start the reusable nappy revolution
                         fifteen years ago and today manufacture a range of diapers and accessories to ensure
                         when parents choose to reuse it is as simple and easy to do as disposables.
-                    </p>
-                </div>
-                <div style="margin-left: -15px;  margin-bottom:2px; position: absolute;">
-                    <a href="javascript:toggleDiv('faq_01');">
-                        <img src="../../Images/plus.gif" id="" style="padding-bottom:2px;" /></a>
-                </div>
-                <h4>Bambino Mio have two different systems</h4>
-                <div id="faq_01" style="display: none;"><p>
-                    the two-piece which benefits from a 100% cotton nappy which can be folded to suit
-                    the individual requirements of your baby and the miosolo a ne-size* all-in-one
-                    nappy which is the simplest nappy to put on baby for the ultimate convenience. Bambino
-                    Mio cloth diapers are slim fitting at the hips, they allow your baby more freedom
-                    of movement. The nappy covers have Velcro® tabs and the miosolo have Velcro® style
-                    tabs making them convenient, simple to use, and easy to adjust to the shape of your
-                    baby. When laundering, our diapers wash and dry very efficiently providing you with
-                    a fast turnaround.
-                </p></div>
-                <h4>3. Why is a mioliner (liner) used?</h4>
-                <p>
-                    Our nappy liners retain solids to help prevent soiling of the nappy and 
-                    also reduce moisture seeping back onto baby's skin. Soiled nappy liners 
-                    can simply be removed from a nappy and flushed away*. Wet liners should 
-                    be placed in a bin or can be composted.
-                </p>
-                <p>
-                    *Caution: the flushing of liners may cause blockages in old or damaged drains. No
-                    responsibility can be accepted for individual drain systems.
-                </p>
-                <h4>4. Are Bambino Mio reusable cloth diapers easy to use?</h4>
-                <p>
-                    Our two-piece reusable nappy is designed to be quick and easy to use. 
-                    Simply place a cotton nappy into a nappy cover, then place the complete 
-                    nappy and cover (nappy wrap) onto baby like you would a disposable and fasten the
-                    Velcro® fasteners around your baby’s tummy.&nbsp; If you are using our 
-                    miosolo you do not need to use a separate nappy as the miosolo is an 
-                    all-in-one nappy for the ultimate convenience.<br>
-                    <br>
-                    Reusable cloth diapers no longer need to be soaked. Real cloth diapers can be dry
-                    stored in
-                    the nappy bucket. Please refer to our <a href="http://www.scribd.com/doc/98688880/Bambino-Mio-User-Guide"
-                        target="_blank">User Guide</a> for further guidance and tips.
-                </p>
+                    </dd>
 
-                <h4>5. How many Bambino Mio cloth diapers do I need?</h4>
-                <p>
-                    The number of cloth diapers you need will basically depend on how often you are
-                    going to wash
-                    the diapers. 
-                </p>
-                <h4>6. When using Bambino Mio reusable diapers full time, we recommend:</h4>
-                <blockquote>
-                    <p><strong>Using the two-piece sytem:</strong></p>
-                    <ul class="default">
-                        <li>Twenty four mionappies in one size (size 1 and 2 are available) 
-                        </li>
-                        <li>Three to six miosoft nappy covers in one size
-                        </li>
-                    </ul>
-                    <p><strong>Using miosolo all-in-ones:</strong></p>
-                    <ul class="default">
-                        <li>Twenty miosolo (all-in-one nappy)
-                        </li>
-                    </ul>
-                    <p><strong>You will also need:</strong></p>
-                    <ul class="default">
-                        <li>mioliners (nappy liners)</li>
-                        <li>miofresh (nappy sanitizer)</li>
-                        <li>A nappy bucket and laundry bag</li>
-                    </ul>
-                    <p>
-                        Please note that all parents and babies needs are different, and you may need 
-                    more or less cloth diapers and covers depending on your circumstances. It is 
-                    important that you have enough diapers and covers so that you do not run
-                    out as washing small quantities is not cost effective.
-                    </p>
-                </blockquote>
-                <h4>7. Will my child suffer from diaper rash as a result of using cloth diapers?
-                </h4>
-                <p>
-                    Studies* have shown that your child is five times more likely to suffer from diaper
-                    rash if you use disposable diapers rather than cloth ones. This is because many
-                    disposables feel dry when in fact they are wet. Diaper rash can be caused by
-                    a number of things such as illness, diarrhea, teething, food allergies/, new  or
-                    different foods, baby wipes, creams, and residual
-                    particles of detergent from washing.
-                </p>
-                <p class="smaller">
-                    (*Source: Br J Gen Pract 1997 Aug:47 (421):493-7 Getting to the
-                    bottom of nappy rash. University of Bristol)
-                </p>
-                <h4>8. Will the reusable diapers leak?</h4>
-                <p>
-                    Both of our nappy systems have been designed for maximum absorbency with minimum
-                    bulk. Both cotton and microfibre are highly absorbent fabrics ideal for cloth.
-                    Our mionappies (two-piece system) are made from 100% cotton, a natural, breathable
-                    fabric, where as the miosolo nappy has a highly absorbent has a super absorbent
-                    microfibre core and a stay dry inner layer to keep baby comfortable
-                    and dry.
-                </p>
-                <p>
-                    Both the miosoft nappy cover (two-piece) and the miosolo benefit from 
-                    elasticated legs and waistband to ensure a snug, comfortable fit which 
-                    prevents leakage and Velcro® tabs to provide a perfect fit for all
-                     shapes and sizes.
-                </p>
-                <p>
-                    (two-piece only) It is 
-                    important to use the correct size cover for your baby and use the most 
-                    appropriate nappy fold to minimise the possibility of leakage. Details 
-                    on how to choose the right size of real nappy or using the most 
-                    efficient nappy fold can be found in the User Guide.
-                </p>
-                <h4>9. Are the Bambino Mio cloth diapers bulky?</h4>
-                <p>
-                    Bambino Mio reusable diapers are less bulky than terry diapers and slightly 
-                    more bulky than disposables. However, when a disposable nappy is wet it 
-                    will swell up more, due to the absorbency of the moisture retaining 
-                    chemicals inside, unlike reusable diapers.
-                </p>
-                <h4>10. How often will I need to change Bambino Mio cloth diapers?</h4>
-                <p>
-                    A Bambino Mio nappy will need to be changed every two to four hours but it really
-                    depends on how often your baby wets. Reusable nappy users prefer to 
-                    change their baby more frequently whereas there is a temptation for 
-                    disposable nappy users to leave for longer periods between changes 
-                    because their baby does not feel wet.
-                </p>
+                    <dt><span class="icon"></span>Why does Bambino Mio have two different systems?</dt>
+                    <dd>The two-piece which benefits from a 100% cotton nappy which can be folded to suit
+                        the individual requirements of your baby and the miosolo a ne-size* all-in-one nappy
+                        which is the simplest nappy to put on baby for the ultimate convenience. Bambino
+                        Mio cloth diapers are slim fitting at the hips, they allow your baby more freedom
+                        of movement. The nappy covers have Velcro® tabs and the miosolo have Velcro® style
+                        tabs making them convenient, simple to use, and easy to adjust to the shape of your
+                        baby. When laundering, our diapers wash and dry very efficiently providing you with
+                        a fast turnaround.
+                    </dd>
+                    <dt><span class="icon"></span>Why is a mioliner (liner) used?</dt>
+                    <dd>Our nappy liners retain solids to help prevent soiling of the nappy and 
+                        also reduce moisture seeping back onto baby's skin. Soiled nappy liners 
+                        can simply be removed from a nappy and flushed away*. Wet liners should 
+                        be placed in a bin or can be composted. The flushing of liners may cause blockages
+                        in old or damaged drains. No
+                        responsibility can be accepted for individual drain systems.
+                <dt><span class="icon"></span>Are Bambino Mio reusable cloth diapers easy to use?
+                </dt>
+                    <dd>Our two-piece reusable nappy is designed to be quick and easy to use. 
+                        Simply place a cotton nappy into a nappy cover, then place the complete 
+                        nappy and cover (nappy wrap) onto baby like you would a disposable and fasten the
+                        Velcro® fasteners around your baby’s tummy.&nbsp; If you are using our 
+                        miosolo you do not need to use a separate nappy as the miosolo is an 
+                        all-in-one nappy for the ultimate convenience. Reusable cloth diapers no longer need
+                        to be soaked. Real cloth diapers can be dry stored in the nappy bucket. Please refer
+                        to our <a href="http://www.scribd.com/doc/98688880/Bambino-Mio-User-Guide"
+                                target="_blank">User Guide</a> for further guidance and tips.
+                    </dd>
+
+                    <dt><span class="icon"></span>How many Bambino Mio cloth diapers do I need?</dt>
+                    <dd>The number of cloth diapers you need will basically depend on how often you are
+                        going to wash the diapers. 
+                    </dd>
+                    <dt><span class="icon"></span>When using Bambino Mio reusable diapers full time, we recommend:</dt>
+                    <dd>
+                        <p><strong>Using the two-piece sytem:</strong></p>
+                        <ul class="default">
+                            <li>Twenty four mionappies in one size (size 1 and 2 are available) 
+                            </li>
+                            <li>Three to six miosoft nappy covers in one size
+                            </li>
+                        </ul>
+                        <p><strong>Using miosolo all-in-ones:</strong></p>
+                        <ul class="default">
+                            <li>Twenty miosolo (all-in-one nappy)
+                            </li>
+                        </ul>
+                        <p><strong>You will also need:</strong></p>
+                        <ul class="default">
+                            <li>mioliners (nappy liners)</li>
+                            <li>miofresh (nappy sanitizer)</li>
+                            <li>A nappy bucket and laundry bag</li>
+                        </ul>
+                        <p>
+                            Please note that all parents and babies needs are different, and you may need more
+                            or less cloth diapers and covers depending on your circumstances. It is important
+                            that you have enough diapers and covers so that you do not run out as washing small
+                            quantities is not cost effective.
+                        </p>
+                    </dd>
+                    <dt><span class="icon"></span>Will my child suffer from diaper rash as a result of using cloth diapers?
+                    </dt>
+                    <dd>Studies* have shown that your child is five times more likely to suffer from diaper
+                        rash if you use disposable diapers rather than cloth ones. This is because many
+                        disposables feel dry when in fact they are wet. Diaper rash can be caused by a number
+                        of things such as illness, diarrhea, teething, food allergies/, new  or different
+                        foods, baby wipes, creams, and residual particles of detergent from washing.
+                   
+                    <span class="smaller">(*Source: Br J Gen Pract 1997 Aug:47 (421):493-7 Getting to the
+                        bottom of nappy rash. University of Bristol)
+                    </span></dd>
+                    <dt><span class="icon"></span>Will the reusable diapers leak?</dt>
+                    <dd>Both of our nappy systems have been designed for maximum absorbency with minimum
+                        bulk. Both cotton and microfibre are highly absorbent fabrics ideal for cloth.
+                        Our mionappies (two-piece system) are made from 100% cotton, a natural, breathable
+                        fabric, where as the miosolo nappy has a highly absorbent has a super absorbent
+                        microfibre core and a stay dry inner layer to keep baby comfortable
+                        and dry.
+                        
+                        Both the miosoft nappy cover (two-piece) and the miosolo benefit from 
+                        elasticated legs and waistband to ensure a snug, comfortable fit which 
+                        prevents leakage and Velcro® tabs to provide a perfect fit for all
+                        shapes and sizes.
+                        
+                        (two-piece only) It is important to use the correct size cover for your baby and use the most 
+                        appropriate nappy fold to minimise the possibility of leakage. 
+                    </dd>
+                    <dt><span class="icon"></span>Are the Bambino Mio cloth diapers bulky?</dt>
+                    <dd>Bambino Mio reusable diapers are less bulky than terry diapers and slightly 
+                        more bulky than disposables. However, when a disposable nappy is wet it 
+                        will swell up more, due to the absorbency of the moisture retaining 
+                        chemicals inside, unlike reusable diapers.
+                    </dd>
+                    <dt><span class="icon"></span>How often will I need to change Bambino Mio cloth diapers?</dt>
+                    <dd>A Bambino Mio nappy will need to be changed every two to four hours but it really
+                        depends on how often your baby wets. Reusable nappy users prefer to 
+                        change their baby more frequently whereas there is a temptation for 
+                        disposable nappy users to leave for longer periods between changes 
+                        because their baby does not feel wet.
+                    </dd>
+                </dl>
             </div>
         </div>
     </section>
@@ -183,42 +149,43 @@
                     <div style="padding-left: 30px;">
 
 
-                        <h4>Can I use my Cybex strollers with a newborn?</h4>
+                        <dl>
+                    <dt><span class="icon"></span>Can I use my Cybex strollers with a newborn?</dt>
 
-                        <p>
+                        <dd>
                             The CYBEX Callisto and Onyx are both approved for use with newborns from birth.
                             The backrest of the Callisto and Onyx may be brought into an almost horizontal position
                             suitable for newborn babies.  Additionally, the harness system can be adjusted  to
                             safely use with a newborn child. Please refer to your Owner's Manual for further
                             information on using your stroller with a newborn.The Cybex Ruby may be only be
                             used with children from 6 months of age and up.
-                        </p>
-                        <h4>What are the advantages of the one-hand-operated harness system?</h4>
-                        <p>
+                        </dd>
+                       <dt><span class="icon"></span>What are the advantages of the one-hand-operated harness system?</dt>
+                        <dd>
                             Unlike other harness systems where both straps have to be adjusted individually,
                             the central, one-handed system ensures a snug fit that can be accomplished with
                             only one hand by pulling the central
                             belt.
                             
-                        </p>
-                        <h4>What is the Automatic Swivel Lock?</h4>
-                        <p>
+                        </dd>
+                        <dt><span class="icon"></span>What is the Automatic Swivel Lock?</dt>
+                        <dd>
                             The front wheels of the CYBEX strollers can be locked into position which is useful
                             on longer walks or more difficult terrain.Simply lift the lever on the front wheels
                             with your foot and the wheels will automatically swivel into a locked position when
                             moving forward.
-                        </p>
-                        <h4>What is the summer function work?</h4>
-                        <p>
+                        </dd>
+                        <dt><span class="icon"></span>What is the summer function work?</dt>
+                        <dd>
                             The side walls of the CYBEX stroller can be removed from the frame to improve air
                             flow across the child. 
                         
-                        </p>
-                        <h4>Can worn wheels be replaced?</h4>
-                        <p>
+                        </dd>
+                        <dt><span class="icon"></span>Can worn wheels be replaced?</dt>
+                        <dd>
                             If your stroller weels show signs of wear, we will be glad to help you with replacement
                             parts. Please contact our @Html.ActionLink("Customer Care Department", "Support", "Index").
-                        </p>
+                        </dd>
                         <h4>What do I have to keep in mind using the shopping basket?</h4>
                         <p>
                             Please make note of the maximum loading weight of 4.5 pounds. Please avoid transporting
@@ -237,6 +204,7 @@
                             <li>The CYBEX Ruby may be used with the CYBEX Aton Infant Carrier by using the Cybex
                                 Infant Car Seat Adapter.</li>
                         </ul>
+                        </dl>
                     </div>
                 </div>
                 <div style="padding-left: 20px;">
