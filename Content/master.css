@@ -1349,7 +1349,22 @@ dd{
 	color:#FFF;
 	line-height:1.5;
 	padding: 0 0 1em 40px;
-	width:680px;
+	width:760px;
 	display:none;
 }
+/*a.button{
+	background:url('../../Images/buttons.png') no-repeat;
+	width:80px;
+	height:38px;
+	position:absolute;
+	right:50px;
+	top:50px;
+	text-indent:-9999px;
+	overflow:hidden;
+	border:none !important;
+}
+
+a.button.expand:hover{ background-position:0 -38px;}
+a.button.collapse{ background-position:0 -76px;}
+a.button.collapse:hover{ background-position:0 bottom;}*/
 /*----------------- FAQ STYLES ----------------------*/

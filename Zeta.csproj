@@ -447,7 +447,6 @@
     <Content Include="Content\master.css" />
     <Content Include="Content\nivo-slider.css" />
     <Content Include="Content\reset.css" />
-    <Content Include="Content\styles.css" />
     <Content Include="Content\toastr-responsive.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Global.asax" />
