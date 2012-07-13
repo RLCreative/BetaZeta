@@ -1,9 +1,11 @@
 ﻿@{
-    ViewBag.SubTitle = "Send Us an E-mail";
+    ViewBag.SubTitle = "E-mail Us";
+    ViewBag.Message = "We are waiting to hear from you";
 }
 @model Zeta.Models.Quick
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
+    <h5>@ViewBag.Message</h5>
 </hgroup>
 @section script{
     <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
@@ -46,12 +48,10 @@
 
                 @Html.TextBoxFor(model => model.Email, "Email", new { @style = "width:250px;" })
             </div>
-            <label class="form">
-                <label for="Comments">Comments</label>
-            </label>
-            @Html.TextArea("Profile", new { placeholder = "Be specific with your issue. If you know your Model and Model Numbers, please include them.", cols = 60, rows = 10 })
+           
+            @Html.TextArea("Profile", new { placeholder = "What can we help you with?. If you know your Model and Model Numbers, please include them.", cols = 60, rows = 10 })
             <p>
-                Do you have an image that would help us assist you? Please attach it to your e-mail. Please, only .jpgs less than 4 Mb.
+                Do you have an image that would help us assist you? Please attach it to your e-mail. Please, only .jpgs less than 4 Mb.</p>
             
             @Html.TextBoxFor(model => model.Attachment, "Attachment", new { type = "file" })
             @Html.ValidationMessageFor(model => model.Attachment)<br />

@@ -4,7 +4,7 @@ body {
     background-image: url("../Images/header-bg.jpg");
     background-repeat:repeat-x;
     background-position:0 -40px;
-    font-family: "proxima-nova", sans-serif;
+    font-family: 	"prenton-n3", "prenton", sans-serif;
     font-style: normal;
     font-weight: 400;
     letter-spacing: normal;
@@ -40,48 +40,61 @@ nav, section {
     width: 100%;
 }
 h1, h2 {
-    font-family: "chaparral-pro-display", /*"ff-tisa-web-pro",*/ serif;
+    font-family: "prenton", /*"ff-tisa-web-pro",*/ serif;
     font-style: normal;
-    margin: 10px 0px 15px 0px;
+    font-weight:700;
     line-height: 1;
 }
  h3, h4 {
-    font-family: "proxima-nova", sans-serif;
+    font-family: "prenton", sans-serif;
     font-style: normal;
     margin: 0px 0px 10px 0px;
     color: rgb(255, 255, 255);
     line-height: 1;
 }
 h1 { /*Main Page Header*/
-    font-size: 2em;
+    font-size: 2.125em;
     font-style: normal;
     font-weight:700;
     letter-spacing: .01em;
+    margin: 10px 0px 15px 0px;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px #000;
 }
 h2 { /*Sub Header*/
     font-size: 1.5em;
-    color: rgb(251, 188, 0);
-    font-weight: 400;
-    letter-spacing: .03em;
+    color: rgb(255, 255, 255);
+    /*color: rgb(251, 188, 0);*/
+    font-weight: 500;
+    letter-spacing: .01em;
+    margin: 0px 0px 10px 0px;
     text-shadow: 1px 1px 1px #000;
 }
 h3 { /*Paragraph Heading */
     font-size: 1.25em;
-    font-weight: 600;
+    font-weight: 500;
        
 }
 h4 { /*Use for Paragraph Sub-Headings*/
     font-size: 1em;
     font-style: italic;
-    font-weight: 600;
+    font-weight: 500;
+}
+h5 {
+    font-family: "prenton-i3", "prenton", sans-serif;
+    font-size: 1.5em;
+    color: rgb(251, 188, 0);
+    font-weight: 300;
+    font-style: italic;
+    margin: 10px 0px 15px 0px;
+    letter-spacing: .01em;
 }
 p {
-    font-size: .9em;
-    line-height: 1.75em;
+    font-size: 1em;
+    line-height: 1.5em;
     padding-bottom: 15px;
     font-weight: 300;
+    letter-spacing: .01em;
 }
 hr {
     border: none 0;
@@ -96,10 +109,11 @@ blockquote {
     margin-left: 20px;
 }
 strong {
-    font-weight:bold;
+    font-weight:500;
+    font-style: normal;
 }
 .worktitle {
-    font-family: "proxima-nova", sans-serif;
+    font-family: "prenton", sans-serif;
     color: rgb(255, 255, 255);
     display: block;
     font-size: 80%;
@@ -109,6 +123,9 @@ strong {
 }
 .yellow {
      color: rgb(251, 188, 0);
+}
+.white {
+     color: rgb(255, 255, 255);
 }
 .secret {
     color: #FBBC00;
@@ -130,14 +147,14 @@ strong {
     height: 0;
     visibility: hidden;
 }
- .wf-loading h1, h2 {
-  /*styles to use before Typekit is loaded*/ 
-   font-family: "chaparral-pro-displa", serif;
+.wf-loading h1, h2 {
+  /*styles to use after Typekit is loaded */
+   font-family: "prenton", serif;
    visibility: hidden;
 }
 .wf-active  h1, h2 {
    /*styles to use after Typekit is loaded */
-   font-family: "chaparral-pro-displa", serif;
+   font-family: "prenton", serif;
    visibility: visible;
 }
 a[href $='.pdf'] {
@@ -167,9 +184,9 @@ a[href $='.video'] {
     margin-top: 40px;
     border-top: 1px solid #CCC;
     
-    background-color: #303233;
-    background: -moz-linear-gradient(top, #303233, #1d1e1f);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#303233), to(#1d1e1f));
+    background-color: #3E4147;
+    background: -moz-linear-gradient(top, #3E4147, #1d1e1f);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3E4147), to(#1d1e1f));
     
     -moz-box-shadow: inset 0px 1px 5px #000;
     -webkit-box-shadow: inset 0px 1px 5px #000;
@@ -185,7 +202,7 @@ a[href $='.video'] {
 }
 #content {
     margin-top: 20px;
-    color:  #FFF;
+    color: rgb(200, 200, 200);
     overflow: hidden;
     min-height: 500px;
 }
@@ -431,31 +448,32 @@ ul#topmenu li:first-child:before {
 	-webkit-border-radius: 5px 5px 0px 0px;
 	border-radius: 5px 5px 0px 0px;
 }
-
 #menu li a {
-	font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
-	font-size: .9em; 
+	font-family: "prenton", Verdana, Helvetica, Sans-Serif;
+	font-size: 1em; 
 	color: #333;
 	display:block;
 	outline:0;
 	text-decoration:none;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
+    letter-spacing: .005em;
 	/*text-shadow: 1px 1px 1px #000;*/
 }
-
 #menu li:hover a {
 	color:#161616;
 	text-shadow: 1px 1px 1px #ffffff;
+    font-weight: 500;
+    letter-spacing: .005em;
+    text-transform: none;
 }
 #menu li div a.link {
-	font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+	font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	font-size: 1em; 
 	display:block;
 	outline:0;
 	text-decoration:none;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
 	/*text-shadow: 1px 1px 1px #000;*/
 }
 #menu li a.drop {
@@ -544,7 +562,7 @@ ul#topmenu li:first-child:before {
 
 #menu p, #menu h2, #menu h3, #menu ul li {
 	color: #333;
-    font-family:"proxima-nova", Verdana, sans-serif;
+    font-family:"prenton", Verdana, sans-serif;
 	text-align:left;
 	text-shadow: 1px 1px 1px #FFFFFF;
     
@@ -595,7 +613,7 @@ ul#topmenu li:first-child:before {
 }
 #menu li ul li {
 	font-size: .85em;
-    line-height: 1.5em;
+    line-height: 1.75em;
     font-kerning: auto;
 	position:relative;
 	text-shadow: 1px 1px 1px #ffffff;
@@ -715,8 +733,8 @@ hgroup.title {
 
 article {
     float: left;
-    width: 630px;
-    padding-right: 30px;
+    width: 600px;
+    padding-right: 40px;
     display: inline;
     padding-bottom: 30px;
 }
@@ -741,7 +759,7 @@ aside {
 }
 
 #aside li a {
-	font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+	font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	color: #FBBC00;
 	display:block;
 }
@@ -776,7 +794,7 @@ img.rounded {
 /*-------------- FORMS ---------------*/
 
 input, select, textarea {
-    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+    font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	color: #333;
     font-size: 1em;
     font-weight: 400;
@@ -1123,32 +1141,31 @@ section.footer {
 
 /* END SOCIAL MEDIA BAR IN FOOTER */
 
-/* LISTS ---------------------------------------*/
+/* ------------------------------------------------ LISTS ---------------------------------------*/
 
 li.regal {
     background: url("../Images/bullet.png") no-repeat 0 50%;
     padding: 2px 0 2px 20px;
-    font-size: .9em;
-    margin-left: 10px;
+    font-size: 1em;
+    margin-left: 20px;
 }
 
 ul.default {
     list-style: disc inside none;
-    color:rgb(100, 200, 255);
     margin-bottom: 10px;
-    font-size: .9em;
+    font-size: 1em;
 }
 
 ul.default li {
-    color: #FFF;
-    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+    color:rgb(200, 200, 200);
+    font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	/*background: url("../Images/bullet.png") no-repeat 0 50%;*/
     line-height: 2em;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 ul.default li a, ol.default a {
-	color:rgb(100, 200, 255);
+	color:rgb(200, 200, 200);
 	display:inline;
 }
 
@@ -1162,12 +1179,12 @@ ol.default {
 }
 
 ol.default li {
-    color: #FFF;
-    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+    color:rgb(200, 200, 200);
+    font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 }
 
 ol.default li a, ol.default a {
-	color: #FFF;
+	color:rgb(200, 200, 200);
     display: inline;
 }
 
@@ -1178,12 +1195,12 @@ ol.default li a:hover, ol.default li a:hover {
 ul.default li.sublist {
     color: #FFF;
     list-style-type: none;
-    font-size: .9em;
-    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+    font-size: 1em;
+    font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	line-height: 2em;
-    padding-left: 23px;
+    padding-left: 0px;
     margin-top: -5px;
-    font-style: italic;
+    font-style: normal;
 }
 /*END LISTS */
 
@@ -1297,7 +1314,7 @@ ul.faq {
 }
 ul.faq li {
     color: #FFF;
-    font-family: "proxima-nova", Verdana, Helvetica, Sans-Serif;
+    font-family: "prenton", Verdana, Helvetica, Sans-Serif;
 	/*background: url("../Images/bullet.png") no-repeat 0 50%;*/
     line-height: 2em;
 }
@@ -1321,7 +1338,7 @@ article.accordion section h2
 /* Definition Lists */
 
 dt{
-	color:rgb(255, 255, 255);
+	color:rgb(200, 200, 200);
     font-size: 1em;
     font-weight:bold;
 	margin-bottom:1em;
@@ -1346,7 +1363,7 @@ dt.opened .icon{ background-position:left bottom;}
 
 dd{
 	font-size:.9em;
-	color:#FFF;
+	color:rgb(200, 200, 200);
 	line-height:1.5;
 	padding: 0 0 1em 40px;
 	width:760px;

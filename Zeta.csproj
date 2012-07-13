@@ -1040,7 +1040,7 @@
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\Test2.cshtml" />
     <Content Include="Views\Press\Awards.cshtml" />
-    <Content Include="Views\Press\Downloads.cshtml" />
+    <Content Include="Views\Press\PressRoom.cshtml" />
     <Content Include="Views\Press\Index.cshtml" />
     <Content Include="Views\Press\New.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />

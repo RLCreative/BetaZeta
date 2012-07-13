@@ -18,7 +18,7 @@ namespace Zeta.Controllers
             return View();
         }
         
-        public ActionResult Downloads()
+        public ActionResult PressRoom()
         {
             return View();
         }

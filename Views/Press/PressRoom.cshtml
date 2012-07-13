@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Subtitle ="Press Room";
+    ViewBag.Message = "What's the Story?";
+}
+<hgroup class="title">
+    <h1>@ViewBag.SubTitle</h1>
+    <h5>@ViewBag.Message</h5>
+</hgroup>
+<article>
+
+    <section>
+        <h2>In the Press</h2>
+        <p>
+            See our latest product reviews and editorial mentions on our favorite <a href="http://regallager.wordpress.com/" target="_blank" title="In the Press">Blog.</a>
+        </p>
+        
+        <h2>Press Images</h2>
+        <p>
+            Images and logos are available on our <a href="http://www.flickr.com/photos/regallager/sets/"
+                target="_blank" title="Regal Lager Product Images and Logos">Flickr photostream</a>.
+        </p>
+        <hr />
+        <h2>Press Kits</h2>
+        <p>
+            We offer the contents of our press kit in <a href="http://www.scribd.com/my_document_collections/3690672"
+                target="_blank" title="Download digital copies of Press Kit material here">digital
+                format</a>.
+        </p>
+          <h2>Press Releases</h2>
+        <p>
+           Read or download our  <a href="http://www.scribd.com/my_document_collections/3690902"
+                target="_blank" title="Regal Lager Press Releases">Press Releases.</a>
+        </p>
+        
+       <hr />
+        <h2>Need Something Really Special?</h2>
+        <p>
+            If this page don't satisfy your needs, our press contact Elisabeth
+            Berg&ouml;&ouml; would love to hear from you. Call her directly at 678-819-5801 or shoot her an <a href="mailto:elisabeth@regallager.com" title="E-mail Elisabeth">
+                e-mail</a>.</p>
+    <p>
+        If you are a blogger and need assistance, please submit your request 
+        @Html.ActionLink("by clicking here", "Media", "Email", null,
+    new { @title = "Blogger" }).
+    </p>
+        </p>
+    </section>
+</article>
+<aside>
+    <img src="../../Images/rl-pressdownload.png" alt="Regal Lager Press Downloads" width="290"
+        height="753" />
+</aside>

@@ -1,43 +1,19 @@
 ﻿@{
     ViewBag.Subtitle = "Contact Us";
+    ViewBag.Message = "We'd like to hear from you";
 }
 <hgroup class="title">
     <h1>@ViewBag.SubTitle</h1>
+    <h5>@ViewBag.Message</h5>
 </hgroup>
 <article>
-     <h2>Telephone</h2>
+     <h2>Customer Care</h2>
     <p>
-        Customer Care: 1-800-593-5522 Toll Free<br />
-        Local: 770-955-5060<br />
-        Fax: 770-955-1997
+        For  support issues, please give us a call Toll Free or 1-800-593-5522 Toll Free, or  @Html.ActionLink("send us an e-mail", "Consumer", "Email"). Our Customer Care team will respond to your e-mai within one business day.
     </p>
     <hr />
-    <h2>E-mail Us</h2>
-    <p>
-        @Html.ActionLink("Send us an e-mail", "Consumer", "Email") and our Customer Care team will respond to you within one business
-        day.
-    </p>
-    <hr />
-    <h2>Our Hours:</h2>
-    <p>
-        Monday&ndash;Friday&nbsp;<strong>8:30 am&ndash;5:30 pm (EST)</strong>
-        <br />
-        Saturday&ndash;Sunday&nbsp;,<strong>Voicemail Only</strong><br />
-        Closed on all major holidays.
-    </p>
-    <hr />
-    <h2>Media Contact:</h2>
-    <p>
-        If you have a media inquiry, please contact Elisabeth Berg&ouml;&ouml; at
-        678-819-5801 or @Html.ActionLink("send her an e-mail", "Media", "Email", null,
-    new { @title = "Send Us an Email" }) and she will respond to you.
-    </p>
-    <h3>Bloggers</h3>
-    <p>
-        If you are a blogger, please sumbit your information 
-        @Html.ActionLink("by clicking here", "Media", "Email", null,
-    new { @title = "Blogger" }).
-    </p>
+    <h2>Media Inquiries:</h2>
+    <p>For press related inquiries, please go to the  @Html.ActionLink("Press Room", "Index", "Press").</p>
     <hr />
     <h2>Sales Inquiries:</h2>
     <p>
@@ -47,12 +23,13 @@
         770-955-5060 x120 or @Html.ActionLink("send him an e-mail", "Sales", "Email", null,
     new { @title = "Send Us an Email" }).
     </p>
-    <hr />
     <h2>Our Address:</h2>
     <p>
         Regal Lager, Inc.<br />
         1100 Cobb Place Blvd. Suite 120<br />
-        Kennesaw, GA 30144
+        Kennesaw, GA 30144<br />
+        770-955-5060<br />
+        Fax: 770-955-1997
     </p>
     <p>
         <a href="http://www.regallager.com/storelocator/mapit.aspx?CustID=0000&CustName=Regal%20Lager,%20Inc.&Address1=1100%20Cobb%20Place%20Blvd&City=Kennesaw&State=GA&Zip=30144&Phone=8005935522"
