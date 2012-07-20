@@ -5,23 +5,17 @@
     <title>Welcome to Regal+Lager : @ViewBag.SubTitle</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Content/core.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="@ViewBag.StylesheetURL" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Description" content="@ViewBag.MetaDescription" />
     <meta name="Keywords" content="@ViewBag.MetaKeywords" />
-    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/jquery-ui-1.8.11.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/euk0nha.js"></script>
     <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
-    <script type="text/javascript" src="@ViewBag.ScriptURL"></script>
     <script type="text/javascript" src="../../Scripts/backtotop.js"></script>
-    @RenderSection("script", required: false)
+     @RenderSection("script", required: false)
 </head>
 <body>
-    <div id="backtotop">
-    <a href="#">UP</a></div>
-     <section id="abovefold">
+   
+    <section id="abovefold">
         <header>
             <div class="content-wrapper">
                 <div id="logo">
@@ -31,7 +25,7 @@
                     <input id="Text1" type="text" placeholder="Search the site..." style="width: 200px;" />
                 </div>
                 <nav>
-                     @Html.Partial("_Topnav")
+                    @Html.Partial("_Topnav")
                 </nav>
             </div>
         </header>
@@ -39,11 +33,11 @@
             @RenderSection("movie", required: false)
         </section>
     </section>
-    <section id="belowfold">
+    <section id="belowfoldbrand">
         <nav>
-            @Html.Partial("_Mainnav")
+             @Html.Partial("_Mainnav")
         </nav>
-        <div id="content" class="content-wrapper">
+        <div id="contentbrands" class="content-wrapper">
             @RenderBody()
         </div>
     </section>
@@ -53,6 +47,5 @@
         </div>
     </footer>
     @Html.Partial("_GoogleTrack")
-    @RenderSection("nivoscript", required: false)
 </body>
 </html>

@@ -5,33 +5,25 @@
     <title>Welcome to Regal+Lager : @ViewBag.SubTitle</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Content/core.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="@ViewBag.StylesheetURL" />
     <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>    
-    <script type="text/javascript" src="../../Scripts/jquery-ui-1.8.11.min.js"></script>
-    <script type="text/javascript" src="../../Scripts/modernizr-2.5.3.js"></script>
-    <!--<script type="text/javascript" src="../../Scripts/2012.1.419/telerik.all.min.js"></script>      -->
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+    <script type="text/javascript" src="../../Scripts/validator.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/euk0nha.js"></script>
     <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+    <script type="text/javascript" src="../../Scripts/backtotop.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Description" content="@ViewBag.MetaDescription" />
     <meta name="Keywords" content="@ViewBag.MetaKeywords" />
+     @RenderSection("script", required: false)
 </head>
 <body>
-    @RenderSection("script", required: false)
+   
     <section id="abovefold">
         <header>
             <div class="content-wrapper">
                 <nav>
-                    <ul id="topmenu">
-                        <li>@Html.ActionLink("Home", "Index", "Home", null, new { @title = "Return Home" })
-                        </li>
-                         <li>@Html.ActionLink("Register a Product", "Index", "Register", new { @title = "Register Your Product" }, new { @class = "" })
-                        </li>
-                        <li>@Html.ActionLink("Recall Info", "Index", "Recalls", null, new { @title = "Check for Product Recalls" })
-                        </li>
-                        <li>@Html.ActionLink("Contact Us", "Contact", "About", null, new { @title = "Contact Regal Lager" })
-                        </li>
-                    </ul>
+                    @Html.Partial("_Topnav")
                 </nav>
             </div>
         </header>
@@ -43,73 +35,7 @@
     </section>
     <footer id="footer">
         <div class="content-wrapper">
-            <section class="footer">
-                <h3>Customer Care</h3>
-                <ul>
-                    <li><a href="#" title="Customer Care">Get Help</a></li>
-                    <li><a href="#" title="Recalls">Check for Recalls</a></li>
-                    <li><a href="#" title="Product Videos">Product Videos</a></li>
-                    <li><a href="#" title="FAQ's">Frequently Asked Questions</a></li>
-                    <li><a href="#" title="FAQ's">Downloads</a></li>
-                    <li><a href="#" title="Contact Us">Register a Product</a></li>
-                </ul>
-            </section>
-            <section class="footer">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><a href="#">1-800-593-5522</a></li>
-                    <li><a href="#">Send Us an Email</a></li>
-                    <li><a href="#">Become a Retailer</a></li>
-                    <li><a href="#">Media Inquiries</a></li>
-                    <li><a href="#">Give us Feedback</a></li>
-                </ul>
-            </section>
-            <section class="footer">
-                <h3>Press Room</h3>
-                <ul>
-                    <li><a href="#" title="About Us">About Us</a></li>
-                    <li><a href="#" title="Become a Retailer">Press Releases</a></li>
-                    <li><a href="#" title="In the Press">In the Press</a></li>
-                    <li><a href="#" title="In the Press">Awards</a></li>
-                </ul>
-            </section>
-            <section class="footer">
-                <h3>Store</h3>
-                <ul>
-                    <li><a href="#" title="Legal Disclaimer">Shopping Cart</a></li>
-                    <li><a href="#" title="Privacy Policy">Shop By Brand</a></li>
-                    <li><a href="#" title="Privacy Policy">Track Order</a></li>
-                </ul>
-            </section>
-            <section class="footer">
-                <h3>Legal Info</h3>
-                <ul>
-                    <li>@Html.ActionLink("Terms and Conditions", "Terms", "Home", null, new { @title = "Terms and Conditions" })
-                    </li>
-                    <li>@Html.ActionLink("Privacy Policy", "Privacy", "Home", null, new { @title = "Privacy Policy" })
-                    </li>
-                </ul>
-            </section>
-            <div class="copyright">
-                &copy; @DateTime.Now.Year. Regal Lager, Inc. All Rights Reserved.
-            </div>
-            <div class="connect">
-                <div style="float: left;">
-                    <ul id="social">
-                        <li class="facebook"><a href="#">Like Us</a></li>
-                        <li class="twitter"><a href="#">Follow Us</a></li>
-                        <li class="youtube"><a href="#">Watch Us</a></li>
-                        @*<li class="pinterest"><a href="#">Pin it</a></li>
-                        <li class="googleplus"><a href="#">Add Us</a></li>*@
-                        <li class="newsletter"><a href="#">Subscribe</a></li>
-                    </ul>
-                </div>
-                <div style="float: right;">
-                    <a href="http://www.jpma.org" target="_blank">
-                        <img src="../../Images/JPMAicon.jpg" alt="JPMA Member" height="35" width="35" class="jpma"
-                            title="JMPA Member" /></a>
-                </div>
-            </div>
+            @Html.Partial("_Footer")
         </div>
     </footer>
     @Html.Partial("_GoogleTrack")

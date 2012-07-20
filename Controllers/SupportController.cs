@@ -13,7 +13,7 @@ namespace Zeta.Controllers
 
     public class SupportController : Controller
     {
-        public ActionResult Index()
+        public ActionResult GetSupport()
         {
             return View();
         }

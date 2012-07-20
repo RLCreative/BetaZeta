@@ -1,0 +1,97 @@
+﻿ <section class="footer">
+                <h3>Customer Care</h3>
+                <hr />
+                <ul>
+                    <li>@Html.ActionLink("Get Great Support", "GetSupport", "Support", null, new { @title = "Get Support" })
+                    </li>
+                    <li>@Html.ActionLink("Frequent Questions", "Faqs", "Support", null, new { @title = "Frequently Asked Questions" })
+                    </li>
+                    <li><a href="http://www.youtube.com/rlcreative" target="_blank" title="Watch Our Product Videos">
+                        Product Videos</a></li>
+                    <li><a href="http://www.scribd.com/RLCreative/collections" target="_blank" title="Read or Download Instructions">
+                        Product Instructions</a></li>
+                     <li>@Html.ActionLink("Register a Product", "Index", "Register", null, new { @title = "Register a Product" })
+                    </li>
+                    <li>@Html.ActionLink("Recall Information", "Index", "Recalls", null, new { @title = "Product Recall Information" })
+                    </li>
+                    <li>@Html.ActionLink("Warranty Info", "Warranty", "Support", null, new { @title = "Warranty and Return Information" })
+                    </li>
+                    <li>@Html.ActionLink("Product Safety", "Testing", "Support", null, new { @title = "See Our Product Testing Results" })
+                    </li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Contact Us</h3>
+                <hr />
+                <ul>
+                    <li><a href="#">1-800-593-5522</a></li>
+                    <li>@Html.ActionLink("Send Us An Email", "Consumer", "Email", null, new { @title = "Send Us An Email" })
+                    </li>
+                    <li>@Html.ActionLink("Media Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
+                    </li>
+                    <li>@Html.ActionLink("Become a Retailer", "Sales", "Email", null, new { @title = "Become a Retailer" })
+                    </li>
+                </ul>
+            </section>
+            <section class="footer">
+                <h3>Media</h3>
+                <hr />
+                <ul>
+                    <li>@Html.ActionLink("Press Room", "PressRooom", "Press", null, new { @title = "Download Logos" })
+                    </li>  <li><a href="http://regallager.wordpress.com" target="_blank" title="See Our Mentions and Celebrity Sightings">
+                        Regal Ramblings</a></li>
+                    <li>@Html.ActionLink("Our Awards", "Awards", "Press", null, new { @title = "Our Awards" })
+                    </li>
+                    <li>@Html.ActionLink("Inquiries", "Media", "Email", null, new { @title = "Media Inquiries" })
+                    </li>
+                </ul>
+            </section>
+            <section class="footer">
+             <h3>Our Company</h3>
+                <hr />
+                <ul>
+                    <li>@Html.ActionLink("About Us", "AboutUs", "About", null, new { @title = "About Us" })
+                    </li>
+                    <li>@Html.ActionLink("Our Team", "OurTeam", "About", null, new { @title = "Our Team" })
+                    </li>
+                    <li>@Html.ActionLink("Our Mission", "Mission", "About", null, new { @title = "Mission Statement" })
+                    </li>
+                </ul>
+                @*<h3>Store</h3>
+                <hr />
+                <ul>
+                    <li><a href="#" title="Legal Disclaimer">Shopping Cart</a></li>
+                    <li><a href="#" title="Privacy Policy">Shop By Brand</a></li>
+                    <li><a href="#" title="Privacy Policy">Track Order</a></li>
+                </ul>*@
+            </section>
+            <section class="footer">
+                <h3>Legal Info</h3>
+                <hr />
+                <ul>
+                    <li>@Html.ActionLink("Terms and Conditions", "Terms", "Home", null, new { @title = "Terms and Conditions" })
+                    </li>
+                    <li>@Html.ActionLink("Privacy Policy", "Privacy", "Home", null, new { @title = "Privacy Policy" })
+                    </li>
+                </ul>
+            </section>
+            <div class="copyright">
+                &copy; @DateTime.Now.Year. Regal Lager, Inc. All Rights Reserved.
+            </div>
+            <div class="connect">
+                <div style="float: left;">
+                    <ul id="social">
+                        <li class="facebook"><a href="http://www.facebook.com/RegalLagerInc">Like Us</a></li>
+                        <li class="twitter"><a href="http://twitter.com/#!/regallager">Follow Us</a></li>
+                        <li class="youtube"><a href="http://www.youtube.com/rlcreative">Watch Us</a></li>
+                        @*<li class="pinterest"><a href="#">Pin it</a></li>
+                        <li class="googleplus"><a href="#">Add Us</a></li>*@
+                        <li class="newsletter"><a href="#">Subscribe</a></li>
+                    </ul>
+                </div>
+                <div style="float: right;">
+                    <a href="http://www.jpma.org" target="_blank">
+                        <img src="../../Images/JPMAicon.jpg" alt="JPMA Member" height="35" width="35" class="jpma"
+                            title="JMPA Member" /></a>
+                </div>
+            </div>

@@ -162,6 +162,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\BrandsController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PressController.cs" />
@@ -412,6 +414,7 @@
     <Compile Include="Models\Quick.cs" />
     <Compile Include="Models\Sales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controllers\SpotlightsController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Readme\Elmah.txt" />
@@ -454,7 +457,9 @@
     <Content Include="Images\41.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\add_to_cart.png" />
+    <Content Include="Images\aton-2012-chilipepper.png" />
     <Content Include="Images\babblesbest.png" />
+    <Content Include="Images\back_to_top_btn.jpg" />
     <Content Include="Images\bambinomio.png" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\bl-headshot.jpg" />
@@ -462,10 +467,10 @@
     <Content Include="Images\bullet.png" />
     <Content Include="Images\bullets.png" />
     <Content Include="Images\buttons.png" />
-    <Content Include="Images\Cribsie-Award.jpg" />
     <Content Include="Images\Cribsie-Award.png" />
     <Content Include="Images\cy-carriersquare.jpg" />
     <Content Include="Images\CYBEX-2009-Colors.jpg" />
+    <Content Include="Images\cybex-logo.png" />
     <Content Include="Images\cybex.png" />
     <Content Include="Images\dekor.png" />
     <Content Include="Images\delete_cart.png" />
@@ -495,7 +500,9 @@
     <Content Include="Images\lwl-headshot.jpg" />
     <Content Include="Images\minus.gif" />
     <Content Include="Images\miosolo-in-Coral.jpg" />
+    <Content Include="Images\miosolo-spot.jpg" />
     <Content Include="Images\mycarrypotty.png" />
+    <Content Include="Images\natural-child-aton.png" />
     <Content Include="Images\new_cart.png" />
     <Content Include="Images\onyx-whatsnew.png" />
     <Content Include="Images\orderedListOne.png" />
@@ -507,6 +514,7 @@
     <Content Include="Images\regallager.png" />
     <Content Include="Images\right.gif" />
     <Content Include="Images\rl-aboutus.png" />
+    <Content Include="Images\rl-awards.png" />
     <Content Include="Images\rl-contact.png" />
     <Content Include="Images\rl-customercare.png" />
     <Content Include="Images\rl-media.png" />
@@ -525,9 +533,13 @@
     <Content Include="Images\slider-03.jpg" />
     <Content Include="Images\slider-04.jpg" />
     <Content Include="Images\solutionxfix.jpg" />
+    <Content Include="Images\spanish.gif" />
     <Content Include="Images\sprite_foot.png" />
+    <Content Include="Images\stroller-feature.png" />
+    <Content Include="Images\strollerbg.jpg" />
     <Content Include="Images\strollertraffic-aton.png" />
     <Content Include="Images\submit_order.png" />
+    <Content Include="Images\svenska.gif" />
     <Content Include="Images\truck.gif" />
     <Content Include="Images\twitter-full.png" />
     <Content Include="Images\twitter.png" />
@@ -571,6 +583,7 @@
     <Content Include="Internal\security\ChangePassword.aspx" />
     <Content Include="Internal\security\ForgotPassword.aspx" />
     <Content Include="Internal\security\Login.aspx" />
+    <Content Include="Scripts\backtotop.js" />
     <Content Include="Scripts\validator.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\jquery-1.7.2.intellisense.js" />
@@ -1028,7 +1041,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\About\Contact.cshtml" />
-    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\AboutUs.cshtml" />
     <Content Include="Views\About\Mission.cshtml" />
     <Content Include="Views\About\OurTeam.cshtml" />
     <Content Include="Views\Home\CPS.cshtml" />
@@ -1047,7 +1060,7 @@
     <Content Include="Views\Support\Instructions.cshtml" />
     <Content Include="Views\Support\Faqs.cshtml" />
     <Content Include="Views\Support\Forum.cshtml" />
-    <Content Include="Views\Support\Index.cshtml" />
+    <Content Include="Views\Support\GetSupport.cshtml" />
     <Content Include="Views\Support\Testing.cshtml" />
     <Content Include="Views\Support\Videos.cshtml" />
     <Content Include="Views\Support\Warranty.cshtml" />
@@ -1125,13 +1138,19 @@
     <Content Include="Views\Home\EmailSuccess.cshtml" />
     <Content Include="Views\Email\Consumer.cshtml" />
     <Content Include="Views\Support\FormResults.cshtml" />
-    <Content Include="Views\Shared\_FormConsumerContact.cshtml" />
     <Content Include="Views\Email\Sales.cshtml" />
     <Content Include="Views\Email\Success.cshtml" />
     <Content Include="Views\Email\Media.cshtml">
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Register\Success.cshtml" />
+    <Content Include="Views\Spotlights\Miosolo.cshtml" />
+    <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\Brands\Cybex.cshtml" />
+    <Content Include="Views\Shared\_LayoutBrands.cshtml" />
+    <Content Include="Views\Shared\_Mainnav.cshtml" />
+    <Content Include="Views\Shared\_Topnav.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

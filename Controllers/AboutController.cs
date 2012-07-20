@@ -11,7 +11,7 @@ namespace Zeta.Controllers
         //
         // GET: /About/
 
-        public ActionResult Index()
+        public ActionResult AboutUs()
         {
             ViewBag.MetaDescription = "Akord incontinence disposal offers discreet, hygienic disposal of your adult incontinence products.";
             ViewBag.MetaKeywords = "Akord incontinence disposal offers discreet, hygienic disposal of your adult incontinence products.";

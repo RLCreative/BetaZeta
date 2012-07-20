@@ -17,7 +17,6 @@ namespace Zeta.Controllers
             ViewBag.MetaDescription = "Akord incontinence disposal offers discreet, hygienic disposal of your adult incontinence products.";
             ViewBag.MetaKeywords = "Akord incontinence disposal offers discreet, hygienic disposal of your adult incontinence products."; 
             ViewBag.StylesheetURL = "../../Content/nivo-slider.css";
-            ViewBag.ScriptJQ171 = "Scripts/jquery-1.7.1.min.js";
             ViewBag.ScriptURL = "/Scripts/jquery.nivo.slider.js";
             return View();
         }
