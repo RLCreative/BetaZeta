@@ -238,10 +238,11 @@ a[href $='.video'] {
 #belowfoldbrand {
     margin-top: 40px;
     border-top: 1px solid #CCC;
+    padding-bottom: 20px;
     
-    background-color:rgb(240, 240, 240) ;
-    /*background: -moz-linear-gradient(top, #3E4147, #1d1e1f);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3E4147), to(#1d1e1f));*/
+    background-color:rgb(3, 102, 41) ;
+    background: -moz-linear-gradient(top, #2F9255, #036629);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#2F9255), to(#036629));
     
     -moz-box-shadow: inset 0px 1px 5px #000;
     -webkit-box-shadow: inset 0px 1px 5px #000;
@@ -271,9 +272,17 @@ a[href $='.video'] {
 }
 #contentbrands {
     margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
     color: rgb(44, 46, 51);
     overflow: hidden;
     min-height: 500px;
+    border-radius: 10px;
+    border: 1px solid #1b1b1b;
+    
+    -moz-box-shadow: 1px 1px 3px #0e0d0d;
+	-webkit-box-shadow:1px 1px 3px #0e0d0d;
+	box-shadow:1px 1px 3px #0e0d0d;
 }
 #logo {
     float: left;
@@ -823,7 +832,7 @@ aside {
 #smart li:hover a {
 	color:#FFF;
 }
-aside img {
+img.aside {
     /*margin: 0px auto -4px auto;
     border: 10px solid #FFF;*/
     border-radius: 10px 10px 10px 10px;

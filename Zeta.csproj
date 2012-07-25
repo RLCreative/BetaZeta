@@ -163,7 +163,7 @@
   <ItemGroup>
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\ArticlesController.cs" />
-    <Compile Include="Controllers\BrandsController.cs" />
+    <Compile Include="Controllers\CybexController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PressController.cs" />
@@ -457,7 +457,9 @@
     <Content Include="Images\41.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\add_to_cart.png" />
+    <Content Include="Images\arrows.png" />
     <Content Include="Images\aton-2012-chilipepper.png" />
+    <Content Include="Images\aton-candy_colors_thumb.jpg" />
     <Content Include="Images\babblesbest.png" />
     <Content Include="Images\back_to_top_btn.jpg" />
     <Content Include="Images\bambinomio.png" />
@@ -497,6 +499,7 @@
     <Content Include="Images\lascal.png" />
     <Content Include="Images\left.png" />
     <Content Include="Images\lilsugarReaderChoice.png" />
+    <Content Include="Images\loading.gif" />
     <Content Include="Images\lwl-headshot.jpg" />
     <Content Include="Images\minus.gif" />
     <Content Include="Images\miosolo-in-Coral.jpg" />
@@ -1017,6 +1020,7 @@
     <Content Include="Scripts\knockout-2.0.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Cybex\aton-candy_colors-thumb.jpg" />
     <Content Include="Views\Shared\_Layout.cshtml">
       <SubType>Code</SubType>
     </Content>
@@ -1146,11 +1150,12 @@
     <Content Include="Views\Register\Success.cshtml" />
     <Content Include="Views\Spotlights\Miosolo.cshtml" />
     <Content Include="Views\Articles\Index.cshtml" />
-    <Content Include="Views\Brands\Cybex.cshtml" />
+    <Content Include="Views\Cybex\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutBrands.cshtml" />
     <Content Include="Views\Shared\_Mainnav.cshtml" />
     <Content Include="Views\Shared\_Topnav.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Cybex\Aton.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -6,12 +6,17 @@ using System.Web.Mvc;
 
 namespace Zeta.Controllers
 {
-    public class BrandsController : Controller
+    public class CybexController : Controller
     {
         //
         // GET: /Brand/
 
-        public ActionResult Cybex()
+        public ActionResult Index()
+        {
+            return View();
+        }
+        
+        public ActionResult Aton()
         {
             return View();
         }

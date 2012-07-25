@@ -5,16 +5,21 @@
     <title>Welcome to Regal+Lager : @ViewBag.SubTitle</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" media="screen" href="../../Content/core.css" />
+    <link rel="stylesheet" type="text/css" href="../../Content/nivo-slider.css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="Description" content="@ViewBag.MetaDescription" />
     <meta name="Keywords" content="@ViewBag.MetaKeywords" />
+    <script type="text/javascript" src="../../Scripts/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="http://use.typekit.com/euk0nha.js"></script>
     <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
     <script type="text/javascript" src="../../Scripts/backtotop.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="../../Scripts/jquery.nivo.slider.pack.js"></script>
      @RenderSection("script", required: false)
 </head>
 <body>
-   
+   <div id="backtotop">
+    <a href="#">UP</a></div>
     <section id="abovefold">
         <header>
             <div class="content-wrapper">

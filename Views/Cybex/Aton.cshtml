@@ -1,0 +1,463 @@
+﻿@{
+    ViewBag.Subtitle = "Brands: Cybex : Aton Infant Car Seat";
+    Layout = "~/Views/Shared/_LayoutBrands.cshtml";
+}
+@section script{
+    @*--SLIDER PARAMETERS--*@
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                effect: 'sliceDownRight', // Specify sets like: 'fold,fade,sliceDown'
+                slices: 15, // For slice animations
+                boxCols: 8, // For box animations
+                boxRows: 4, // For box animations
+                animSpeed: 400, // Slide transition speed
+                pauseTime: 5000000, // How long each slide will show
+                startSlide: 0, // Set starting Slide (0 index)
+                directionNav: false, // Next & Prev navigation
+                directionNavHide: true, // Only show on hover
+                controlNav: true, // 1,2,3... navigation
+                controlNavThumbs: true, // Use thumbnails for Control Nav
+                controlNavThumbsFromRel: false, // Use image rel for thumbs
+                controlNavThumbsSearch: '.jpg', // Replace this with...
+                controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+                keyboardNav: false, // Use left & right arrows
+                pauseOnHover: false, // Stop animation while hovering
+                manualAdvance: false, // Force manual transitions
+                captionOpacity: 0.8, // Universal caption opacity
+                prevText: 'Prev', // Prev directionNav text
+                nextText: 'Next', // Next directionNav text
+                beforeChange: function () { }, // Triggers before a slide transition
+                afterChange: function () { }, // Triggers after a slide transition
+                slideshowEnd: function () { }, // Triggers after all slides have been shown
+                lastSlide: function () { }, // Triggers when last slide is shown
+                afterLoad: function () { } // Triggers when slider has loaded
+            });
+        });
+    </script>
+
+    @*--END SLIDER PARAMETERS--*@
+}
+<h1 style="text-align: left; vertical-align: middle; margin: 0; position: absolute;
+    margin: 20px 0px 0px 10px; z-index: 100;">
+    <img src="../Images/cybex-white.png" style="border: none;" />
+</h1>
+<header style="margin-bottom: 30px;">
+    <div style="border-radius: 10px; background: #036629; background: -moz-linear-gradient(left, #036629, #036629);
+        background: -webkit-gradient(linear, 0% 50%, 75% 100%, from(#036629), to(#036629));
+        width: 960px; height: 125px;">
+        <div style="border-radius: 10px; width: 960px; height: 125px; background-image: url(../Images/teaser_childsafety.png);
+            background-position: 200px -150px; background-repeat: no-repeat; opacity: .5;">
+        </div>
+    </div>
+
+
+</header>
+
+<style type="text/css">
+    #tabbed_box {
+        margin: 30px auto 0px auto;
+        width: 100%;
+    }
+
+    .tabbed_box h4 {
+        font-family: "prenton", Arial, Helvetica, sans-serif;
+        font-size: 23px;
+        color: #333;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+    }
+
+        .tabbed_box h4 small {
+            color: #333;
+            font-weight: normal;
+            font-size: 9px;
+            font-family: "prenton", Verdana, Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            position: relative;
+            top: -4px;
+            left: 6px;
+            letter-spacing: 0px;
+        }
+
+    .tabbed_area {
+        border: 1px solid #ddd;
+        background-color: #636d76;
+        padding: 8px;
+        background: #636d76;
+        background: -moz-linear-gradient(top, #636d76, #001F40);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#636d76), to(#001F40));
+    }
+
+    ul.tabs {
+        margin: 0px;
+        padding: 0px;
+    }
+
+        ul.tabs li {
+            list-style: none;
+            display: inline;
+        }
+
+            ul.tabs li a {
+                background-color: #ddd;
+                color: #333;
+                padding: 8px 14px 8px 14px;
+                text-decoration: none;
+                font-size: .85em;
+                font-family: "prenton", Verdana, Arial, Helvetica, sans-serif;
+                font-weight: 400;
+                text-transform: uppercase;
+                border: 1px solid #ddd;
+                border-radius: 10px 10px 0 0;
+            }
+
+                ul.tabs li a:hover {
+                    background-color: #001F40;
+                    border-color: #ddd;
+                    color: #fff;
+                }
+
+                ul.tabs li a.active {
+                    background-color: #FFF;
+                    padding: 12px 14px 8px 14px;
+                    color: #282e32;
+                    border: 1px solid #ddd;
+                    border-bottom: 1px solid #FFF;
+                    font-weight: 500;
+                }
+
+    ul.tabs {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 5px;
+        margin-bottom: .3em;
+    }
+
+    .content {
+        background-color: #ddd;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 0 10px 10px 10px;
+        background: #fff;
+        background: -moz-linear-gradient(top, #fff, #ddd);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd));
+    }
+
+    #content_2, #content_3, #content_4, #content_5 {
+        display: none;
+    }
+
+
+    .content ul {
+        margin: 0px;
+        padding: 0px 20px 0px 20px;
+    }
+
+        .content ul li {
+            list-style: disc outside none;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 1em;
+        }
+
+            .content ul li a {
+                text-decoration: none;
+                color: #3e4346;
+            }
+
+                .content ul li a small {
+                    color: #8b959c;
+                    font-size: 9px;
+                    text-transform: uppercase;
+                    font-family: "prenton", Verdana, Arial, Helvetica, sans-serif;
+                    position: relative;
+                    left: 4px;
+                    top: 0px;
+                }
+
+            .content ul li:last-child {
+                border-bottom: none;
+            }
+            /*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.2
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(/Images/loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+    /*-webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;*/
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	text-align: center;
+	padding: 20px 0;
+}
+.theme-default .nivo-controlNav a {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background:url(/Images/aton-colors.jpg) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(/Images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+}
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}
+</style>
+<article>
+
+    <h2 class="brands">Aton Infant Car Seat</h2>
+
+    <div class="">
+        <div>
+            <p>
+                This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum,
+                nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit
+                amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor
+                a ornare odio. 
+            </p>
+        </div>
+    </div>
+    <div id="tabbed_box" class="tabbed_box">
+        @*<h4>Browse Site <small>Select a Tab</small></h4>*@
+
+        <ul class="tabs">
+            <li><a href="#" title="content_1" class="tab active">Product Features</a></li>
+            <li><a href="#" title="content_3" class="tab">Specifications</a></li>
+            <li><a href="#" title="content_4" class="tab">Accessories</a></li>
+            <li><a href="#" title="content_5" class="tab">Images</a></li>
+            <li><a href="#" title="content_2" class="tab">Awards</a></li>
+        </ul>
+
+        <div id="content_1" class="content">
+            <ul>
+                <li><strong>Enhanced Side-Impact Protection</strong>&nbsp;Achieved by using an engineered
+                    combination of materials such as an energy absorbing shell, thick EPS foam, and
+                    well-padded covers, to absorb and distribute crash forces away from your child.
+                </li>
+                <li><strong>Newborn Inlay</strong>&nbsp;Properly positions smaller babies for a better
+                    fit
+            of the harness and also opens up the torso angle to help facilitate breathing and
+            digestion.</li>
+
+                <li><strong>Infant Insert</strong>&nbsp;Provides more stability to the head and upper
+                    torso
+            and also aids in providing a better fit of the harness with smaller children.
+                </li>
+
+                <li><strong>Integrated Designer Canopy&trade;</strong>&nbsp;Provides sun protection
+                    for your child
+            while maintaining the sleek style of the Aton.</li>
+
+                <li><strong>Shoulder Belt Guide</strong>&nbsp;Allows you to use the preferred, "European
+                    Method"
+            when choosing to install the Aton without a base.</li>
+
+                <li><strong>Three-Position Handle</strong>&nbsp;Can be used in three positions. 1. The
+                    "Carry
+            Position" when used in the vehicle and out and about. This position is part of the
+            Aton’s rebound and rotation management system when used in the vehicle. 2. The "Storage"
+                    position when storing the seat or rocking your child is asleep and may need to be
+                    rocked. 3. And the "Resting" position which stablizes the seat to help when putting
+                    baby in or taking baby out.</li>
+
+                <li><strong>Dual Action Release</strong>&nbsp;A green "safety" button indicates a secure
+                    connection
+            between the carrier and the base. This button also forms part of a two-step process
+            needed to remove carrier from the base, preventing an accidental release. The overall
+            weight of the carrier has been reduced by integrating the release mechanism into
+            the base.</li>
+
+                <li><strong>Belt Tensioning Plate</strong>&nbsp;The Aton Base uses a unique Belt Tensioning
+                    Plate for a quick, simple and secure installation when using either LATCH or vehicle
+                    belts. Simply remove the slack from the belts and close the plate for a secure install.
+                </li>
+
+                <li><strong>Recline Foot and Level Indicator</strong>&nbsp;A four-position, spring activated
+                    leveling foot makes reclining the Aton easy. The level indicator with dual weight
+                    ranges help you make sure your seat is reclined at the proper angle according to
+                    the weight of your child.</li>
+
+                <li><strong>Steel Chassis</strong>&nbsp;A solid steel spine in the base creates metal
+                    to metal
+            contact through the base, infant carrier, and the vehicle for added strength and
+            properly managed crash forces.</li>
+
+                <li><strong>Five-Point Harness</strong>&nbsp;Provides a secure fit and contacts your
+                    baby
+            at the stronger parts of the body to better distribute crash energy. Harness is equipped
+                    with extra thick shoulder and buckle pads.</li>
+
+                <li><strong>Premium Lower Anchor Connectors</strong>&nbsp;Make for a quick and easy
+                    installation and feature a push button for easy release.</li>
+
+                <li><strong>Lower Anchor Storage</strong>&nbsp;In the Base for out of the way storage
+                    of
+            the LATCH Connectors when not in use.</li>
+
+                <li><strong>Color Coded Belt Guides</strong>&nbsp;To aid in proper installation of vehicle
+                    belts.</li>
+
+                <li><strong>LATCH Guides</strong>&nbsp;Aid with installation using LATCH are included
+                    with
+            every seat (and base).</li>
+
+                <li><strong>Certified</strong>&nbsp;According to Federal Motor Vehicle Safety Standards
+                    213.</li>
+            </ul>
+        </div>
+
+        <div id="content_2" class="content">Content for Tab 2</div>
+        <div id="content_3" class="content">
+            <ul>
+                <li><strong>Carrier:</strong><br />
+                    L 25 x W 17.25 x H 15 inches<br />
+                    8.8 pounds</li>
+
+                <li><strong>Base:</strong><br />
+                    L 21 x W 15 x H 8.75 inches<br />
+                    10.25 pounds</li>
+
+                <li><strong>Carrier on Base:</strong><br />
+                    L 27 x W 17.25 x H 17 inches<br />
+                    19 pounds</li>
+                <li>Machine Washable Covers</li>
+            </ul>
+        </div>
+        <div id="content_4" class="content">Content for Tab 4</div>
+        <div id="content_5" class="content">
+            <img src="../../Images/natural-child-aton.png"><img src="../../Images/strollertraffic-aton.png"><img
+                src="../../Images/Cribsie-Award.png"></div>
+
+    </div>
+
+</article>
+<aside style="background-color: #FFF; min-height: 1000px; margin-bottom: 20px; padding: 10px;
+    border-radius: 10px;">
+    <h3 class="brands">Available Colors</h3>
+    <div class="slider-wrapper">
+        <div id="slider" class="nivoSlider">
+            <img src="../../Images/aton-candy_colors.jpg" alt="" data-thumb="../../Images/aton-candy_colors_thumb.jpg" />
+            <img src="../../Images/aton-chili_pepper.jpg"  alt="" data-thumb="../../Images/aton-chili_pepper_thumb.jpg" />
+        </div>
+    </div>
+    <div id="htmlcaption" class="nivo-html-caption">
+        <strong>This</strong>is an example of a <em>HTML</em>caption with <a href="#">a link
+        </a>.
+    </div>
+    <div>
+        <h3 class="brands">Installation Videos</h3>
+        <iframe width="300" height="250" src="http://www.youtube.com/embed/QqzHIjjsnS0" frameborder="0"
+            allowfullscreen></iframe>
+    </div>
+    <h3 class="brands">More Resources</h3>
+    <ul class="default">
+        <li><a href="#">How to Choose an Infant Seat</a> </li>
+        <li><a href="#">Why Rear Facing is Safer</a></li>
+    </ul>
+</aside>
+<script type="text/javascript">
+    $(window).load(function () {
+        $('#slider').nivoSlider();
+    });
+</script>
+<script type="text/javascript">
+
+    // When the document loads do everything inside here ...
+    $(document).ready(function () {
+
+        // When a link is clicked
+        $("a.tab").click(function () {
+
+            // switch all tabs off
+            $(".active").removeClass("active");
+
+            // switch this tab on
+            $(this).addClass("active");
+
+            // slide all elements with the class 'content' up
+            $(".content").slideUp();
+
+            // Now figure out what the 'title' attribute value is and find the element with that id.  Then slide that down.
+            var content_show = $(this).attr("title");
+            $("#" + content_show).slideDown();
+
+        });
+
+    });
+
+    //function tabSwitch_2(active, number, tab_prefix, content_prefix) {
+
+    //    for (var i = 1; i < number + 1; i++) {
+    //        document.getElementById(content_prefix + i).style.display = 'none';
+    //        document.getElementById(tab_prefix + i).className = '';
+    //    }
+    //    document.getElementById(content_prefix + active).style.display = 'block';
+    //    document.getElementById(tab_prefix + active).className = 'active';
+
+    //}
+</script>
