@@ -459,9 +459,23 @@
     <Content Include="Images\add_to_cart.png" />
     <Content Include="Images\arrows.png" />
     <Content Include="Images\aton-2012-chilipepper.png" />
+    <Content Include="Images\aton-candy_colors.jpg" />
+    <Content Include="Images\aton-candy_colors_large.jpg" />
     <Content Include="Images\aton-candy_colors_thumb.jpg" />
+    <Content Include="Images\aton-chili_pepper.jpg" />
+    <Content Include="Images\aton-chili_pepper_large.jpg" />
+    <Content Include="Images\aton-chili_pepper_thumb.jpg" />
+    <Content Include="Images\aton-cobblestone.jpg" />
+    <Content Include="Images\aton-cobblestone_large.jpg" />
+    <Content Include="Images\aton-cobblestone_thumb.jpg" />
+    <Content Include="Images\aton-colors.jpg" />
+    <Content Include="Images\aton-pure_black.jpg" />
+    <Content Include="Images\aton-pure_black_large.jpg" />
+    <Content Include="Images\aton-pure_black_thumb.jpg" />
+    <Content Include="Images\aton-water_colors.jpg" />
+    <Content Include="Images\aton-water_colors_large.jpg" />
+    <Content Include="Images\aton-water_colors_thumb.jpg" />
     <Content Include="Images\babblesbest.png" />
-    <Content Include="Images\back_to_top_btn.jpg" />
     <Content Include="Images\bambinomio.png" />
     <Content Include="Images\bg.jpg" />
     <Content Include="Images\bl-headshot.jpg" />
@@ -473,6 +487,7 @@
     <Content Include="Images\cy-carriersquare.jpg" />
     <Content Include="Images\CYBEX-2009-Colors.jpg" />
     <Content Include="Images\cybex-logo.png" />
+    <Content Include="Images\cybex-white.png" />
     <Content Include="Images\cybex.png" />
     <Content Include="Images\dekor.png" />
     <Content Include="Images\delete_cart.png" />
@@ -502,7 +517,6 @@
     <Content Include="Images\loading.gif" />
     <Content Include="Images\lwl-headshot.jpg" />
     <Content Include="Images\minus.gif" />
-    <Content Include="Images\miosolo-in-Coral.jpg" />
     <Content Include="Images\miosolo-spot.jpg" />
     <Content Include="Images\mycarrypotty.png" />
     <Content Include="Images\natural-child-aton.png" />
@@ -535,6 +549,7 @@
     <Content Include="Images\slider-02.jpg" />
     <Content Include="Images\slider-03.jpg" />
     <Content Include="Images\slider-04.jpg" />
+    <Content Include="Images\socialbar.jpg" />
     <Content Include="Images\solutionxfix.jpg" />
     <Content Include="Images\spanish.gif" />
     <Content Include="Images\sprite_foot.png" />
@@ -543,6 +558,8 @@
     <Content Include="Images\strollertraffic-aton.png" />
     <Content Include="Images\submit_order.png" />
     <Content Include="Images\svenska.gif" />
+    <Content Include="Images\teaser_childsafety.jpg" />
+    <Content Include="Images\teaser_childsafety.png" />
     <Content Include="Images\truck.gif" />
     <Content Include="Images\twitter-full.png" />
     <Content Include="Images\twitter.png" />
@@ -1020,7 +1037,9 @@
     <Content Include="Scripts\knockout-2.0.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Cybex\aton-candy_colors-thumb.jpg" />
+    <Content Include="Views\Cybex\Aton.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Views\Shared\_Layout.cshtml">
       <SubType>Code</SubType>
     </Content>
@@ -1155,7 +1174,6 @@
     <Content Include="Views\Shared\_Mainnav.cshtml" />
     <Content Include="Views\Shared\_Topnav.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
-    <Content Include="Views\Cybex\Aton.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
